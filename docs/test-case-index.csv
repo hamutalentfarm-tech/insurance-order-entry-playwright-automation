@@ -1,0 +1,82 @@
+TC ID,Validation ID,Module,Scenario,Risk IDs,Seeded defect candidates,Layer,Type,Priority,Tags
+TC-AUTH-001,AUTH-V01,Authentication,Valid agent can log in successfully,R-AUTH-01,SDC-01,UI,Smoke,P1,@smoke @regression @authentication @SDC-01
+TC-AUTH-002,AUTH-V02,Authentication,Invalid password displays the correct error message,R-AUTH-05,,UI,Smoke,P1,@smoke @regression @authentication
+TC-AUTH-003,AUTH-V03,Authentication,Blank username and password show mandatory validation,R-AUTH-05,,UI,Negative,P3,@regression @authentication
+TC-AUTH-004,AUTH-V04,Authentication,Logout clears the session and redirects to login,R-AUTH-06,,UI,Authorization,P2,@regression @authentication
+TC-AUTH-005,AUTH-V05,Authentication,Direct access to dashboard without login is blocked,R-AUTH-06,,UI,Smoke,P1,@smoke @regression @authentication
+TC-AUTH-006,AUTH-V06,Authentication,Locked user cannot access the dashboard,R-AUTH-02,SDC-02,UI + API,Negative,P2,@regression @api @authentication @SDC-02
+TC-AUTH-007,AUTH-V07,Authentication,Account locks after five failed login attempts,R-AUTH-03,,UI + API,Boundary,P2,@regression @api @authentication
+TC-AUTH-008,AUTH-V08,Authentication,Password policy rejects weak passwords,R-AUTH-04,SDC-03,UI,Negative,P2,@regression @authentication @SDC-03
+TC-DASH-001,DASH-V01,Dashboard & application summary,Dashboard loads after successful login,R-DASH-04,,UI,Smoke,P1,@smoke @regression @dashboard
+TC-DASH-002,DASH-V02,Dashboard & application summary,Agent sees only their own applications,R-DASH-01,,UI + API,Authorization,P2,@regression @api @dashboard
+TC-DASH-003,DASH-V03,Dashboard & application summary,New agent sees empty application state,R-DASH-04,,UI + API,Functional,P3,@regression @api @dashboard
+TC-DASH-004,DASH-V04,Dashboard & application summary,Draft application can be resumed from the dashboard,R-DASH-03,SDC-16,UI,Functional,P2,@regression @dashboard @SDC-16
+TC-DASH-005,DASH-V05,Dashboard & application summary,Application status filter and summary counts work correctly,R-DASH-04,,UI + API,Functional,P3,@regression @api @dashboard
+TC-DASH-006,DASH-V06,Dashboard & application summary,Dashboard status matches the application status API,R-DASH-02,SDC-18,UI + API,Reconciliation,P1,@regression @api @dashboard @SDC-18
+TC-CLI-001,CLI-V01,Client / insured information,Agent can enter valid insured personal information,R-CLI-03; R-CLI-05,,UI,Smoke,P1,@smoke @regression @client
+TC-CLI-002,CLI-V02,Client / insured information,Mandatory personal fields are validated,R-CLI-03,,UI,Negative,P3,@regression @client
+TC-CLI-003,CLI-V03,Client / insured information,DOB below 18 years is rejected,R-CLI-01,SDC-04,UI,Boundary,P1,@regression @client @SDC-04
+TC-CLI-004,CLI-V04,Client / insured information,DOB above 65 years is rejected,R-CLI-01,SDC-04,UI,Boundary,P1,@regression @client @SDC-04
+TC-CLI-005,CLI-V05,Client / insured information,Future date of birth is rejected,R-CLI-02,SDC-05,UI,Negative,P2,@regression @client @SDC-05
+TC-CLI-006,CLI-P01,Client / insured information,Age boundary values 18 and 65 are accepted,R-CLI-01,SDC-04,UI,Boundary,P1,@regression @client @SDC-04
+TC-CLI-007,CLI-P02,Client / insured information,Age is calculated correctly from the date of birth,R-CLI-04,,UI,Boundary,P3,@regression @client
+TC-CLI-008,CLI-P03,Client / insured information,Name and personal field format validation,R-CLI-03,,UI,Negative,P3,@regression @client
+TC-ADR-001,CLI-V06,Address & contact,Same-as-residential copies data to mailing address,R-ADR-01,,UI,Functional,P3,@regression @address
+TC-ADR-002,CLI-V07a,Address & contact,Invalid email formats are rejected,R-ADR-02,,UI,Negative,P3,@regression @address
+TC-ADR-003,CLI-V07b,Address & contact,Invalid phone formats are rejected,R-ADR-02,,UI,Negative,P3,@regression @address
+TC-ADR-004,ADR-P01,Address & contact,Postal code format is validated,R-ADR-02,,UI,Negative,P3,@regression @address
+TC-ADR-005,ADR-P02,Address & contact,Mailing address is mandatory when not same as residential,R-ADR-03,,UI,Negative,P3,@regression @address
+TC-ADR-006,ADR-P03,Address & contact,Preferred communication mode is required,R-ADR-03,,UI,Negative,P3,@regression @address
+TC-KYC-001,CLI-V08,"KYC, financial & compliance",SSN is masked after entry (all screens and responses),R-KYC-01,SDC-07,UI + API,Negative,P1,@regression @api @kyc @SDC-07
+TC-KYC-002,CLI-V09,"KYC, financial & compliance",KYC upload rejects unsupported file type,R-DOC-01,,UI,Negative,P3,@regression @kyc
+TC-KYC-003,CLI-V10,"KYC, financial & compliance",PEP = Yes requires additional details,R-KYC-05,,UI,Functional,P2,@regression @kyc
+TC-KYC-004,KYC-P01,"KYC, financial & compliance",Income versus premium affordability is validated,R-KYC-03,SDC-08,UI + API,Negative,P1,@regression @api @kyc @SDC-08
+TC-KYC-005,KYC-P02,"KYC, financial & compliance",ID number validation changes with ID type,R-KYC-04,,UI,Negative,P3,@regression @kyc
+TC-KYC-006,KYC-P03,"KYC, financial & compliance",Incomplete compliance declaration blocks progression,R-KYC-05,,UI + API,Negative,P2,@regression @api @kyc
+TC-PROD-001,PROD-V01,Product selection & policy config,Product catalog displays the expected Whole Life products,R-PROD-05,,UI + API,Smoke,P1,@smoke @regression @api @product
+TC-PROD-002,PROD-V02,Product selection & policy config,Product details page opens correctly,R-PROD-05; R-PROD-06,,UI,Functional,P3,@regression @product
+TC-PROD-003,PROD-V03,Product selection & policy config,Face value below minimum is rejected,R-PROD-02,,UI + API,Boundary,P2,@regression @api @product
+TC-PROD-004,PROD-V04,Product selection & policy config,Face value above maximum is rejected,R-PROD-02,,UI + API,Boundary,P2,@regression @api @product
+TC-PROD-005,PROD-V05,Product selection & policy config,Premium recalculates when premium frequency changes,R-PROD-03,SDC-12,UI + API,Reconciliation,P1,@regression @api @product @SDC-12
+TC-PROD-006,PROD-V06,Product selection & policy config,Premium on review page matches configuration page,R-PROD-04,SDC-12,UI + API,Reconciliation,P2,@regression @api @product @SDC-12
+TC-PROD-007,PROD-V07,Product selection & policy config,Product suitability warning appears on mismatch,R-PROD-01,SDC-09,UI + API,Negative,P1,@regression @api @product @SDC-09
+TC-RID-001,RIDER-V01,Rider selection,Agent can add an eligible protection rider (ADB),R-RID-05,,UI,Functional,P2,@regression @rider
+TC-RID-002,RIDER-V02,Rider selection,Rider coverage cannot exceed base policy face value,R-RID-01,SDC-10,UI + API,Boundary,P1,@regression @api @rider @SDC-10
+TC-RID-003,RIDER-V03,Rider selection,Age-ineligible rider cannot be added,R-RID-03,,UI + API,Negative,P2,@regression @api @rider
+TC-RID-004,RIDER-V04,Rider selection,Maximum rider count is enforced,R-RID-04,,UI,Boundary,P3,@regression @rider
+TC-RID-005,RIDER-V05,Rider selection,Mutually exclusive waiver riders cannot both be selected,R-RID-02,SDC-11,UI + API,Negative,P2,@regression @api @rider @SDC-11
+TC-RID-006,RIDER-V06,Rider selection,Critical illness rider triggers the health questionnaire,R-RID-06,,UI,Functional,P3,@regression @rider
+TC-RID-007,RIDER-V07,Rider selection,Rider premium is itemized in total premium,R-RID-05,SDC-12,UI + API,Reconciliation,P2,@regression @api @rider @SDC-12
+TC-BEN-001,BEN-V01,Beneficiary management,Add a valid primary beneficiary (and irrevocable confirmation),R-BEN-04; R-BEN-06,,UI,Smoke,P1,@smoke @regression @beneficiary
+TC-BEN-002,BEN-V02,Beneficiary management,Primary allocation below 100% blocks progression,R-BEN-01,SDC-13,UI,Boundary,P1,@regression @beneficiary @SDC-13
+TC-BEN-003,BEN-V03,Beneficiary management,Primary allocation above 100% blocks progression,R-BEN-01,SDC-13,UI,Boundary,P1,@regression @beneficiary @SDC-13
+TC-BEN-004,BEN-V04,Beneficiary management,Secondary allocation is validated separately,R-BEN-01,SDC-13,UI,Boundary,P1,@regression @beneficiary @SDC-13
+TC-BEN-005,BEN-V05,Beneficiary management,Minor beneficiary requires guardian details,R-BEN-02,SDC-14,UI,Negative,P1,@regression @beneficiary @SDC-14
+TC-BEN-006,BEN-V06,Beneficiary management,Trust beneficiary shows trust-specific fields,R-BEN-05,,UI,Functional,P3,@regression @beneficiary
+TC-BEN-007,BEN-V07,Beneficiary management,Organization beneficiary shows organization-specific fields,R-BEN-05,,UI,Functional,P3,@regression @beneficiary
+TC-BEN-008,BEN-V08,Beneficiary management,Duplicate beneficiary is blocked,R-BEN-03,SDC-15,UI + API,Negative,P2,@regression @api @beneficiary @SDC-15
+TC-BEN-009,BEN-V09,Beneficiary management,Removing a beneficiary updates the allocation total,R-BEN-04,,UI,Functional,P3,@regression @beneficiary
+TC-DOC-001,DOC-V01,Document upload & validation summary,Valid KYC document can be uploaded,R-DOC-02,,UI + API,Smoke,P1,@smoke @regression @api @documents
+TC-DOC-002,DOC-V02,Document upload & validation summary,Unsupported file type is rejected,R-DOC-01,,UI + API,Negative,P3,@regression @api @documents
+TC-DOC-003,DOC-V03,Document upload & validation summary,File above maximum size is rejected,R-DOC-01,,UI + API,Boundary,P3,@regression @api @documents
+TC-DOC-004,DOC-V04,Document upload & validation summary,Missing mandatory document blocks submission,R-KYC-02,SDC-06,UI + API,Negative,P1,@regression @api @documents @SDC-06
+TC-DOC-005,VAL-V01,Document upload & validation summary,"Validation summary lists all unresolved errors, grouped",R-DOC-03; R-BEN-06,,UI,Functional,P2,@regression @documents
+TC-DOC-006,VAL-V02,Document upload & validation summary,Clicking a validation error navigates to the field,R-DOC-03,,UI,Functional,P3,@regression @documents
+TC-DOC-007,VAL-V03,Document upload & validation summary,Submit stays disabled until critical errors are resolved,R-WF-02,SDC-17,UI + API,Negative,P1,@regression @api @documents @SDC-17
+TC-WF-001,WF-V01,Submission & status tracking,Agent can save an incomplete application as draft,R-WF-01,SDC-16,UI,Functional,P1,@regression @workflow @SDC-16
+TC-WF-002,WF-V02,Submission & status tracking,Draft can be resumed with saved data,R-WF-01,SDC-16,UI + API,Functional,P1,@regression @api @workflow @SDC-16
+TC-WF-003,WF-V03,Submission & status tracking,Valid application can be submitted successfully (full E2E),R-WF-03,,UI + API,E2E,P1,@smoke @regression @e2e @api @workflow
+TC-WF-004,WF-V04,Submission & status tracking,Submitted application becomes read-only,R-WF-04,,UI + API,Negative,P2,@regression @api @workflow
+TC-WF-005,WF-V05,Submission & status tracking,Confirmation message appears after submission,R-WF-05,,UI,Functional,P3,@regression @workflow
+TC-WF-006,WF-V06,Submission & status tracking,Dashboard status updates after submission,R-WF-03; R-DASH-02,SDC-18,UI + API,Reconciliation,P1,@regression @api @workflow @SDC-18
+TC-WF-007,WF-V07,Submission & status tracking,Application detail status matches the API response,R-DASH-02,SDC-18,UI + API,Reconciliation,P1,@regression @api @workflow @SDC-18
+TC-API-001,API-V01,API tests,Products API returns 200 and the expected schema,R-API-03; R-PROD-05,,API,Smoke,P1,@smoke @regression @api
+TC-API-002,API-V02,API tests,Application APIs require authorization,R-API-02; R-AUTH-06,,API,Smoke,P1,@smoke @regression @api
+TC-API-003,API-V03,API tests,Client API rejects invalid DOB,R-CLI-01; R-CLI-02; R-API-01,SDC-04; SDC-05; SDC-19,API,Negative,P1,@regression @api @SDC-04 @SDC-05 @SDC-19
+TC-API-004,API-V04,API tests,Validation API returns beneficiary allocation error,R-BEN-01; R-API-01,SDC-13; SDC-19,API,Negative,P1,@regression @api @SDC-13 @SDC-19
+TC-API-005,API-V05,API tests,Submission API rejects an incomplete application,R-WF-02; R-KYC-02; R-API-01,SDC-17; SDC-06; SDC-19,API,Negative,P1,@regression @api @SDC-17 @SDC-06 @SDC-19
+TC-API-006,API-V06,API tests,Application status API matches the dashboard,R-DASH-02,SDC-18,UI + API,Reconciliation,P1,@regression @api @SDC-18
+TC-API-007,API-V07,API tests,Product API supports product detail retrieval,R-PROD-05; R-API-03,,UI + API,Reconciliation,P3,@regression @api
+TC-API-008,API-V08,API tests,Applications API returns only the logged-in agent records,R-DASH-01,,API,Authorization,P2,@regression @api
+TC-API-009,API-P01,API tests,Documents API validates type and size,R-DOC-01; R-DOC-02,,API,Negative,P2,@regression @api
+TC-API-010,API-P02,API tests,Login API status codes and response schema,R-AUTH-01; R-AUTH-02,SDC-01; SDC-02,API,Functional,P1,@regression @api @SDC-01 @SDC-02

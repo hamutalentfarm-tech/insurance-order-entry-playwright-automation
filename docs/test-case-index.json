@@ -1,0 +1,1547 @@
+[
+  {
+    "tc": "TC-AUTH-001",
+    "vid": "AUTH-V01",
+    "module": "Authentication",
+    "title": "Valid agent can log in successfully",
+    "risk": [
+      "R-AUTH-01"
+    ],
+    "sdc": [
+      "SDC-01"
+    ],
+    "layer": "UI",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@authentication",
+      "@SDC-01"
+    ]
+  },
+  {
+    "tc": "TC-AUTH-002",
+    "vid": "AUTH-V02",
+    "module": "Authentication",
+    "title": "Invalid password displays the correct error message",
+    "risk": [
+      "R-AUTH-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@authentication"
+    ]
+  },
+  {
+    "tc": "TC-AUTH-003",
+    "vid": "AUTH-V03",
+    "module": "Authentication",
+    "title": "Blank username and password show mandatory validation",
+    "risk": [
+      "R-AUTH-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@authentication"
+    ]
+  },
+  {
+    "tc": "TC-AUTH-004",
+    "vid": "AUTH-V04",
+    "module": "Authentication",
+    "title": "Logout clears the session and redirects to login",
+    "risk": [
+      "R-AUTH-06"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Authorization",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@authentication"
+    ]
+  },
+  {
+    "tc": "TC-AUTH-005",
+    "vid": "AUTH-V05",
+    "module": "Authentication",
+    "title": "Direct access to dashboard without login is blocked",
+    "risk": [
+      "R-AUTH-06"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@authentication"
+    ]
+  },
+  {
+    "tc": "TC-AUTH-006",
+    "vid": "AUTH-V06",
+    "module": "Authentication",
+    "title": "Locked user cannot access the dashboard",
+    "risk": [
+      "R-AUTH-02"
+    ],
+    "sdc": [
+      "SDC-02"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@authentication",
+      "@SDC-02"
+    ]
+  },
+  {
+    "tc": "TC-AUTH-007",
+    "vid": "AUTH-V07",
+    "module": "Authentication",
+    "title": "Account locks after five failed login attempts",
+    "risk": [
+      "R-AUTH-03"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Boundary",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@authentication"
+    ]
+  },
+  {
+    "tc": "TC-AUTH-008",
+    "vid": "AUTH-V08",
+    "module": "Authentication",
+    "title": "Password policy rejects weak passwords",
+    "risk": [
+      "R-AUTH-04"
+    ],
+    "sdc": [
+      "SDC-03"
+    ],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@authentication",
+      "@SDC-03"
+    ]
+  },
+  {
+    "tc": "TC-DASH-001",
+    "vid": "DASH-V01",
+    "module": "Dashboard & application summary",
+    "title": "Dashboard loads after successful login",
+    "risk": [
+      "R-DASH-04"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@dashboard"
+    ]
+  },
+  {
+    "tc": "TC-DASH-002",
+    "vid": "DASH-V02",
+    "module": "Dashboard & application summary",
+    "title": "Agent sees only their own applications",
+    "risk": [
+      "R-DASH-01"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Authorization",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@dashboard"
+    ]
+  },
+  {
+    "tc": "TC-DASH-003",
+    "vid": "DASH-V03",
+    "module": "Dashboard & application summary",
+    "title": "New agent sees empty application state",
+    "risk": [
+      "R-DASH-04"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@api",
+      "@dashboard"
+    ]
+  },
+  {
+    "tc": "TC-DASH-004",
+    "vid": "DASH-V04",
+    "module": "Dashboard & application summary",
+    "title": "Draft application can be resumed from the dashboard",
+    "risk": [
+      "R-DASH-03"
+    ],
+    "sdc": [
+      "SDC-16"
+    ],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@dashboard",
+      "@SDC-16"
+    ]
+  },
+  {
+    "tc": "TC-DASH-005",
+    "vid": "DASH-V05",
+    "module": "Dashboard & application summary",
+    "title": "Application status filter and summary counts work correctly",
+    "risk": [
+      "R-DASH-04"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@api",
+      "@dashboard"
+    ]
+  },
+  {
+    "tc": "TC-DASH-006",
+    "vid": "DASH-V06",
+    "module": "Dashboard & application summary",
+    "title": "Dashboard status matches the application status API",
+    "risk": [
+      "R-DASH-02"
+    ],
+    "sdc": [
+      "SDC-18"
+    ],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@dashboard",
+      "@SDC-18"
+    ]
+  },
+  {
+    "tc": "TC-CLI-001",
+    "vid": "CLI-V01",
+    "module": "Client / insured information",
+    "title": "Agent can enter valid insured personal information",
+    "risk": [
+      "R-CLI-03",
+      "R-CLI-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@client"
+    ]
+  },
+  {
+    "tc": "TC-CLI-002",
+    "vid": "CLI-V02",
+    "module": "Client / insured information",
+    "title": "Mandatory personal fields are validated",
+    "risk": [
+      "R-CLI-03"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@client"
+    ]
+  },
+  {
+    "tc": "TC-CLI-003",
+    "vid": "CLI-V03",
+    "module": "Client / insured information",
+    "title": "DOB below 18 years is rejected",
+    "risk": [
+      "R-CLI-01"
+    ],
+    "sdc": [
+      "SDC-04"
+    ],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@client",
+      "@SDC-04"
+    ]
+  },
+  {
+    "tc": "TC-CLI-004",
+    "vid": "CLI-V04",
+    "module": "Client / insured information",
+    "title": "DOB above 65 years is rejected",
+    "risk": [
+      "R-CLI-01"
+    ],
+    "sdc": [
+      "SDC-04"
+    ],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@client",
+      "@SDC-04"
+    ]
+  },
+  {
+    "tc": "TC-CLI-005",
+    "vid": "CLI-V05",
+    "module": "Client / insured information",
+    "title": "Future date of birth is rejected",
+    "risk": [
+      "R-CLI-02"
+    ],
+    "sdc": [
+      "SDC-05"
+    ],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@client",
+      "@SDC-05"
+    ]
+  },
+  {
+    "tc": "TC-CLI-006",
+    "vid": "CLI-P01",
+    "module": "Client / insured information",
+    "title": "Age boundary values 18 and 65 are accepted",
+    "risk": [
+      "R-CLI-01"
+    ],
+    "sdc": [
+      "SDC-04"
+    ],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@client",
+      "@SDC-04"
+    ]
+  },
+  {
+    "tc": "TC-CLI-007",
+    "vid": "CLI-P02",
+    "module": "Client / insured information",
+    "title": "Age is calculated correctly from the date of birth",
+    "risk": [
+      "R-CLI-04"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@client"
+    ]
+  },
+  {
+    "tc": "TC-CLI-008",
+    "vid": "CLI-P03",
+    "module": "Client / insured information",
+    "title": "Name and personal field format validation",
+    "risk": [
+      "R-CLI-03"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@client"
+    ]
+  },
+  {
+    "tc": "TC-ADR-001",
+    "vid": "CLI-V06",
+    "module": "Address & contact",
+    "title": "Same-as-residential copies data to mailing address",
+    "risk": [
+      "R-ADR-01"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@address"
+    ]
+  },
+  {
+    "tc": "TC-ADR-002",
+    "vid": "CLI-V07a",
+    "module": "Address & contact",
+    "title": "Invalid email formats are rejected",
+    "risk": [
+      "R-ADR-02"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@address"
+    ]
+  },
+  {
+    "tc": "TC-ADR-003",
+    "vid": "CLI-V07b",
+    "module": "Address & contact",
+    "title": "Invalid phone formats are rejected",
+    "risk": [
+      "R-ADR-02"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@address"
+    ]
+  },
+  {
+    "tc": "TC-ADR-004",
+    "vid": "ADR-P01",
+    "module": "Address & contact",
+    "title": "Postal code format is validated",
+    "risk": [
+      "R-ADR-02"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@address"
+    ]
+  },
+  {
+    "tc": "TC-ADR-005",
+    "vid": "ADR-P02",
+    "module": "Address & contact",
+    "title": "Mailing address is mandatory when not same as residential",
+    "risk": [
+      "R-ADR-03"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@address"
+    ]
+  },
+  {
+    "tc": "TC-ADR-006",
+    "vid": "ADR-P03",
+    "module": "Address & contact",
+    "title": "Preferred communication mode is required",
+    "risk": [
+      "R-ADR-03"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@address"
+    ]
+  },
+  {
+    "tc": "TC-KYC-001",
+    "vid": "CLI-V08",
+    "module": "KYC, financial & compliance",
+    "title": "SSN is masked after entry (all screens and responses)",
+    "risk": [
+      "R-KYC-01"
+    ],
+    "sdc": [
+      "SDC-07"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@kyc",
+      "@SDC-07"
+    ]
+  },
+  {
+    "tc": "TC-KYC-002",
+    "vid": "CLI-V09",
+    "module": "KYC, financial & compliance",
+    "title": "KYC upload rejects unsupported file type",
+    "risk": [
+      "R-DOC-01"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@kyc"
+    ]
+  },
+  {
+    "tc": "TC-KYC-003",
+    "vid": "CLI-V10",
+    "module": "KYC, financial & compliance",
+    "title": "PEP = Yes requires additional details",
+    "risk": [
+      "R-KYC-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@kyc"
+    ]
+  },
+  {
+    "tc": "TC-KYC-004",
+    "vid": "KYC-P01",
+    "module": "KYC, financial & compliance",
+    "title": "Income versus premium affordability is validated",
+    "risk": [
+      "R-KYC-03"
+    ],
+    "sdc": [
+      "SDC-08"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@kyc",
+      "@SDC-08"
+    ]
+  },
+  {
+    "tc": "TC-KYC-005",
+    "vid": "KYC-P02",
+    "module": "KYC, financial & compliance",
+    "title": "ID number validation changes with ID type",
+    "risk": [
+      "R-KYC-04"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@kyc"
+    ]
+  },
+  {
+    "tc": "TC-KYC-006",
+    "vid": "KYC-P03",
+    "module": "KYC, financial & compliance",
+    "title": "Incomplete compliance declaration blocks progression",
+    "risk": [
+      "R-KYC-05"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@kyc"
+    ]
+  },
+  {
+    "tc": "TC-PROD-001",
+    "vid": "PROD-V01",
+    "module": "Product selection & policy config",
+    "title": "Product catalog displays the expected Whole Life products",
+    "risk": [
+      "R-PROD-05"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@api",
+      "@product"
+    ]
+  },
+  {
+    "tc": "TC-PROD-002",
+    "vid": "PROD-V02",
+    "module": "Product selection & policy config",
+    "title": "Product details page opens correctly",
+    "risk": [
+      "R-PROD-05",
+      "R-PROD-06"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@product"
+    ]
+  },
+  {
+    "tc": "TC-PROD-003",
+    "vid": "PROD-V03",
+    "module": "Product selection & policy config",
+    "title": "Face value below minimum is rejected",
+    "risk": [
+      "R-PROD-02"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Boundary",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@product"
+    ]
+  },
+  {
+    "tc": "TC-PROD-004",
+    "vid": "PROD-V04",
+    "module": "Product selection & policy config",
+    "title": "Face value above maximum is rejected",
+    "risk": [
+      "R-PROD-02"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Boundary",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@product"
+    ]
+  },
+  {
+    "tc": "TC-PROD-005",
+    "vid": "PROD-V05",
+    "module": "Product selection & policy config",
+    "title": "Premium recalculates when premium frequency changes",
+    "risk": [
+      "R-PROD-03"
+    ],
+    "sdc": [
+      "SDC-12"
+    ],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@product",
+      "@SDC-12"
+    ]
+  },
+  {
+    "tc": "TC-PROD-006",
+    "vid": "PROD-V06",
+    "module": "Product selection & policy config",
+    "title": "Premium on review page matches configuration page",
+    "risk": [
+      "R-PROD-04"
+    ],
+    "sdc": [
+      "SDC-12"
+    ],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@product",
+      "@SDC-12"
+    ]
+  },
+  {
+    "tc": "TC-PROD-007",
+    "vid": "PROD-V07",
+    "module": "Product selection & policy config",
+    "title": "Product suitability warning appears on mismatch",
+    "risk": [
+      "R-PROD-01"
+    ],
+    "sdc": [
+      "SDC-09"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@product",
+      "@SDC-09"
+    ]
+  },
+  {
+    "tc": "TC-RID-001",
+    "vid": "RIDER-V01",
+    "module": "Rider selection",
+    "title": "Agent can add an eligible protection rider (ADB)",
+    "risk": [
+      "R-RID-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@rider"
+    ]
+  },
+  {
+    "tc": "TC-RID-002",
+    "vid": "RIDER-V02",
+    "module": "Rider selection",
+    "title": "Rider coverage cannot exceed base policy face value",
+    "risk": [
+      "R-RID-01"
+    ],
+    "sdc": [
+      "SDC-10"
+    ],
+    "layer": "UI + API",
+    "type": "Boundary",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@rider",
+      "@SDC-10"
+    ]
+  },
+  {
+    "tc": "TC-RID-003",
+    "vid": "RIDER-V03",
+    "module": "Rider selection",
+    "title": "Age-ineligible rider cannot be added",
+    "risk": [
+      "R-RID-03"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@rider"
+    ]
+  },
+  {
+    "tc": "TC-RID-004",
+    "vid": "RIDER-V04",
+    "module": "Rider selection",
+    "title": "Maximum rider count is enforced",
+    "risk": [
+      "R-RID-04"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@rider"
+    ]
+  },
+  {
+    "tc": "TC-RID-005",
+    "vid": "RIDER-V05",
+    "module": "Rider selection",
+    "title": "Mutually exclusive waiver riders cannot both be selected",
+    "risk": [
+      "R-RID-02"
+    ],
+    "sdc": [
+      "SDC-11"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@rider",
+      "@SDC-11"
+    ]
+  },
+  {
+    "tc": "TC-RID-006",
+    "vid": "RIDER-V06",
+    "module": "Rider selection",
+    "title": "Critical illness rider triggers the health questionnaire",
+    "risk": [
+      "R-RID-06"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@rider"
+    ]
+  },
+  {
+    "tc": "TC-RID-007",
+    "vid": "RIDER-V07",
+    "module": "Rider selection",
+    "title": "Rider premium is itemized in total premium",
+    "risk": [
+      "R-RID-05"
+    ],
+    "sdc": [
+      "SDC-12"
+    ],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@rider",
+      "@SDC-12"
+    ]
+  },
+  {
+    "tc": "TC-BEN-001",
+    "vid": "BEN-V01",
+    "module": "Beneficiary management",
+    "title": "Add a valid primary beneficiary (and irrevocable confirmation)",
+    "risk": [
+      "R-BEN-04",
+      "R-BEN-06"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@beneficiary"
+    ]
+  },
+  {
+    "tc": "TC-BEN-002",
+    "vid": "BEN-V02",
+    "module": "Beneficiary management",
+    "title": "Primary allocation below 100% blocks progression",
+    "risk": [
+      "R-BEN-01"
+    ],
+    "sdc": [
+      "SDC-13"
+    ],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@beneficiary",
+      "@SDC-13"
+    ]
+  },
+  {
+    "tc": "TC-BEN-003",
+    "vid": "BEN-V03",
+    "module": "Beneficiary management",
+    "title": "Primary allocation above 100% blocks progression",
+    "risk": [
+      "R-BEN-01"
+    ],
+    "sdc": [
+      "SDC-13"
+    ],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@beneficiary",
+      "@SDC-13"
+    ]
+  },
+  {
+    "tc": "TC-BEN-004",
+    "vid": "BEN-V04",
+    "module": "Beneficiary management",
+    "title": "Secondary allocation is validated separately",
+    "risk": [
+      "R-BEN-01"
+    ],
+    "sdc": [
+      "SDC-13"
+    ],
+    "layer": "UI",
+    "type": "Boundary",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@beneficiary",
+      "@SDC-13"
+    ]
+  },
+  {
+    "tc": "TC-BEN-005",
+    "vid": "BEN-V05",
+    "module": "Beneficiary management",
+    "title": "Minor beneficiary requires guardian details",
+    "risk": [
+      "R-BEN-02"
+    ],
+    "sdc": [
+      "SDC-14"
+    ],
+    "layer": "UI",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@beneficiary",
+      "@SDC-14"
+    ]
+  },
+  {
+    "tc": "TC-BEN-006",
+    "vid": "BEN-V06",
+    "module": "Beneficiary management",
+    "title": "Trust beneficiary shows trust-specific fields",
+    "risk": [
+      "R-BEN-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@beneficiary"
+    ]
+  },
+  {
+    "tc": "TC-BEN-007",
+    "vid": "BEN-V07",
+    "module": "Beneficiary management",
+    "title": "Organization beneficiary shows organization-specific fields",
+    "risk": [
+      "R-BEN-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@beneficiary"
+    ]
+  },
+  {
+    "tc": "TC-BEN-008",
+    "vid": "BEN-V08",
+    "module": "Beneficiary management",
+    "title": "Duplicate beneficiary is blocked",
+    "risk": [
+      "R-BEN-03"
+    ],
+    "sdc": [
+      "SDC-15"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@beneficiary",
+      "@SDC-15"
+    ]
+  },
+  {
+    "tc": "TC-BEN-009",
+    "vid": "BEN-V09",
+    "module": "Beneficiary management",
+    "title": "Removing a beneficiary updates the allocation total",
+    "risk": [
+      "R-BEN-04"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@beneficiary"
+    ]
+  },
+  {
+    "tc": "TC-DOC-001",
+    "vid": "DOC-V01",
+    "module": "Document upload & validation summary",
+    "title": "Valid KYC document can be uploaded",
+    "risk": [
+      "R-DOC-02"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@api",
+      "@documents"
+    ]
+  },
+  {
+    "tc": "TC-DOC-002",
+    "vid": "DOC-V02",
+    "module": "Document upload & validation summary",
+    "title": "Unsupported file type is rejected",
+    "risk": [
+      "R-DOC-01"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@api",
+      "@documents"
+    ]
+  },
+  {
+    "tc": "TC-DOC-003",
+    "vid": "DOC-V03",
+    "module": "Document upload & validation summary",
+    "title": "File above maximum size is rejected",
+    "risk": [
+      "R-DOC-01"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Boundary",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@api",
+      "@documents"
+    ]
+  },
+  {
+    "tc": "TC-DOC-004",
+    "vid": "DOC-V04",
+    "module": "Document upload & validation summary",
+    "title": "Missing mandatory document blocks submission",
+    "risk": [
+      "R-KYC-02"
+    ],
+    "sdc": [
+      "SDC-06"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@documents",
+      "@SDC-06"
+    ]
+  },
+  {
+    "tc": "TC-DOC-005",
+    "vid": "VAL-V01",
+    "module": "Document upload & validation summary",
+    "title": "Validation summary lists all unresolved errors, grouped",
+    "risk": [
+      "R-DOC-03",
+      "R-BEN-06"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@documents"
+    ]
+  },
+  {
+    "tc": "TC-DOC-006",
+    "vid": "VAL-V02",
+    "module": "Document upload & validation summary",
+    "title": "Clicking a validation error navigates to the field",
+    "risk": [
+      "R-DOC-03"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@documents"
+    ]
+  },
+  {
+    "tc": "TC-DOC-007",
+    "vid": "VAL-V03",
+    "module": "Document upload & validation summary",
+    "title": "Submit stays disabled until critical errors are resolved",
+    "risk": [
+      "R-WF-02"
+    ],
+    "sdc": [
+      "SDC-17"
+    ],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@documents",
+      "@SDC-17"
+    ]
+  },
+  {
+    "tc": "TC-WF-001",
+    "vid": "WF-V01",
+    "module": "Submission & status tracking",
+    "title": "Agent can save an incomplete application as draft",
+    "risk": [
+      "R-WF-01"
+    ],
+    "sdc": [
+      "SDC-16"
+    ],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@workflow",
+      "@SDC-16"
+    ]
+  },
+  {
+    "tc": "TC-WF-002",
+    "vid": "WF-V02",
+    "module": "Submission & status tracking",
+    "title": "Draft can be resumed with saved data",
+    "risk": [
+      "R-WF-01"
+    ],
+    "sdc": [
+      "SDC-16"
+    ],
+    "layer": "UI + API",
+    "type": "Functional",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@workflow",
+      "@SDC-16"
+    ]
+  },
+  {
+    "tc": "TC-WF-003",
+    "vid": "WF-V03",
+    "module": "Submission & status tracking",
+    "title": "Valid application can be submitted successfully (full E2E)",
+    "risk": [
+      "R-WF-03"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "E2E",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@e2e",
+      "@api",
+      "@workflow"
+    ]
+  },
+  {
+    "tc": "TC-WF-004",
+    "vid": "WF-V04",
+    "module": "Submission & status tracking",
+    "title": "Submitted application becomes read-only",
+    "risk": [
+      "R-WF-04"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api",
+      "@workflow"
+    ]
+  },
+  {
+    "tc": "TC-WF-005",
+    "vid": "WF-V05",
+    "module": "Submission & status tracking",
+    "title": "Confirmation message appears after submission",
+    "risk": [
+      "R-WF-05"
+    ],
+    "sdc": [],
+    "layer": "UI",
+    "type": "Functional",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@workflow"
+    ]
+  },
+  {
+    "tc": "TC-WF-006",
+    "vid": "WF-V06",
+    "module": "Submission & status tracking",
+    "title": "Dashboard status updates after submission",
+    "risk": [
+      "R-WF-03",
+      "R-DASH-02"
+    ],
+    "sdc": [
+      "SDC-18"
+    ],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@workflow",
+      "@SDC-18"
+    ]
+  },
+  {
+    "tc": "TC-WF-007",
+    "vid": "WF-V07",
+    "module": "Submission & status tracking",
+    "title": "Application detail status matches the API response",
+    "risk": [
+      "R-DASH-02"
+    ],
+    "sdc": [
+      "SDC-18"
+    ],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@workflow",
+      "@SDC-18"
+    ]
+  },
+  {
+    "tc": "TC-API-001",
+    "vid": "API-V01",
+    "module": "API tests",
+    "title": "Products API returns 200 and the expected schema",
+    "risk": [
+      "R-API-03",
+      "R-PROD-05"
+    ],
+    "sdc": [],
+    "layer": "API",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@api"
+    ]
+  },
+  {
+    "tc": "TC-API-002",
+    "vid": "API-V02",
+    "module": "API tests",
+    "title": "Application APIs require authorization",
+    "risk": [
+      "R-API-02",
+      "R-AUTH-06"
+    ],
+    "sdc": [],
+    "layer": "API",
+    "type": "Smoke",
+    "priority": "P1",
+    "tags": [
+      "@smoke",
+      "@regression",
+      "@api"
+    ]
+  },
+  {
+    "tc": "TC-API-003",
+    "vid": "API-V03",
+    "module": "API tests",
+    "title": "Client API rejects invalid DOB",
+    "risk": [
+      "R-CLI-01",
+      "R-CLI-02",
+      "R-API-01"
+    ],
+    "sdc": [
+      "SDC-04",
+      "SDC-05",
+      "SDC-19"
+    ],
+    "layer": "API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@SDC-04",
+      "@SDC-05",
+      "@SDC-19"
+    ]
+  },
+  {
+    "tc": "TC-API-004",
+    "vid": "API-V04",
+    "module": "API tests",
+    "title": "Validation API returns beneficiary allocation error",
+    "risk": [
+      "R-BEN-01",
+      "R-API-01"
+    ],
+    "sdc": [
+      "SDC-13",
+      "SDC-19"
+    ],
+    "layer": "API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@SDC-13",
+      "@SDC-19"
+    ]
+  },
+  {
+    "tc": "TC-API-005",
+    "vid": "API-V05",
+    "module": "API tests",
+    "title": "Submission API rejects an incomplete application",
+    "risk": [
+      "R-WF-02",
+      "R-KYC-02",
+      "R-API-01"
+    ],
+    "sdc": [
+      "SDC-17",
+      "SDC-06",
+      "SDC-19"
+    ],
+    "layer": "API",
+    "type": "Negative",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@SDC-17",
+      "@SDC-06",
+      "@SDC-19"
+    ]
+  },
+  {
+    "tc": "TC-API-006",
+    "vid": "API-V06",
+    "module": "API tests",
+    "title": "Application status API matches the dashboard",
+    "risk": [
+      "R-DASH-02"
+    ],
+    "sdc": [
+      "SDC-18"
+    ],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@SDC-18"
+    ]
+  },
+  {
+    "tc": "TC-API-007",
+    "vid": "API-V07",
+    "module": "API tests",
+    "title": "Product API supports product detail retrieval",
+    "risk": [
+      "R-PROD-05",
+      "R-API-03"
+    ],
+    "sdc": [],
+    "layer": "UI + API",
+    "type": "Reconciliation",
+    "priority": "P3",
+    "tags": [
+      "@regression",
+      "@api"
+    ]
+  },
+  {
+    "tc": "TC-API-008",
+    "vid": "API-V08",
+    "module": "API tests",
+    "title": "Applications API returns only the logged-in agent records",
+    "risk": [
+      "R-DASH-01"
+    ],
+    "sdc": [],
+    "layer": "API",
+    "type": "Authorization",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api"
+    ]
+  },
+  {
+    "tc": "TC-API-009",
+    "vid": "API-P01",
+    "module": "API tests",
+    "title": "Documents API validates type and size",
+    "risk": [
+      "R-DOC-01",
+      "R-DOC-02"
+    ],
+    "sdc": [],
+    "layer": "API",
+    "type": "Negative",
+    "priority": "P2",
+    "tags": [
+      "@regression",
+      "@api"
+    ]
+  },
+  {
+    "tc": "TC-API-010",
+    "vid": "API-P02",
+    "module": "API tests",
+    "title": "Login API status codes and response schema",
+    "risk": [
+      "R-AUTH-01",
+      "R-AUTH-02"
+    ],
+    "sdc": [
+      "SDC-01",
+      "SDC-02"
+    ],
+    "layer": "API",
+    "type": "Functional",
+    "priority": "P1",
+    "tags": [
+      "@regression",
+      "@api",
+      "@SDC-01",
+      "@SDC-02"
+    ]
+  }
+]
