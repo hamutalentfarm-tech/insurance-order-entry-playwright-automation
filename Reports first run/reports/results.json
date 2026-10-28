@@ -1,0 +1,1763 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--grep",
+      "@smoke"
+    ],
+    "configFile": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\playwright.config.ts",
+    "rootDir": "C:/Users/talentfarm_learner/insurance-order-entry-playwright-automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/talentfarm_learner/insurance-order-entry-playwright-automation/reports/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "insurance-chromium",
+        "name": "insurance-chromium",
+        "testDir": "C:/Users/talentfarm_learner/insurance-order-entry-playwright-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "insurance-chromium",
+        "testDir": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests",
+        "snapshotDir": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://35.244.49.205:8081",
+          "testIdAttribute": "data-testid",
+          "actionTimeout": 15000,
+          "navigationTimeout": 30000,
+          "trace": "on-first-retry",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "insurance-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/html",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/junit.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\api.spec.ts",
+      "file": "api/api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API",
+          "file": "api/api.spec.ts",
+          "line": 19,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-API-001 | API-V01 | products API returns 200 and the expected schema",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "API-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-API-03, R-PROD-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1135,
+                      "error": {
+                        "message": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n            bo\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n            bo\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at expectApiSuccess (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:33:121)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:22:21",
+                        "location": {
+                          "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                          "column": 121,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                            "column": 121,
+                            "line": 33
+                          },
+                          "message": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n            bo\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\u001b[0m\n\u001b[2m    at expectApiSuccess (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:33:121)\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:22:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 200 <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23,\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-25T15:12:52.012Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "API-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-API-03, R-PROD-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKPCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPgogICAgPHRpdGxlPlByb2R1Y3RzIHwgSW5zdXJhbmNlIE9yZGVyIEVudHJ5PC90aXRsZT4KICAgIDxsaW5rIGhyZWY9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vYm9vdHN0cmFwQDUuMy4zL2Rpc3QvY3NzL2Jvb3RzdHJhcC5taW4uY3NzIiByZWw9InN0eWxlc2hlZXQiPgogICAgPHN0eWxlPgogICAgICAgIGJvZHkgeyBiYWNrZ3JvdW5kOiAjZjZmOGZiOyB9CiAgICAgICAgLnBhZ2Utc2hlbGwgeyBwYWRkaW5nLXRvcDogMjRweDsgcGFkZGluZy1ib3R0b206IDQ4cHg7IH0KICAgICAgICAudGYtY2FyZCB7IGJvcmRlcjogMDsgYm9yZGVyLXJhZGl1czogMTZweDsgYm94LXNoYWRvdzogMCA4cHggMjRweCByZ2JhKDE1LCAyMywgNDIsIDAuMDYpOyB9CiAgICAgICAgLnN0ZXAtbGluayB7IHRleHQtZGVjb3JhdGlvbjpub25lOyB9CiAgICAgICAgLnNtYWxsLWxhYmVsIHsgZm9udC1zaXplOiAuNzZyZW07IGxldHRlci1zcGFjaW5nOi4wMmVtOyB0ZXh0LXRyYW5zZm9ybTp1cHBlcmNhc2U7IGNvbG9yOiM2Yzc1N2Q7IH0KICAgICAgICAuc3RhdHVzLXBpbGwgeyBmb250LXNpemU6Ljc1cmVtOyB9CgogICAgICAgIC50Zi1icmFuZC1sb2dvIHsKICAgICAgICAgICAgd2lkdGg6IDQycHg7CiAgICAgICAgICAgIGhlaWdodDogNDJweDsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogMTJweDsKICAgICAgICAgICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDEzNWRlZywgIzBkNmVmZCwgIzA4NDI5OCk7CiAgICAgICAgICAgIGNvbG9yOiAjZmZmOwogICAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtZmxleDsKICAgICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMC45cmVtOwogICAgICAgICAgICBsZXR0ZXItc3BhY2luZzogLjAyZW07CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgNnB4IDE0cHggcmdiYSgxMywgMTEwLCAyNTMsIDAuMjUpOwogICAgICAgIH0KCiAgICAgICAgLnRmLWJyYW5kLXRpdGxlIHsKICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDEuMTsKICAgICAgICB9CgogICAgICAgIC50Zi1icmFuZC10aXRsZSAubWFpbi10aXRsZSB7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMXJlbTsKICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDsKICAgICAgICAgICAgY29sb3I6ICMxNzIwMzM7CiAgICAgICAgfQoKICAgICAgICAudGYtYnJhbmQtdGl0bGUgLnN1Yi10aXRsZSB7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogLjc0cmVtOwogICAgICAgICAgICBjb2xvcjogIzZjNzU3ZDsKICAgICAgICB9CiAgICA8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5IGRhdGEtdGVzdGlkPSJhcHAtbGF5b3V0Ij4KICAgIDxuYXYgY2xhc3M9Im5hdmJhciBuYXZiYXItZXhwYW5kLWxnIGJnLXdoaXRlIGJvcmRlci1ib3R0b20iIGRhdGEtdGVzdGlkPSJtYWluLW5hdmlnYXRpb24iPgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgICA8YSBjbGFzcz0ibmF2YmFyLWJyYW5kIGQtZmxleCBhbGlnbi1pdGVtcy1jZW50ZXIgZ2FwLTIgZnctc2VtaWJvbGQiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvZGFzaGJvYXJkIiBkYXRhLXRlc3RpZD0ibmF2LWJyYW5kIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9InRmLWJyYW5kLWxvZ28iIGFyaWEtaGlkZGVuPSJ0cnVlIj5JTzwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9InRmLWJyYW5kLXRpdGxlIj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJtYWluLXRpdGxlIGQtYmxvY2siPkluc3VyYW5jZSBPcmRlciBFbnRyeSBEZW1vIFBsYXRmb3JtPC9zcGFuPgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InN1Yi10aXRsZSBkLWJsb2NrIj5RQSBBdXRvbWF0aW9uIFRyYWluaW5nIEFwcDwvc3Bhbj4KICAgICAgICAgICAgPC9zcGFuPgogICAgICAgIDwvYT4KCiAgICAgICAgPGJ1dHRvbiBjbGFzcz0ibmF2YmFyLXRvZ2dsZXIiIHR5cGU9ImJ1dHRvbiIgZGF0YS1icy10b2dnbGU9ImNvbGxhcHNlIiBkYXRhLWJzLXRhcmdldD0iI21haW5OYXZiYXIiIGFyaWEtY29udHJvbHM9Im1haW5OYXZiYXIiIGFyaWEtZXhwYW5kZWQ9ImZhbHNlIiBhcmlhLWxhYmVsPSJUb2dnbGUgbmF2aWdhdGlvbiI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJuYXZiYXItdG9nZ2xlci1pY29uIj48L3NwYW4+CiAgICAgICAgPC9idXR0b24+CgogICAgICAgIDxkaXYgY2xhc3M9ImNvbGxhcHNlIG5hdmJhci1jb2xsYXBzZSIgaWQ9Im1haW5OYXZiYXIiPgogICAgICAgICAgICA8dWwgY2xhc3M9Im5hdmJhci1uYXYgbWUtYXV0byBtYi0yIG1iLWxnLTAgbXMtbGctNCI+CiAgICAgICAgICAgICAgICA8bGkgY2xhc3M9Im5hdi1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0ibmF2LWxpbmsiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvZGFzaGJvYXJkIiBkYXRhLXRlc3RpZD0ibmF2LWRhc2hib2FyZC1saW5rIj5EYXNoYm9hcmQ8L2E+CiAgICAgICAgICAgICAgICA8L2xpPgoKICAgICAgICAgICAgICAgIDxsaSBjbGFzcz0ibmF2LWl0ZW0iPgogICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzPSJuYXYtbGluayIgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9hcHBsaWNhdGlvbnMiIGRhdGEtdGVzdGlkPSJuYXYtYXBwbGljYXRpb25zLWxpbmsiPkFwcGxpY2F0aW9uczwvYT4KICAgICAgICAgICAgICAgIDwvbGk+CgogICAgICAgICAgICAgICAgPGxpIGNsYXNzPSJuYXYtaXRlbSI+CiAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9Im5hdi1saW5rIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL3Byb2R1Y3RzIiBkYXRhLXRlc3RpZD0ibmF2LXByb2R1Y3RzLWxpbmsiPlByb2R1Y3RzPC9hPgogICAgICAgICAgICAgICAgPC9saT4KCiAgICAgICAgICAgICAgICA8bGkgY2xhc3M9Im5hdi1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0ibmF2LWxpbmsiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvc3VwcG9ydCIgZGF0YS10ZXN0aWQ9Im5hdi1zdXBwb3J0LWxpbmsiPlN1cHBvcnQ8L2E+CiAgICAgICAgICAgICAgICA8L2xpPgoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdWw+CgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJkLWZsZXggYWxpZ24taXRlbXMtY2VudGVyIGdhcC0zIj4KICAgICAgICAgICAgICAgIDxhIGNsYXNzPSJ0ZXh0LWRlY29yYXRpb24tbm9uZSBzbWFsbCIgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9maWxlIiBkYXRhLXRlc3RpZD0ibmF2LXByb2ZpbGUtbGluayI+CiAgICAgICAgICAgICAgICAgICAgTGVhcm5lciBBZ2VudCAwMDEKICAgICAgICAgICAgICAgIDwvYT4KCiAgICAgICAgICAgICAgICA8Zm9ybSBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9sb2dvdXQiIGNsYXNzPSJtYi0wIj4KICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJfdG9rZW4iIHZhbHVlPSI4eTZGVGl0anRQUUN4aU1YVmY0bHBZY0VrbjFOZDJncUhRc2N2OHlmIiBhdXRvY29tcGxldGU9Im9mZiI+ICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4gYnRuLW91dGxpbmUtc2Vjb25kYXJ5IGJ0bi1zbSIgZGF0YS10ZXN0aWQ9Im5hdi1sb2dvdXQtYnV0dG9uIj5Mb2dvdXQ8L2J1dHRvbj4KICAgICAgICAgICAgICAgIDwvZm9ybT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KPC9uYXY+CgogICAgPG1haW4gY2xhc3M9ImNvbnRhaW5lciBwYWdlLXNoZWxsIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1iLTQiIGRhdGEtdGVzdGlkPSJwcm9kdWN0LWNhdGFsb2ctcGFnZSI+CiAgICA8aDEgY2xhc3M9ImgzIG1iLTEiPldob2xlIExpZmUgUHJvZHVjdCBDYXRhbG9nPC9oMT4KICAgIDxwIGNsYXNzPSJ0ZXh0LW11dGVkIG1iLTAiPlVzZSB0aGVzZSBwcm9kdWN0cyB3aGlsZSBjb25maWd1cmluZyBhbiBpbnN1cmFuY2UgYXBwbGljYXRpb24uPC9wPgo8L2Rpdj4KPGRpdiBjbGFzcz0icm93IGctNCI+CiAgICA8ZGl2IGNsYXNzPSJjb2wtbWQtNiBjb2wteGwtNCI+CiAgICAgICAgPGRpdiBjbGFzcz0iY2FyZCB0Zi1jYXJkIGgtMTAwIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1jYXJkLVdMX0VMSVRFX0xFR0FDWSI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQtYm9keSI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzbWFsbC1sYWJlbCI+V0xfRUxJVEVfTEVHQUNZPC9kaXY+CiAgICAgICAgICAgICAgICA8aDIgY2xhc3M9Img1Ij5FbGl0ZSBMZWdhY3kgV2hvbGUgTGlmZTwvaDI+CiAgICAgICAgICAgICAgICA8cCBjbGFzcz0idGV4dC1tdXRlZCI+SGlnaC1uZXQtd29ydGggb2ZmZXJpbmcgZm9yIGVzdGF0ZSBwbGFubmluZyBhbmQgdGF4IGVmZmljaWVuY3kuPC9wPgogICAgICAgICAgICAgICAgPGRsIGNsYXNzPSJyb3cgc21hbGwiPgogICAgICAgICAgICAgICAgICAgIDxkdCBjbGFzcz0iY29sLTYiPkFnZTwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MzAgLSA2NTwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+U3VtIEFzc3VyZWQ8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjUwMCwwMDAgLSA1LDAwMCwwMDA8L2RkPgogICAgICAgICAgICAgICAgICAgIDxkdCBjbGFzcz0iY29sLTYiPlJhdGUgLyAxMDAwPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij42LjEwMDA8L2RkPgogICAgICAgICAgICAgICAgPC9kbD4KICAgICAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvcHJvZHVjdHMvMyIgY2xhc3M9ImJ0biBidG4tb3V0bGluZS1wcmltYXJ5IGJ0bi1zbSIgZGF0YS10ZXN0aWQ9InByb2R1Y3QtZGV0YWlscy1XTF9FTElURV9MRUdBQ1kiPlZpZXcgRGV0YWlsczwvYT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImNvbC1tZC02IGNvbC14bC00Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIHRmLWNhcmQgaC0xMDAiIGRhdGEtdGVzdGlkPSJwcm9kdWN0LWNhcmQtV0xfRkxFWElfUEFZIj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZC1ib2R5Ij4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNtYWxsLWxhYmVsIj5XTF9GTEVYSV9QQVk8L2Rpdj4KICAgICAgICAgICAgICAgIDxoMiBjbGFzcz0iaDUiPkZsZXhpUGF5IFdob2xlIExpZmU8L2gyPgogICAgICAgICAgICAgICAgPHAgY2xhc3M9InRleHQtbXV0ZWQiPkZsZXhpYmxlIHByZW1pdW0gcGF5bWVudCBvcHRpb25zIHdpdGggYWRqdXN0YWJsZSBwcmVtaXVtcy48L3A+CiAgICAgICAgICAgICAgICA8ZGwgY2xhc3M9InJvdyBzbWFsbCI+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+QWdlPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij4xOSAtIDYyPC9kZD4KICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3M9ImNvbC02Ij5TdW0gQXNzdXJlZDwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MTAwLDAwMCAtIDEsMjAwLDAwMDwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+UmF0ZSAvIDEwMDA8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjUuMTUwMDwvZGQ+CiAgICAgICAgICAgICAgICA8L2RsPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cy80IiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYnRuLXNtIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1kZXRhaWxzLVdMX0ZMRVhJX1BBWSI+VmlldyBEZXRhaWxzPC9hPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iY29sLW1kLTYgY29sLXhsLTQiPgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQgdGYtY2FyZCBoLTEwMCIgZGF0YS10ZXN0aWQ9InByb2R1Y3QtY2FyZC1XTF9TRUNVUkVfQkFTSUMiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkLWJvZHkiPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic21hbGwtbGFiZWwiPldMX1NFQ1VSRV9CQVNJQzwvZGl2PgogICAgICAgICAgICAgICAgPGgyIGNsYXNzPSJoNSI+U2VjdXJlTGlmZSBXaG9sZSBMaWZlPC9oMj4KICAgICAgICAgICAgICAgIDxwIGNsYXNzPSJ0ZXh0LW11dGVkIj5CYXNpYyBsaWZlbG9uZyBjb3ZlcmFnZSB3aXRoIGZpeGVkIHByZW1pdW0gYW5kIGd1YXJhbnRlZWQgZGVhdGggYmVuZWZpdC48L3A+CiAgICAgICAgICAgICAgICA8ZGwgY2xhc3M9InJvdyBzbWFsbCI+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+QWdlPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij4xOCAtIDY1PC9kZD4KICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3M9ImNvbC02Ij5TdW0gQXNzdXJlZDwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MTAwLDAwMCAtIDEsMDAwLDAwMDwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+UmF0ZSAvIDEwMDA8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjQuNzUwMDwvZGQ+CiAgICAgICAgICAgICAgICA8L2RsPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cy8xIiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYnRuLXNtIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1kZXRhaWxzLVdMX1NFQ1VSRV9CQVNJQyI+VmlldyBEZXRhaWxzPC9hPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iY29sLW1kLTYgY29sLXhsLTQiPgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQgdGYtY2FyZCBoLTEwMCIgZGF0YS10ZXN0aWQ9InByb2R1Y3QtY2FyZC1XTF9XRUFMVEhfQlVJTERFUiI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQtYm9keSI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzbWFsbC1sYWJlbCI+V0xfV0VBTFRIX0JVSUxERVI8L2Rpdj4KICAgICAgICAgICAgICAgIDxoMiBjbGFzcz0iaDUiPldlYWx0aEJ1aWxkZXIgV2hvbGUgTGlmZTwvaDI+CiAgICAgICAgICAgICAgICA8cCBjbGFzcz0idGV4dC1tdXRlZCI+R3Jvd3RoIGFuZCBwcm90ZWN0aW9uIHByb2R1Y3Qgd2l0aCBjYXNoIHZhbHVlIGFjY3VtdWxhdGlvbi48L3A+CiAgICAgICAgICAgICAgICA8ZGwgY2xhc3M9InJvdyBzbWFsbCI+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+QWdlPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij4yMSAtIDYwPC9kZD4KICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3M9ImNvbC02Ij5TdW0gQXNzdXJlZDwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MTUwLDAwMCAtIDEsNTAwLDAwMDwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+UmF0ZSAvIDEwMDA8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjUuMzUwMDwvZGQ+CiAgICAgICAgICAgICAgICA8L2RsPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cy8yIiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYnRuLXNtIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1kZXRhaWxzLVdMX1dFQUxUSF9CVUlMREVSIj5WaWV3IERldGFpbHM8L2E+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+CjwvZGl2PgogICAgPC9tYWluPgoKICAgIDxmb290ZXIgY2xhc3M9ImJvcmRlci10b3AgYmctd2hpdGUgcHktMyIgZGF0YS10ZXN0aWQ9ImFwcC1mb290ZXIiPgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIHNtYWxsIHRleHQtbXV0ZWQgZC1mbGV4IGp1c3RpZnktY29udGVudC1iZXR3ZWVuIj4KICAgICAgICA8c3Bhbj5UYWxlbnRGYXJtIFFBIEF1dG9tYXRpb24gTGFiPC9zcGFuPgogICAgICAgIDxzcGFuPkluc3VyYW5jZSBPcmRlciBFbnRyeSBEZW1vPC9zcGFuPgogICAgPC9kaXY+CjwvZm9vdGVyPgoKICAgICAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9ib290c3RyYXBANS4zLjMvZGlzdC9qcy9ib290c3RyYXAuYnVuZGxlLm1pbi5qcyI+PC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo="
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                        "column": 121,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "495da78dfc57d624a56a-453b01d3c350134d6548",
+              "file": "api/api.spec.ts",
+              "line": 20,
+              "column": 7
+            },
+            {
+              "title": "TC-API-002 | API-V02 | application APIs require the API key",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "API-V02",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 53,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-API-02, R-AUTH-06",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 53,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 53,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1117,
+                      "error": {
+                        "message": "Error: HTTP status. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Applications | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n          \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                        "stack": "Error: HTTP status. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Applications | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n          \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at expectApiError (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:38:92)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:60:25\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:58:9",
+                        "location": {
+                          "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                          "column": 92,
+                          "line": 38
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:38\n\n\u001b[0m \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\n \u001b[90m 37 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'error'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mif\u001b[39m (pattern) {\n \u001b[90m 41 |\u001b[39m     \u001b[36mconst\u001b[39m texts \u001b[33m=\u001b[39m errorTexts(result)\u001b[33m.\u001b[39mjoin(\u001b[32m' | '\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                            "column": 92,
+                            "line": 38
+                          },
+                          "message": "Error: HTTP status. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Applications | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n          \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:38\n\n\u001b[0m \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\n \u001b[90m 37 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'error'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mif\u001b[39m (pattern) {\n \u001b[90m 41 |\u001b[39m     \u001b[36mconst\u001b[39m texts \u001b[33m=\u001b[39m errorTexts(result)\u001b[33m.\u001b[39mjoin(\u001b[32m' | '\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at expectApiError (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:38:92)\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:60:25\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:58:9\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 200 <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Applications | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15,\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "no key",
+                          "duration": 529,
+                          "error": {
+                            "message": "Error: HTTP status. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Applications | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n          \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m200\u001b[39m",
+                            "stack": "Error: HTTP status. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Applications | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n          \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m401\u001b[39m\nReceived: \u001b[31m200\u001b[39m\n    at expectApiError (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:38:92)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:60:25\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts:58:9",
+                            "location": {
+                              "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                              "column": 92,
+                              "line": 38
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:38\n\n\u001b[0m \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\n \u001b[90m 37 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 38 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 39 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'error'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 40 |\u001b[39m   \u001b[36mif\u001b[39m (pattern) {\n \u001b[90m 41 |\u001b[39m     \u001b[36mconst\u001b[39m texts \u001b[33m=\u001b[39m errorTexts(result)\u001b[33m.\u001b[39mjoin(\u001b[32m' | '\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-25T15:12:54.737Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "API-V02",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 53,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-API-02, R-AUTH-06",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 53,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 53,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKPCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPgogICAgPHRpdGxlPkFwcGxpY2F0aW9ucyB8IEluc3VyYW5jZSBPcmRlciBFbnRyeTwvdGl0bGU+CiAgICA8bGluayBocmVmPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2Jvb3RzdHJhcEA1LjMuMy9kaXN0L2Nzcy9ib290c3RyYXAubWluLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ij4KICAgIDxzdHlsZT4KICAgICAgICBib2R5IHsgYmFja2dyb3VuZDogI2Y2ZjhmYjsgfQogICAgICAgIC5wYWdlLXNoZWxsIHsgcGFkZGluZy10b3A6IDI0cHg7IHBhZGRpbmctYm90dG9tOiA0OHB4OyB9CiAgICAgICAgLnRmLWNhcmQgeyBib3JkZXI6IDA7IGJvcmRlci1yYWRpdXM6IDE2cHg7IGJveC1zaGFkb3c6IDAgOHB4IDI0cHggcmdiYSgxNSwgMjMsIDQyLCAwLjA2KTsgfQogICAgICAgIC5zdGVwLWxpbmsgeyB0ZXh0LWRlY29yYXRpb246bm9uZTsgfQogICAgICAgIC5zbWFsbC1sYWJlbCB7IGZvbnQtc2l6ZTogLjc2cmVtOyBsZXR0ZXItc3BhY2luZzouMDJlbTsgdGV4dC10cmFuc2Zvcm06dXBwZXJjYXNlOyBjb2xvcjojNmM3NTdkOyB9CiAgICAgICAgLnN0YXR1cy1waWxsIHsgZm9udC1zaXplOi43NXJlbTsgfQoKICAgICAgICAudGYtYnJhbmQtbG9nbyB7CiAgICAgICAgICAgIHdpZHRoOiA0MnB4OwogICAgICAgICAgICBoZWlnaHQ6IDQycHg7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEycHg7CiAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxMzVkZWcsICMwZDZlZmQsICMwODQyOTgpOwogICAgICAgICAgICBjb2xvcjogI2ZmZjsKICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWZsZXg7CiAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOwogICAgICAgICAgICBmb250LXdlaWdodDogODAwOwogICAgICAgICAgICBmb250LXNpemU6IDAuOXJlbTsKICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc6IC4wMmVtOwogICAgICAgICAgICBib3gtc2hhZG93OiAwIDZweCAxNHB4IHJnYmEoMTMsIDExMCwgMjUzLCAwLjI1KTsKICAgICAgICB9CgogICAgICAgIC50Zi1icmFuZC10aXRsZSB7CiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAxLjE7CiAgICAgICAgfQoKICAgICAgICAudGYtYnJhbmQtdGl0bGUgLm1haW4tdGl0bGUgewogICAgICAgICAgICBmb250LXNpemU6IDFyZW07CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgICAgICAgIGNvbG9yOiAjMTcyMDMzOwogICAgICAgIH0KCiAgICAgICAgLnRmLWJyYW5kLXRpdGxlIC5zdWItdGl0bGUgewogICAgICAgICAgICBmb250LXNpemU6IC43NHJlbTsKICAgICAgICAgICAgY29sb3I6ICM2Yzc1N2Q7CiAgICAgICAgfQogICAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keSBkYXRhLXRlc3RpZD0iYXBwLWxheW91dCI+CiAgICA8bmF2IGNsYXNzPSJuYXZiYXIgbmF2YmFyLWV4cGFuZC1sZyBiZy13aGl0ZSBib3JkZXItYm90dG9tIiBkYXRhLXRlc3RpZD0ibWFpbi1uYXZpZ2F0aW9uIj4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgICAgPGEgY2xhc3M9Im5hdmJhci1icmFuZCBkLWZsZXggYWxpZ24taXRlbXMtY2VudGVyIGdhcC0yIGZ3LXNlbWlib2xkIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL2Rhc2hib2FyZCIgZGF0YS10ZXN0aWQ9Im5hdi1icmFuZCI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0Zi1icmFuZC1sb2dvIiBhcmlhLWhpZGRlbj0idHJ1ZSI+SU88L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0Zi1icmFuZC10aXRsZSI+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibWFpbi10aXRsZSBkLWJsb2NrIj5JbnN1cmFuY2UgT3JkZXIgRW50cnkgRGVtbyBQbGF0Zm9ybTwvc3Bhbj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJzdWItdGl0bGUgZC1ibG9jayI+UUEgQXV0b21hdGlvbiBUcmFpbmluZyBBcHA8L3NwYW4+CiAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICA8L2E+CgogICAgICAgIDxidXR0b24gY2xhc3M9Im5hdmJhci10b2dnbGVyIiB0eXBlPSJidXR0b24iIGRhdGEtYnMtdG9nZ2xlPSJjb2xsYXBzZSIgZGF0YS1icy10YXJnZXQ9IiNtYWluTmF2YmFyIiBhcmlhLWNvbnRyb2xzPSJtYWluTmF2YmFyIiBhcmlhLWV4cGFuZGVkPSJmYWxzZSIgYXJpYS1sYWJlbD0iVG9nZ2xlIG5hdmlnYXRpb24iPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmF2YmFyLXRvZ2dsZXItaWNvbiI+PC9zcGFuPgogICAgICAgIDwvYnV0dG9uPgoKICAgICAgICA8ZGl2IGNsYXNzPSJjb2xsYXBzZSBuYXZiYXItY29sbGFwc2UiIGlkPSJtYWluTmF2YmFyIj4KICAgICAgICAgICAgPHVsIGNsYXNzPSJuYXZiYXItbmF2IG1lLWF1dG8gbWItMiBtYi1sZy0wIG1zLWxnLTQiPgogICAgICAgICAgICAgICAgPGxpIGNsYXNzPSJuYXYtaXRlbSI+CiAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9Im5hdi1saW5rIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL2Rhc2hib2FyZCIgZGF0YS10ZXN0aWQ9Im5hdi1kYXNoYm9hcmQtbGluayI+RGFzaGJvYXJkPC9hPgogICAgICAgICAgICAgICAgPC9saT4KCiAgICAgICAgICAgICAgICA8bGkgY2xhc3M9Im5hdi1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0ibmF2LWxpbmsiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvYXBwbGljYXRpb25zIiBkYXRhLXRlc3RpZD0ibmF2LWFwcGxpY2F0aW9ucy1saW5rIj5BcHBsaWNhdGlvbnM8L2E+CiAgICAgICAgICAgICAgICA8L2xpPgoKICAgICAgICAgICAgICAgIDxsaSBjbGFzcz0ibmF2LWl0ZW0iPgogICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzPSJuYXYtbGluayIgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cyIgZGF0YS10ZXN0aWQ9Im5hdi1wcm9kdWN0cy1saW5rIj5Qcm9kdWN0czwvYT4KICAgICAgICAgICAgICAgIDwvbGk+CgogICAgICAgICAgICAgICAgPGxpIGNsYXNzPSJuYXYtaXRlbSI+CiAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9Im5hdi1saW5rIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL3N1cHBvcnQiIGRhdGEtdGVzdGlkPSJuYXYtc3VwcG9ydC1saW5rIj5TdXBwb3J0PC9hPgogICAgICAgICAgICAgICAgPC9saT4KCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3VsPgoKICAgICAgICAgICAgPGRpdiBjbGFzcz0iZC1mbGV4IGFsaWduLWl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAgICAgICAgICA8YSBjbGFzcz0idGV4dC1kZWNvcmF0aW9uLW5vbmUgc21hbGwiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvcHJvZmlsZSIgZGF0YS10ZXN0aWQ9Im5hdi1wcm9maWxlLWxpbmsiPgogICAgICAgICAgICAgICAgICAgIExlYXJuZXIgQWdlbnQgMDAxCiAgICAgICAgICAgICAgICA8L2E+CgogICAgICAgICAgICAgICAgPGZvcm0gbWV0aG9kPSJQT1NUIiBhY3Rpb249Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvbG9nb3V0IiBjbGFzcz0ibWItMCI+CiAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iX3Rva2VuIiB2YWx1ZT0iOHk2RlRpdGp0UFFDeGlNWFZmNGxwWWNFa24xTmQyZ3FIUXNjdjh5ZiIgYXV0b2NvbXBsZXRlPSJvZmYiPiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXNlY29uZGFyeSBidG4tc20iIGRhdGEtdGVzdGlkPSJuYXYtbG9nb3V0LWJ1dHRvbiI+TG9nb3V0PC9idXR0b24+CiAgICAgICAgICAgICAgICA8L2Zvcm0+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+CjwvbmF2PgoKICAgIDxtYWluIGNsYXNzPSJjb250YWluZXIgcGFnZS1zaGVsbCI+CiAgICAgICAgICAgICAgICA8c3R5bGU+CiAgICAudGYtcGFnZS1oZWFkZXIgewogICAgICAgIGRpc3BsYXk6IGZsZXg7CiAgICAgICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuOwogICAgICAgIGdhcDogMXJlbTsKICAgICAgICBhbGlnbi1pdGVtczogZmxleC1zdGFydDsKICAgICAgICBtYXJnaW4tYm90dG9tOiAxLjVyZW07CiAgICB9CgogICAgLnRmLXBhZ2UtdGl0bGUgewogICAgICAgIG1hcmdpbjogMDsKICAgICAgICBmb250LXNpemU6IDEuNzVyZW07CiAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDsKICAgIH0KCiAgICAudGYtcGFnZS1zdWJ0aXRsZSB7CiAgICAgICAgbWFyZ2luOiAuMjVyZW0gMCAwOwogICAgICAgIGNvbG9yOiAjNmM3NTdkOwogICAgfQoKICAgIC50Zi1jYXJkIHsKICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZTVlN2ViOwogICAgICAgIGJvcmRlci1yYWRpdXM6IC43NXJlbTsKICAgICAgICBib3gtc2hhZG93OiAwIDhweCAyNHB4IHJnYmEoMTUsIDIzLCA0MiwgLjA1KTsKICAgIH0KCiAgICAuc21hbGwtbGFiZWwgewogICAgICAgIGZvbnQtc2l6ZTogLjc1cmVtOwogICAgICAgIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7CiAgICAgICAgbGV0dGVyLXNwYWNpbmc6IC4wNGVtOwogICAgICAgIGNvbG9yOiAjNmM3NTdkOwogICAgICAgIGZvbnQtd2VpZ2h0OiA2MDA7CiAgICB9Cjwvc3R5bGU+Cgo8ZGl2IGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbnMtaW5kZXgtcGFnZSI+CiAgICA8ZGl2IGNsYXNzPSJ0Zi1wYWdlLWhlYWRlciI+CiAgICAgICAgPGRpdj4KICAgICAgICAgICAgPGgxIGNsYXNzPSJ0Zi1wYWdlLXRpdGxlIj5BcHBsaWNhdGlvbnM8L2gxPgogICAgICAgICAgICA8cCBjbGFzcz0idGYtcGFnZS1zdWJ0aXRsZSI+T3BlbiBhbiBleGlzdGluZyBhcHBsaWNhdGlvbiBvciBzdGFydCBhIG5ldyBsaWZlIGluc3VyYW5jZSBvcmRlciBlbnRyeSBjYXNlLjwvcD4KICAgICAgICA8L2Rpdj4KICAgICAgICA8ZGl2PgogICAgICAgICAgICA8YSBjbGFzcz0iYnRuIGJ0bi1wcmltYXJ5IiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL2FwcGxpY2F0aW9ucy9uZXciIGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbi1uZXctYnV0dG9uIj4KICAgICAgICAgICAgICAgIE5ldyBBcHBsaWNhdGlvbgogICAgICAgICAgICA8L2E+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGNsYXNzPSJjYXJkIHRmLWNhcmQiPgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQtYm9keSBwLTQiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJ0YWJsZS1yZXNwb25zaXZlIj4KICAgICAgICAgICAgICAgIDx0YWJsZSBjbGFzcz0idGFibGUgYWxpZ24tbWlkZGxlIiBkYXRhLXRlc3RpZD0iYXBwbGljYXRpb25zLXRhYmxlIj4KICAgICAgICAgICAgICAgICAgICA8dGhlYWQ+CiAgICAgICAgICAgICAgICAgICAgICAgIDx0cj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5JRDwvdGg+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGg+Q2xpZW50PC90aD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5Qcm9kdWN0PC90aD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5TdGF0dXM8L3RoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPlRvdGFsIE1vZGFsIFByZW1pdW08L3RoPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRoPjwvdGg+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICAgICAgPC90aGVhZD4KICAgICAgICAgICAgICAgICAgICA8dGJvZHk+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbi1yb3ctNTMiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD41MzwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPlFheGFraW5iIFlycGNycmk8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5TZWN1cmVMaWZlIFdob2xlIExpZmU8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5TVUJNSVRURUQ8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4kMTE2LjY3PC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9InRleHQtZW5kIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9ImJ0biBidG4tc20gYnRuLW91dGxpbmUtcHJpbWFyeSIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9hcHBsaWNhdGlvbnMvNTMiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbi1vcGVuLTUzIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE9wZW4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9hPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ciBkYXRhLXRlc3RpZD0iYXBwbGljYXRpb24tcm93LTUyIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+NTI8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5RYXdxanVpbyBOb2dxbXVkPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+UGVuZGluZzwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPkRSQUZUPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+JDAuMDA8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0idGV4dC1lbmQiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0iYnRuIGJ0bi1zbSBidG4tb3V0bGluZS1wcmltYXJ5IgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL2FwcGxpY2F0aW9ucy81MiIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YS10ZXN0aWQ9ImFwcGxpY2F0aW9uLW9wZW4tNTIiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgT3BlbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2E+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbi1yb3ctNTEiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD41MTwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPlFhb3ljenltIEpudGZtanE8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5TZWN1cmVMaWZlIFdob2xlIExpZmU8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5TVUJNSVRURUQ8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4kMTE2LjY3PC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3M9InRleHQtZW5kIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9ImJ0biBidG4tc20gYnRuLW91dGxpbmUtcHJpbWFyeSIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9hcHBsaWNhdGlvbnMvNTEiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbi1vcGVuLTUxIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIE9wZW4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9hPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ciBkYXRhLXRlc3RpZD0iYXBwbGljYXRpb24tcm93LTUwIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+NTA8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5RYW1wdXBuZiBScmJjYnN6PC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+UGVuZGluZzwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPkRSQUZUPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dGQ+JDAuMDA8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjbGFzcz0idGV4dC1lbmQiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0iYnRuIGJ0bi1zbSBidG4tb3V0bGluZS1wcmltYXJ5IgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL2FwcGxpY2F0aW9ucy81MCIKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZGF0YS10ZXN0aWQ9ImFwcGxpY2F0aW9uLW9wZW4tNTAiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgT3BlbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2E+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyIGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbi1yb3ctNyI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPjc8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5MZWFybmVyIENsaWVudCAwMDE8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5TZWN1cmVMaWZlIFdob2xlIExpZmU8L3RkPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5EUkFGVDwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkPiQ3OS4xNzwvdGQ+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzPSJ0ZXh0LWVuZCI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzPSJidG4gYnRuLXNtIGJ0bi1vdXRsaW5lLXByaW1hcnkiCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvYXBwbGljYXRpb25zLzciCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGRhdGEtdGVzdGlkPSJhcHBsaWNhdGlvbi1vcGVuLTciPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgT3BlbgogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2E+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90Ym9keT4KICAgICAgICAgICAgICAgIDwvdGFibGU+CiAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im10LTMiPgogICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KPC9kaXY+CiAgICA8L21haW4+CgogICAgPGZvb3RlciBjbGFzcz0iYm9yZGVyLXRvcCBiZy13aGl0ZSBweS0zIiBkYXRhLXRlc3RpZD0iYXBwLWZvb3RlciI+CiAgICA8ZGl2IGNsYXNzPSJjb250YWluZXIgc21hbGwgdGV4dC1tdXRlZCBkLWZsZXgganVzdGlmeS1jb250ZW50LWJldHdlZW4iPgogICAgICAgIDxzcGFuPlRhbGVudEZhcm0gUUEgQXV0b21hdGlvbiBMYWI8L3NwYW4+CiAgICAgICAgPHNwYW4+SW5zdXJhbmNlIE9yZGVyIEVudHJ5IERlbW88L3NwYW4+CiAgICA8L2Rpdj4KPC9mb290ZXI+CgogICAgICAgIDxzY3JpcHQgc3JjPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2Jvb3RzdHJhcEA1LjMuMy9kaXN0L2pzL2Jvb3RzdHJhcC5idW5kbGUubWluLmpzIj48L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+Cg=="
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                        "column": 92,
+                        "line": 38
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "495da78dfc57d624a56a-552e870627ceb94b5121",
+              "file": "api/api.spec.ts",
+              "line": 53,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth\\login.spec.ts",
+      "file": "auth/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication: login, logout and access control",
+          "file": "auth/login.spec.ts",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-AUTH-001 | AUTH-V01 | valid agent can log in",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "authentication",
+                "SDC-01",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "AUTH-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-AUTH-01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "seeded-defect-candidate",
+                      "description": "SDC-01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8237,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "log in as valid",
+                          "duration": 2150
+                        },
+                        {
+                          "title": "log in as draft",
+                          "duration": 1927
+                        },
+                        {
+                          "title": "log in as new",
+                          "duration": 1898
+                        },
+                        {
+                          "title": "log in as submitted",
+                          "duration": 1797
+                        }
+                      ],
+                      "startTime": "2026-10-25T15:12:57.107Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "AUTH-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-AUTH-01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "seeded-defect-candidate",
+                          "description": "SDC-01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-06796c47c5359db549fd",
+              "file": "auth/login.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "TC-AUTH-002 | AUTH-V02 | invalid password shows the invalid-credentials message",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "authentication",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "AUTH-V02",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 28,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-AUTH-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 28,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 28,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-25T15:13:05.545Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "AUTH-V02",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 28,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-AUTH-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 28,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 28,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-e2e8a58ab7ea36885eb4",
+              "file": "auth/login.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "TC-AUTH-005 | AUTH-V05 | protected pages redirect to login without a session",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "authentication",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "AUTH-V05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 93,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-AUTH-06",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 93,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 93,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5904,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[setup] saved login for valid (agent.valid@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for draft (agent.draft@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for new (agent.new@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for submitted (agent.submitted@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for learner (learner001@insurance.test)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "GET /dashboard without a session",
+                          "duration": 876
+                        },
+                        {
+                          "title": "GET /applications without a session",
+                          "duration": 845
+                        },
+                        {
+                          "title": "GET /applications/new without a session",
+                          "duration": 863
+                        },
+                        {
+                          "title": "GET /profile without a session",
+                          "duration": 864
+                        },
+                        {
+                          "title": "GET /support without a session",
+                          "duration": 874
+                        },
+                        {
+                          "title": "GET /change-password without a session",
+                          "duration": 885
+                        }
+                      ],
+                      "startTime": "2026-10-25T15:13:08.528Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "AUTH-V05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 93,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-AUTH-06",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 93,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 93,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-41d6c8f06905efe21fa7",
+              "file": "auth/login.spec.ts",
+              "line": 93,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "beneficiaries\\beneficiaries.spec.ts",
+      "file": "beneficiaries/beneficiaries.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Beneficiary management",
+          "file": "beneficiaries/beneficiaries.spec.ts",
+          "line": 28,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-BEN-001 | BEN-V01 | add a valid primary beneficiary (and irrevocable confirmation)",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "regression",
+                "beneficiary",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "BEN-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                        "line": 29,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-BEN-04, R-BEN-06",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                        "line": 29,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                        "line": 29,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 698,
+                      "error": {
+                        "message": "Error: Setup step \"create draft\" failed: HTTP 419 {\n    \"message\": \"CSRF token mismatch.\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\HttpException\",\n    \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 673,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src",
+                        "stack": "Error: Setup step \"create draft\" failed: HTTP 419 {\n    \"message\": \"CSRF token mismatch.\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\HttpException\",\n    \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 673,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\n    at must (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:44:11)\n    at buildApplication (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:95:19)\n    at atBeneficiaries (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts:17:11)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts:30:16",
+                        "location": {
+                          "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts",
+                          "column": 11,
+                          "line": 44
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\applicationBuilder.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m \u001b[36mfunction\u001b[39m must(res\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m stage\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m ok\u001b[33m:\u001b[39m number[] \u001b[33m=\u001b[39m [\u001b[35m200\u001b[39m\u001b[33m,\u001b[39m \u001b[35m201\u001b[39m])\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m {\n \u001b[90m 43 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mok\u001b[33m.\u001b[39mincludes(res\u001b[33m.\u001b[39mstatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Setup step \"${stage}\" failed: HTTP ${res.status} ${res.text.slice(0, 400)}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m   \u001b[36mreturn\u001b[39m res\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts",
+                            "column": 11,
+                            "line": 44
+                          },
+                          "message": "Error: Setup step \"create draft\" failed: HTTP 419 {\n    \"message\": \"CSRF token mismatch.\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\HttpException\",\n    \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 673,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\n\n\u001b[90m   at \u001b[39m..\\utils\\applicationBuilder.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m \u001b[36mfunction\u001b[39m must(res\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m stage\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m ok\u001b[33m:\u001b[39m number[] \u001b[33m=\u001b[39m [\u001b[35m200\u001b[39m\u001b[33m,\u001b[39m \u001b[35m201\u001b[39m])\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m {\n \u001b[90m 43 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mok\u001b[33m.\u001b[39mincludes(res\u001b[33m.\u001b[39mstatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Setup step \"${stage}\" failed: HTTP ${res.status} ${res.text.slice(0, 400)}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m   \u001b[36mreturn\u001b[39m res\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m }\u001b[0m\n\u001b[2m    at must (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:44:11)\u001b[22m\n\u001b[2m    at buildApplication (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:95:19)\u001b[22m\n\u001b[2m    at atBeneficiaries (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts:17:11)\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts:30:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-25T15:13:25.808Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "BEN-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                            "line": 29,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-BEN-04, R-BEN-06",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                            "line": 29,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                            "line": 29,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts",
+                        "column": 11,
+                        "line": 44
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "92262c7b403700513bf7-53b4ab660bf4d289e125",
+              "file": "beneficiaries/beneficiaries.spec.ts",
+              "line": 29,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "client-information\\client.spec.ts",
+      "file": "client-information/client.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Client / insured information",
+          "file": "client-information/client.spec.ts",
+          "line": 22,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-CLI-001 | CLI-V01 | agent can enter valid insured information",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "regression",
+                "client",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "CLI-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                        "line": 23,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-CLI-03, R-CLI-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                        "line": 23,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                        "line": 23,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4844,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Qaxduiqx\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Qaxduiqx\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts:35:42\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts:33:5",
+                        "location": {
+                          "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                          "column": 42,
+                          "line": 35
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 33 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'saved values equal the entered values (API read-back)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 34 |\u001b[39m       \u001b[36mconst\u001b[39m res \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m api\u001b[33m.\u001b[39mgetClient(id\u001b[33m,\u001b[39m emailOf(\u001b[32m'learner'\u001b[39m))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m       expect(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mfirst_name)\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m       expect(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mlast_name)\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mlastName)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m       expect(\u001b[33mString\u001b[39m(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdate_of_birth)\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m10\u001b[39m))\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mdob)\u001b[33m;\u001b[39m\n \u001b[90m 38 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                            "column": 42,
+                            "line": 35
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Qaxduiqx\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n\u001b[0m \u001b[90m 33 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'saved values equal the entered values (API read-back)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 34 |\u001b[39m       \u001b[36mconst\u001b[39m res \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m api\u001b[33m.\u001b[39mgetClient(id\u001b[33m,\u001b[39m emailOf(\u001b[32m'learner'\u001b[39m))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m       expect(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mfirst_name)\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m       expect(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mlast_name)\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mlastName)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m       expect(\u001b[33mString\u001b[39m(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdate_of_birth)\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m10\u001b[39m))\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mdob)\u001b[33m;\u001b[39m\n \u001b[90m 38 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts:35:42\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts:33:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "saved values equal the entered values (API read-back)",
+                          "duration": 472,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Qaxduiqx\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Qaxduiqx\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts:35:42\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts:33:5",
+                            "location": {
+                              "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                              "column": 42,
+                              "line": 35
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 33 |\u001b[39m     \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39mstep(\u001b[32m'saved values equal the entered values (API read-back)'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 34 |\u001b[39m       \u001b[36mconst\u001b[39m res \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m api\u001b[33m.\u001b[39mgetClient(id\u001b[33m,\u001b[39m emailOf(\u001b[32m'learner'\u001b[39m))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 35 |\u001b[39m       expect(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mfirst_name)\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mfirstName)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 36 |\u001b[39m       expect(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mlast_name)\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mlastName)\u001b[33m;\u001b[39m\n \u001b[90m 37 |\u001b[39m       expect(\u001b[33mString\u001b[39m(res\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdata\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mdate_of_birth)\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m \u001b[35m10\u001b[39m))\u001b[33m.\u001b[39mtoBe(data\u001b[33m.\u001b[39mdob)\u001b[33m;\u001b[39m\n \u001b[90m 38 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-25T15:13:27.598Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "CLI-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                            "line": 23,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-CLI-03, R-CLI-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                            "line": 23,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                            "line": 23,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                        "column": 42,
+                        "line": 35
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "2281cdd43ac321b7efb1-021e4fff497721eb6b9e",
+              "file": "client-information/client.spec.ts",
+              "line": 23,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard\\dashboard.spec.ts",
+      "file": "dashboard/dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard (agent.valid)",
+          "file": "dashboard/dashboard.spec.ts",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-DASH-001 | DASH-V01 | dashboard loads after login",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "dashboard",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "DASH-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-DASH-04",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1347,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-25T15:13:33.681Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "DASH-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-DASH-04",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "747340cde928aa6c3216-90185b5bbf4124fc4168",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 20,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "documents\\documents.spec.ts",
+      "file": "documents/documents.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Document upload",
+          "file": "documents/documents.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-DOC-001 | DOC-V01 | valid documents (PDF, JPG, PNG) can be uploaded",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "documents",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "DOC-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                        "line": 16,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-DOC-02",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                        "line": 16,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                        "line": 16,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 656,
+                      "error": {
+                        "message": "Error: Setup step \"create draft\" failed: HTTP 419 {\n    \"message\": \"CSRF token mismatch.\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\HttpException\",\n    \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 673,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src",
+                        "stack": "Error: Setup step \"create draft\" failed: HTTP 419 {\n    \"message\": \"CSRF token mismatch.\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\HttpException\",\n    \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 673,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\n    at must (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:44:11)\n    at buildApplication (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:95:19)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts:17:17",
+                        "location": {
+                          "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts",
+                          "column": 11,
+                          "line": 44
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\applicationBuilder.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m \u001b[36mfunction\u001b[39m must(res\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m stage\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m ok\u001b[33m:\u001b[39m number[] \u001b[33m=\u001b[39m [\u001b[35m200\u001b[39m\u001b[33m,\u001b[39m \u001b[35m201\u001b[39m])\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m {\n \u001b[90m 43 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mok\u001b[33m.\u001b[39mincludes(res\u001b[33m.\u001b[39mstatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Setup step \"${stage}\" failed: HTTP ${res.status} ${res.text.slice(0, 400)}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m   \u001b[36mreturn\u001b[39m res\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m }\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts",
+                            "column": 11,
+                            "line": 44
+                          },
+                          "message": "Error: Setup step \"create draft\" failed: HTTP 419 {\n    \"message\": \"CSRF token mismatch.\",\n    \"exception\": \"Symfony\\\\Component\\\\HttpKernel\\\\Exception\\\\HttpException\",\n    \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\\\\Illuminate\\\\Foundation\\\\Exceptions\\\\Handler.php\",\n    \"line\": 673,\n    \"trace\": [\n        {\n            \"file\": \"C:\\\\qa-lab\\\\apps\\\\insurance-order-entry-demo\\\\vendor\\\\laravel\\\\framework\\\\src\n\n\u001b[90m   at \u001b[39m..\\utils\\applicationBuilder.ts:44\n\n\u001b[0m \u001b[90m 42 |\u001b[39m \u001b[36mfunction\u001b[39m must(res\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m stage\u001b[33m:\u001b[39m string\u001b[33m,\u001b[39m ok\u001b[33m:\u001b[39m number[] \u001b[33m=\u001b[39m [\u001b[35m200\u001b[39m\u001b[33m,\u001b[39m \u001b[35m201\u001b[39m])\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m {\n \u001b[90m 43 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mok\u001b[33m.\u001b[39mincludes(res\u001b[33m.\u001b[39mstatus)) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 44 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Setup step \"${stage}\" failed: HTTP ${res.status} ${res.text.slice(0, 400)}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 45 |\u001b[39m   }\n \u001b[90m 46 |\u001b[39m   \u001b[36mreturn\u001b[39m res\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m }\u001b[0m\n\u001b[2m    at must (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:44:11)\u001b[22m\n\u001b[2m    at buildApplication (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts:95:19)\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts:17:17\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-25T15:13:35.291Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "DOC-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                            "line": 16,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-DOC-02",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                            "line": 16,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                            "line": 16,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\applicationBuilder.ts",
+                        "column": 11,
+                        "line": 44
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "435ed4a0a7277bdfe9d0-d47a76653a5bb43585a7",
+              "file": "documents/documents.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "product-selection\\product-selection.spec.ts",
+      "file": "product-selection/product-selection.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product selection and policy configuration",
+          "file": "product-selection/product-selection.spec.ts",
+          "line": 21,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-PROD-001 | PROD-V01 | catalog shows the expected Whole Life products",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "product",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "PROD-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                        "line": 22,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-PROD-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                        "line": 22,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                        "line": 22,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1973,
+                      "error": {
+                        "message": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n            bo\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n            bo\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at expectApiSuccess (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:33:121)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts:28:21",
+                        "location": {
+                          "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                          "column": 121,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                            "column": 121,
+                            "line": 33
+                          },
+                          "message": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n            bo\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\u001b[0m\n\u001b[2m    at expectApiSuccess (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:33:121)\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts:28:21\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 200 <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Products | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23,\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-25T15:13:36.962Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "PROD-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                            "line": 22,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-PROD-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                            "line": 22,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                            "line": 22,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKPCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPgogICAgPHRpdGxlPlByb2R1Y3RzIHwgSW5zdXJhbmNlIE9yZGVyIEVudHJ5PC90aXRsZT4KICAgIDxsaW5rIGhyZWY9Imh0dHBzOi8vY2RuLmpzZGVsaXZyLm5ldC9ucG0vYm9vdHN0cmFwQDUuMy4zL2Rpc3QvY3NzL2Jvb3RzdHJhcC5taW4uY3NzIiByZWw9InN0eWxlc2hlZXQiPgogICAgPHN0eWxlPgogICAgICAgIGJvZHkgeyBiYWNrZ3JvdW5kOiAjZjZmOGZiOyB9CiAgICAgICAgLnBhZ2Utc2hlbGwgeyBwYWRkaW5nLXRvcDogMjRweDsgcGFkZGluZy1ib3R0b206IDQ4cHg7IH0KICAgICAgICAudGYtY2FyZCB7IGJvcmRlcjogMDsgYm9yZGVyLXJhZGl1czogMTZweDsgYm94LXNoYWRvdzogMCA4cHggMjRweCByZ2JhKDE1LCAyMywgNDIsIDAuMDYpOyB9CiAgICAgICAgLnN0ZXAtbGluayB7IHRleHQtZGVjb3JhdGlvbjpub25lOyB9CiAgICAgICAgLnNtYWxsLWxhYmVsIHsgZm9udC1zaXplOiAuNzZyZW07IGxldHRlci1zcGFjaW5nOi4wMmVtOyB0ZXh0LXRyYW5zZm9ybTp1cHBlcmNhc2U7IGNvbG9yOiM2Yzc1N2Q7IH0KICAgICAgICAuc3RhdHVzLXBpbGwgeyBmb250LXNpemU6Ljc1cmVtOyB9CgogICAgICAgIC50Zi1icmFuZC1sb2dvIHsKICAgICAgICAgICAgd2lkdGg6IDQycHg7CiAgICAgICAgICAgIGhlaWdodDogNDJweDsKICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogMTJweDsKICAgICAgICAgICAgYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDEzNWRlZywgIzBkNmVmZCwgIzA4NDI5OCk7CiAgICAgICAgICAgIGNvbG9yOiAjZmZmOwogICAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtZmxleDsKICAgICAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICAgICAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA4MDA7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMC45cmVtOwogICAgICAgICAgICBsZXR0ZXItc3BhY2luZzogLjAyZW07CiAgICAgICAgICAgIGJveC1zaGFkb3c6IDAgNnB4IDE0cHggcmdiYSgxMywgMTEwLCAyNTMsIDAuMjUpOwogICAgICAgIH0KCiAgICAgICAgLnRmLWJyYW5kLXRpdGxlIHsKICAgICAgICAgICAgbGluZS1oZWlnaHQ6IDEuMTsKICAgICAgICB9CgogICAgICAgIC50Zi1icmFuZC10aXRsZSAubWFpbi10aXRsZSB7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogMXJlbTsKICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDsKICAgICAgICAgICAgY29sb3I6ICMxNzIwMzM7CiAgICAgICAgfQoKICAgICAgICAudGYtYnJhbmQtdGl0bGUgLnN1Yi10aXRsZSB7CiAgICAgICAgICAgIGZvbnQtc2l6ZTogLjc0cmVtOwogICAgICAgICAgICBjb2xvcjogIzZjNzU3ZDsKICAgICAgICB9CiAgICA8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5IGRhdGEtdGVzdGlkPSJhcHAtbGF5b3V0Ij4KICAgIDxuYXYgY2xhc3M9Im5hdmJhciBuYXZiYXItZXhwYW5kLWxnIGJnLXdoaXRlIGJvcmRlci1ib3R0b20iIGRhdGEtdGVzdGlkPSJtYWluLW5hdmlnYXRpb24iPgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgICA8YSBjbGFzcz0ibmF2YmFyLWJyYW5kIGQtZmxleCBhbGlnbi1pdGVtcy1jZW50ZXIgZ2FwLTIgZnctc2VtaWJvbGQiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvZGFzaGJvYXJkIiBkYXRhLXRlc3RpZD0ibmF2LWJyYW5kIj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9InRmLWJyYW5kLWxvZ28iIGFyaWEtaGlkZGVuPSJ0cnVlIj5JTzwvc3Bhbj4KICAgICAgICAgICAgPHNwYW4gY2xhc3M9InRmLWJyYW5kLXRpdGxlIj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJtYWluLXRpdGxlIGQtYmxvY2siPkluc3VyYW5jZSBPcmRlciBFbnRyeSBEZW1vIFBsYXRmb3JtPC9zcGFuPgogICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InN1Yi10aXRsZSBkLWJsb2NrIj5RQSBBdXRvbWF0aW9uIFRyYWluaW5nIEFwcDwvc3Bhbj4KICAgICAgICAgICAgPC9zcGFuPgogICAgICAgIDwvYT4KCiAgICAgICAgPGJ1dHRvbiBjbGFzcz0ibmF2YmFyLXRvZ2dsZXIiIHR5cGU9ImJ1dHRvbiIgZGF0YS1icy10b2dnbGU9ImNvbGxhcHNlIiBkYXRhLWJzLXRhcmdldD0iI21haW5OYXZiYXIiIGFyaWEtY29udHJvbHM9Im1haW5OYXZiYXIiIGFyaWEtZXhwYW5kZWQ9ImZhbHNlIiBhcmlhLWxhYmVsPSJUb2dnbGUgbmF2aWdhdGlvbiI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJuYXZiYXItdG9nZ2xlci1pY29uIj48L3NwYW4+CiAgICAgICAgPC9idXR0b24+CgogICAgICAgIDxkaXYgY2xhc3M9ImNvbGxhcHNlIG5hdmJhci1jb2xsYXBzZSIgaWQ9Im1haW5OYXZiYXIiPgogICAgICAgICAgICA8dWwgY2xhc3M9Im5hdmJhci1uYXYgbWUtYXV0byBtYi0yIG1iLWxnLTAgbXMtbGctNCI+CiAgICAgICAgICAgICAgICA8bGkgY2xhc3M9Im5hdi1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0ibmF2LWxpbmsiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvZGFzaGJvYXJkIiBkYXRhLXRlc3RpZD0ibmF2LWRhc2hib2FyZC1saW5rIj5EYXNoYm9hcmQ8L2E+CiAgICAgICAgICAgICAgICA8L2xpPgoKICAgICAgICAgICAgICAgIDxsaSBjbGFzcz0ibmF2LWl0ZW0iPgogICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzPSJuYXYtbGluayIgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9hcHBsaWNhdGlvbnMiIGRhdGEtdGVzdGlkPSJuYXYtYXBwbGljYXRpb25zLWxpbmsiPkFwcGxpY2F0aW9uczwvYT4KICAgICAgICAgICAgICAgIDwvbGk+CgogICAgICAgICAgICAgICAgPGxpIGNsYXNzPSJuYXYtaXRlbSI+CiAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9Im5hdi1saW5rIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL3Byb2R1Y3RzIiBkYXRhLXRlc3RpZD0ibmF2LXByb2R1Y3RzLWxpbmsiPlByb2R1Y3RzPC9hPgogICAgICAgICAgICAgICAgPC9saT4KCiAgICAgICAgICAgICAgICA8bGkgY2xhc3M9Im5hdi1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0ibmF2LWxpbmsiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvc3VwcG9ydCIgZGF0YS10ZXN0aWQ9Im5hdi1zdXBwb3J0LWxpbmsiPlN1cHBvcnQ8L2E+CiAgICAgICAgICAgICAgICA8L2xpPgoKICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdWw+CgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJkLWZsZXggYWxpZ24taXRlbXMtY2VudGVyIGdhcC0zIj4KICAgICAgICAgICAgICAgIDxhIGNsYXNzPSJ0ZXh0LWRlY29yYXRpb24tbm9uZSBzbWFsbCIgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9maWxlIiBkYXRhLXRlc3RpZD0ibmF2LXByb2ZpbGUtbGluayI+CiAgICAgICAgICAgICAgICAgICAgTGVhcm5lciBBZ2VudCAwMDEKICAgICAgICAgICAgICAgIDwvYT4KCiAgICAgICAgICAgICAgICA8Zm9ybSBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9sb2dvdXQiIGNsYXNzPSJtYi0wIj4KICAgICAgICAgICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBuYW1lPSJfdG9rZW4iIHZhbHVlPSJyRmdBN3B2cGNhbWR6RmZhd252SjN5aEE0dFJySTEyNHlQR1FUWFBkIiBhdXRvY29tcGxldGU9Im9mZiI+ICAgICAgICAgICAgICAgICAgICA8YnV0dG9uIGNsYXNzPSJidG4gYnRuLW91dGxpbmUtc2Vjb25kYXJ5IGJ0bi1zbSIgZGF0YS10ZXN0aWQ9Im5hdi1sb2dvdXQtYnV0dG9uIj5Mb2dvdXQ8L2J1dHRvbj4KICAgICAgICAgICAgICAgIDwvZm9ybT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KPC9uYXY+CgogICAgPG1haW4gY2xhc3M9ImNvbnRhaW5lciBwYWdlLXNoZWxsIj4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9Im1iLTQiIGRhdGEtdGVzdGlkPSJwcm9kdWN0LWNhdGFsb2ctcGFnZSI+CiAgICA8aDEgY2xhc3M9ImgzIG1iLTEiPldob2xlIExpZmUgUHJvZHVjdCBDYXRhbG9nPC9oMT4KICAgIDxwIGNsYXNzPSJ0ZXh0LW11dGVkIG1iLTAiPlVzZSB0aGVzZSBwcm9kdWN0cyB3aGlsZSBjb25maWd1cmluZyBhbiBpbnN1cmFuY2UgYXBwbGljYXRpb24uPC9wPgo8L2Rpdj4KPGRpdiBjbGFzcz0icm93IGctNCI+CiAgICA8ZGl2IGNsYXNzPSJjb2wtbWQtNiBjb2wteGwtNCI+CiAgICAgICAgPGRpdiBjbGFzcz0iY2FyZCB0Zi1jYXJkIGgtMTAwIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1jYXJkLVdMX0VMSVRFX0xFR0FDWSI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQtYm9keSI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzbWFsbC1sYWJlbCI+V0xfRUxJVEVfTEVHQUNZPC9kaXY+CiAgICAgICAgICAgICAgICA8aDIgY2xhc3M9Img1Ij5FbGl0ZSBMZWdhY3kgV2hvbGUgTGlmZTwvaDI+CiAgICAgICAgICAgICAgICA8cCBjbGFzcz0idGV4dC1tdXRlZCI+SGlnaC1uZXQtd29ydGggb2ZmZXJpbmcgZm9yIGVzdGF0ZSBwbGFubmluZyBhbmQgdGF4IGVmZmljaWVuY3kuPC9wPgogICAgICAgICAgICAgICAgPGRsIGNsYXNzPSJyb3cgc21hbGwiPgogICAgICAgICAgICAgICAgICAgIDxkdCBjbGFzcz0iY29sLTYiPkFnZTwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MzAgLSA2NTwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+U3VtIEFzc3VyZWQ8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjUwMCwwMDAgLSA1LDAwMCwwMDA8L2RkPgogICAgICAgICAgICAgICAgICAgIDxkdCBjbGFzcz0iY29sLTYiPlJhdGUgLyAxMDAwPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij42LjEwMDA8L2RkPgogICAgICAgICAgICAgICAgPC9kbD4KICAgICAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvcHJvZHVjdHMvMyIgY2xhc3M9ImJ0biBidG4tb3V0bGluZS1wcmltYXJ5IGJ0bi1zbSIgZGF0YS10ZXN0aWQ9InByb2R1Y3QtZGV0YWlscy1XTF9FTElURV9MRUdBQ1kiPlZpZXcgRGV0YWlsczwvYT4KICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgPC9kaXY+CiAgICA8L2Rpdj4KICAgIDxkaXYgY2xhc3M9ImNvbC1tZC02IGNvbC14bC00Ij4KICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIHRmLWNhcmQgaC0xMDAiIGRhdGEtdGVzdGlkPSJwcm9kdWN0LWNhcmQtV0xfRkxFWElfUEFZIj4KICAgICAgICAgICAgPGRpdiBjbGFzcz0iY2FyZC1ib2R5Ij4KICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNtYWxsLWxhYmVsIj5XTF9GTEVYSV9QQVk8L2Rpdj4KICAgICAgICAgICAgICAgIDxoMiBjbGFzcz0iaDUiPkZsZXhpUGF5IFdob2xlIExpZmU8L2gyPgogICAgICAgICAgICAgICAgPHAgY2xhc3M9InRleHQtbXV0ZWQiPkZsZXhpYmxlIHByZW1pdW0gcGF5bWVudCBvcHRpb25zIHdpdGggYWRqdXN0YWJsZSBwcmVtaXVtcy48L3A+CiAgICAgICAgICAgICAgICA8ZGwgY2xhc3M9InJvdyBzbWFsbCI+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+QWdlPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij4xOSAtIDYyPC9kZD4KICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3M9ImNvbC02Ij5TdW0gQXNzdXJlZDwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MTAwLDAwMCAtIDEsMjAwLDAwMDwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+UmF0ZSAvIDEwMDA8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjUuMTUwMDwvZGQ+CiAgICAgICAgICAgICAgICA8L2RsPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cy80IiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYnRuLXNtIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1kZXRhaWxzLVdMX0ZMRVhJX1BBWSI+VmlldyBEZXRhaWxzPC9hPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iY29sLW1kLTYgY29sLXhsLTQiPgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQgdGYtY2FyZCBoLTEwMCIgZGF0YS10ZXN0aWQ9InByb2R1Y3QtY2FyZC1XTF9TRUNVUkVfQkFTSUMiPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkLWJvZHkiPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic21hbGwtbGFiZWwiPldMX1NFQ1VSRV9CQVNJQzwvZGl2PgogICAgICAgICAgICAgICAgPGgyIGNsYXNzPSJoNSI+U2VjdXJlTGlmZSBXaG9sZSBMaWZlPC9oMj4KICAgICAgICAgICAgICAgIDxwIGNsYXNzPSJ0ZXh0LW11dGVkIj5CYXNpYyBsaWZlbG9uZyBjb3ZlcmFnZSB3aXRoIGZpeGVkIHByZW1pdW0gYW5kIGd1YXJhbnRlZWQgZGVhdGggYmVuZWZpdC48L3A+CiAgICAgICAgICAgICAgICA8ZGwgY2xhc3M9InJvdyBzbWFsbCI+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+QWdlPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij4xOCAtIDY1PC9kZD4KICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3M9ImNvbC02Ij5TdW0gQXNzdXJlZDwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MTAwLDAwMCAtIDEsMDAwLDAwMDwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+UmF0ZSAvIDEwMDA8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjQuNzUwMDwvZGQ+CiAgICAgICAgICAgICAgICA8L2RsPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cy8xIiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYnRuLXNtIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1kZXRhaWxzLVdMX1NFQ1VSRV9CQVNJQyI+VmlldyBEZXRhaWxzPC9hPgogICAgICAgICAgICA8L2Rpdj4KICAgICAgICA8L2Rpdj4KICAgIDwvZGl2PgogICAgPGRpdiBjbGFzcz0iY29sLW1kLTYgY29sLXhsLTQiPgogICAgICAgIDxkaXYgY2xhc3M9ImNhcmQgdGYtY2FyZCBoLTEwMCIgZGF0YS10ZXN0aWQ9InByb2R1Y3QtY2FyZC1XTF9XRUFMVEhfQlVJTERFUiI+CiAgICAgICAgICAgIDxkaXYgY2xhc3M9ImNhcmQtYm9keSI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzbWFsbC1sYWJlbCI+V0xfV0VBTFRIX0JVSUxERVI8L2Rpdj4KICAgICAgICAgICAgICAgIDxoMiBjbGFzcz0iaDUiPldlYWx0aEJ1aWxkZXIgV2hvbGUgTGlmZTwvaDI+CiAgICAgICAgICAgICAgICA8cCBjbGFzcz0idGV4dC1tdXRlZCI+R3Jvd3RoIGFuZCBwcm90ZWN0aW9uIHByb2R1Y3Qgd2l0aCBjYXNoIHZhbHVlIGFjY3VtdWxhdGlvbi48L3A+CiAgICAgICAgICAgICAgICA8ZGwgY2xhc3M9InJvdyBzbWFsbCI+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+QWdlPC9kdD48ZGQgY2xhc3M9ImNvbC02Ij4yMSAtIDYwPC9kZD4KICAgICAgICAgICAgICAgICAgICA8ZHQgY2xhc3M9ImNvbC02Ij5TdW0gQXNzdXJlZDwvZHQ+PGRkIGNsYXNzPSJjb2wtNiI+MTUwLDAwMCAtIDEsNTAwLDAwMDwvZGQ+CiAgICAgICAgICAgICAgICAgICAgPGR0IGNsYXNzPSJjb2wtNiI+UmF0ZSAvIDEwMDA8L2R0PjxkZCBjbGFzcz0iY29sLTYiPjUuMzUwMDwvZGQ+CiAgICAgICAgICAgICAgICA8L2RsPgogICAgICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cy8yIiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXByaW1hcnkgYnRuLXNtIiBkYXRhLXRlc3RpZD0icHJvZHVjdC1kZXRhaWxzLVdMX1dFQUxUSF9CVUlMREVSIj5WaWV3IERldGFpbHM8L2E+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+CjwvZGl2PgogICAgPC9tYWluPgoKICAgIDxmb290ZXIgY2xhc3M9ImJvcmRlci10b3AgYmctd2hpdGUgcHktMyIgZGF0YS10ZXN0aWQ9ImFwcC1mb290ZXIiPgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIHNtYWxsIHRleHQtbXV0ZWQgZC1mbGV4IGp1c3RpZnktY29udGVudC1iZXR3ZWVuIj4KICAgICAgICA8c3Bhbj5UYWxlbnRGYXJtIFFBIEF1dG9tYXRpb24gTGFiPC9zcGFuPgogICAgICAgIDxzcGFuPkluc3VyYW5jZSBPcmRlciBFbnRyeSBEZW1vPC9zcGFuPgogICAgPC9kaXY+CjwvZm9vdGVyPgoKICAgICAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9ib290c3RyYXBANS4zLjMvZGlzdC9qcy9ib290c3RyYXAuYnVuZGxlLm1pbi5qcyI+PC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo="
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                        "column": 121,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "63db1f7a7681e76a1ba8-c013654b94d9ebb699d4",
+              "file": "product-selection/product-selection.spec.ts",
+              "line": 22,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "workflow\\workflow.spec.ts",
+      "file": "workflow/workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Submission and status tracking",
+          "file": "workflow/workflow.spec.ts",
+          "line": 67,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-WF-003 | WF-V03 | a valid application can be submitted end to end",
+              "ok": false,
+              "tags": [
+                "smoke",
+                "regression",
+                "e2e",
+                "api",
+                "workflow",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "WF-V03",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                        "line": 110,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-WF-03",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                        "line": 110,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                        "line": 110,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 16413,
+                      "error": {
+                        "message": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Application Status | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n    \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                        "stack": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Application Status | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n    \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at expectApiSuccess (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:33:121)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts:149:25\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts:113:7",
+                        "location": {
+                          "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                          "column": 121,
+                          "line": 33
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                            "column": 121,
+                            "line": 33
+                          },
+                          "message": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Application Status | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n    \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n\n\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\u001b[0m\n\u001b[2m    at expectApiSuccess (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:33:121)\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts:149:25\u001b[22m\n\u001b[2m    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts:113:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 200 <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Application Status | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rg\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "E2E-01: SecureLife, ADB rider, one individual beneficiary",
+                          "duration": 15838,
+                          "error": {
+                            "message": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Application Status | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n    \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m",
+                            "stack": "Error: The response has no \"status\" field. Actual response body: <!doctype html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <title>Application Status | Insurance Order Entry</title>\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\n    <style>\n        body { background: #f6f8fb; }\n        .page-shell { padding-top: 24px; padding-bottom: 48px; }\n        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }\n        .step-link { text-decoration:none; }\n        .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }\n        .status-pill { font-size:.75rem; }\n\n        .tf-brand-logo {\n            width: 42px;\n            height: 42px;\n    \n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"success\"\u001b[39m\nReceived: \u001b[31mundefined\u001b[39m\n    at expectApiSuccess (C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts:33:121)\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts:149:25\n    at C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts:113:7",
+                            "location": {
+                              "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                              "column": 121,
+                              "line": 33
+                            },
+                            "snippet": "\u001b[90m   at \u001b[39m..\\utils\\assertions.ts:33\n\n\u001b[0m \u001b[90m 31 |\u001b[39m   showResponse(result)\u001b[33m;\u001b[39m\n \u001b[90m 32 |\u001b[39m   expect(result\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`HTTP status. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(status)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect(result\u001b[33m.\u001b[39mbody\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mstatus\u001b[33m,\u001b[39m \u001b[32m`The response has no \"status\" field. Actual response body: ${result.text.slice(0, 800)}`\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[32m'success'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m }\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36mfunction\u001b[39m expectApiError(result\u001b[33m:\u001b[39m \u001b[33mApiResult\u001b[39m\u001b[33m,\u001b[39m status\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m pattern\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m \u001b[33mRegExp\u001b[39m)\u001b[33m:\u001b[39m \u001b[36mvoid\u001b[39m {\u001b[0m"
+                          }
+                        }
+                      ],
+                      "startTime": "2026-10-25T15:13:40.221Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "WF-V03",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                            "line": 110,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-WF-03",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                            "line": 110,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                            "line": 110,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKPCFkb2N0eXBlIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJ1dGYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEiPgogICAgPHRpdGxlPkFwcGxpY2F0aW9uIFN0YXR1cyB8IEluc3VyYW5jZSBPcmRlciBFbnRyeTwvdGl0bGU+CiAgICA8bGluayBocmVmPSJodHRwczovL2Nkbi5qc2RlbGl2ci5uZXQvbnBtL2Jvb3RzdHJhcEA1LjMuMy9kaXN0L2Nzcy9ib290c3RyYXAubWluLmNzcyIgcmVsPSJzdHlsZXNoZWV0Ij4KICAgIDxzdHlsZT4KICAgICAgICBib2R5IHsgYmFja2dyb3VuZDogI2Y2ZjhmYjsgfQogICAgICAgIC5wYWdlLXNoZWxsIHsgcGFkZGluZy10b3A6IDI0cHg7IHBhZGRpbmctYm90dG9tOiA0OHB4OyB9CiAgICAgICAgLnRmLWNhcmQgeyBib3JkZXI6IDA7IGJvcmRlci1yYWRpdXM6IDE2cHg7IGJveC1zaGFkb3c6IDAgOHB4IDI0cHggcmdiYSgxNSwgMjMsIDQyLCAwLjA2KTsgfQogICAgICAgIC5zdGVwLWxpbmsgeyB0ZXh0LWRlY29yYXRpb246bm9uZTsgfQogICAgICAgIC5zbWFsbC1sYWJlbCB7IGZvbnQtc2l6ZTogLjc2cmVtOyBsZXR0ZXItc3BhY2luZzouMDJlbTsgdGV4dC10cmFuc2Zvcm06dXBwZXJjYXNlOyBjb2xvcjojNmM3NTdkOyB9CiAgICAgICAgLnN0YXR1cy1waWxsIHsgZm9udC1zaXplOi43NXJlbTsgfQoKICAgICAgICAudGYtYnJhbmQtbG9nbyB7CiAgICAgICAgICAgIHdpZHRoOiA0MnB4OwogICAgICAgICAgICBoZWlnaHQ6IDQycHg7CiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEycHg7CiAgICAgICAgICAgIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxMzVkZWcsICMwZDZlZmQsICMwODQyOTgpOwogICAgICAgICAgICBjb2xvcjogI2ZmZjsKICAgICAgICAgICAgZGlzcGxheTogaW5saW5lLWZsZXg7CiAgICAgICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgICAgICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyOwogICAgICAgICAgICBmb250LXdlaWdodDogODAwOwogICAgICAgICAgICBmb250LXNpemU6IDAuOXJlbTsKICAgICAgICAgICAgbGV0dGVyLXNwYWNpbmc6IC4wMmVtOwogICAgICAgICAgICBib3gtc2hhZG93OiAwIDZweCAxNHB4IHJnYmEoMTMsIDExMCwgMjUzLCAwLjI1KTsKICAgICAgICB9CgogICAgICAgIC50Zi1icmFuZC10aXRsZSB7CiAgICAgICAgICAgIGxpbmUtaGVpZ2h0OiAxLjE7CiAgICAgICAgfQoKICAgICAgICAudGYtYnJhbmQtdGl0bGUgLm1haW4tdGl0bGUgewogICAgICAgICAgICBmb250LXNpemU6IDFyZW07CiAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiA3MDA7CiAgICAgICAgICAgIGNvbG9yOiAjMTcyMDMzOwogICAgICAgIH0KCiAgICAgICAgLnRmLWJyYW5kLXRpdGxlIC5zdWItdGl0bGUgewogICAgICAgICAgICBmb250LXNpemU6IC43NHJlbTsKICAgICAgICAgICAgY29sb3I6ICM2Yzc1N2Q7CiAgICAgICAgfQogICAgPC9zdHlsZT4KPC9oZWFkPgo8Ym9keSBkYXRhLXRlc3RpZD0iYXBwLWxheW91dCI+CiAgICA8bmF2IGNsYXNzPSJuYXZiYXIgbmF2YmFyLWV4cGFuZC1sZyBiZy13aGl0ZSBib3JkZXItYm90dG9tIiBkYXRhLXRlc3RpZD0ibWFpbi1uYXZpZ2F0aW9uIj4KICAgIDxkaXYgY2xhc3M9ImNvbnRhaW5lciI+CiAgICAgICAgPGEgY2xhc3M9Im5hdmJhci1icmFuZCBkLWZsZXggYWxpZ24taXRlbXMtY2VudGVyIGdhcC0yIGZ3LXNlbWlib2xkIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL2Rhc2hib2FyZCIgZGF0YS10ZXN0aWQ9Im5hdi1icmFuZCI+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0Zi1icmFuZC1sb2dvIiBhcmlhLWhpZGRlbj0idHJ1ZSI+SU88L3NwYW4+CiAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJ0Zi1icmFuZC10aXRsZSI+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibWFpbi10aXRsZSBkLWJsb2NrIj5JbnN1cmFuY2UgT3JkZXIgRW50cnkgRGVtbyBQbGF0Zm9ybTwvc3Bhbj4KICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJzdWItdGl0bGUgZC1ibG9jayI+UUEgQXV0b21hdGlvbiBUcmFpbmluZyBBcHA8L3NwYW4+CiAgICAgICAgICAgIDwvc3Bhbj4KICAgICAgICA8L2E+CgogICAgICAgIDxidXR0b24gY2xhc3M9Im5hdmJhci10b2dnbGVyIiB0eXBlPSJidXR0b24iIGRhdGEtYnMtdG9nZ2xlPSJjb2xsYXBzZSIgZGF0YS1icy10YXJnZXQ9IiNtYWluTmF2YmFyIiBhcmlhLWNvbnRyb2xzPSJtYWluTmF2YmFyIiBhcmlhLWV4cGFuZGVkPSJmYWxzZSIgYXJpYS1sYWJlbD0iVG9nZ2xlIG5hdmlnYXRpb24iPgogICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmF2YmFyLXRvZ2dsZXItaWNvbiI+PC9zcGFuPgogICAgICAgIDwvYnV0dG9uPgoKICAgICAgICA8ZGl2IGNsYXNzPSJjb2xsYXBzZSBuYXZiYXItY29sbGFwc2UiIGlkPSJtYWluTmF2YmFyIj4KICAgICAgICAgICAgPHVsIGNsYXNzPSJuYXZiYXItbmF2IG1lLWF1dG8gbWItMiBtYi1sZy0wIG1zLWxnLTQiPgogICAgICAgICAgICAgICAgPGxpIGNsYXNzPSJuYXYtaXRlbSI+CiAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9Im5hdi1saW5rIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL2Rhc2hib2FyZCIgZGF0YS10ZXN0aWQ9Im5hdi1kYXNoYm9hcmQtbGluayI+RGFzaGJvYXJkPC9hPgogICAgICAgICAgICAgICAgPC9saT4KCiAgICAgICAgICAgICAgICA8bGkgY2xhc3M9Im5hdi1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8YSBjbGFzcz0ibmF2LWxpbmsiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvYXBwbGljYXRpb25zIiBkYXRhLXRlc3RpZD0ibmF2LWFwcGxpY2F0aW9ucy1saW5rIj5BcHBsaWNhdGlvbnM8L2E+CiAgICAgICAgICAgICAgICA8L2xpPgoKICAgICAgICAgICAgICAgIDxsaSBjbGFzcz0ibmF2LWl0ZW0iPgogICAgICAgICAgICAgICAgICAgIDxhIGNsYXNzPSJuYXYtbGluayIgaHJlZj0iaHR0cDovLzM1LjI0NC40OS4yMDU6ODA4MS9wcm9kdWN0cyIgZGF0YS10ZXN0aWQ9Im5hdi1wcm9kdWN0cy1saW5rIj5Qcm9kdWN0czwvYT4KICAgICAgICAgICAgICAgIDwvbGk+CgogICAgICAgICAgICAgICAgPGxpIGNsYXNzPSJuYXYtaXRlbSI+CiAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3M9Im5hdi1saW5rIiBocmVmPSJodHRwOi8vMzUuMjQ0LjQ5LjIwNTo4MDgxL3N1cHBvcnQiIGRhdGEtdGVzdGlkPSJuYXYtc3VwcG9ydC1saW5rIj5TdXBwb3J0PC9hPgogICAgICAgICAgICAgICAgPC9saT4KCiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3VsPgoKICAgICAgICAgICAgPGRpdiBjbGFzcz0iZC1mbGV4IGFsaWduLWl0ZW1zLWNlbnRlciBnYXAtMyI+CiAgICAgICAgICAgICAgICA8YSBjbGFzcz0idGV4dC1kZWNvcmF0aW9uLW5vbmUgc21hbGwiIGhyZWY9Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvcHJvZmlsZSIgZGF0YS10ZXN0aWQ9Im5hdi1wcm9maWxlLWxpbmsiPgogICAgICAgICAgICAgICAgICAgIExlYXJuZXIgQWdlbnQgMDAxCiAgICAgICAgICAgICAgICA8L2E+CgogICAgICAgICAgICAgICAgPGZvcm0gbWV0aG9kPSJQT1NUIiBhY3Rpb249Imh0dHA6Ly8zNS4yNDQuNDkuMjA1OjgwODEvbG9nb3V0IiBjbGFzcz0ibWItMCI+CiAgICAgICAgICAgICAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgbmFtZT0iX3Rva2VuIiB2YWx1ZT0ickZnQTdwdnBjYW1kekZmYXdudkozeWhBNHRSckkxMjR5UEdRVFhQZCIgYXV0b2NvbXBsZXRlPSJvZmYiPiAgICAgICAgICAgICAgICAgICAgPGJ1dHRvbiBjbGFzcz0iYnRuIGJ0bi1vdXRsaW5lLXNlY29uZGFyeSBidG4tc20iIGRhdGEtdGVzdGlkPSJuYXYtbG9nb3V0LWJ1dHRvbiI+TG9nb3V0PC9idXR0b24+CiAgICAgICAgICAgICAgICA8L2Zvcm0+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvZGl2PgogICAgPC9kaXY+CjwvbmF2PgoKICAgIDxtYWluIGNsYXNzPSJjb250YWluZXIgcGFnZS1zaGVsbCI+CiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJjYXJkIHRmLWNhcmQiIGRhdGEtdGVzdGlkPSJzdGF0dXMtcGFnZSI+CiAgICA8ZGl2IGNsYXNzPSJjYXJkLWJvZHkgcC00Ij4KICAgICAgICA8aDEgY2xhc3M9ImgzIj5BcHBsaWNhdGlvbiBTdGF0dXM8L2gxPgogICAgICAgIDxwIGNsYXNzPSJ0ZXh0LW11dGVkIiBkYXRhLXRlc3RpZD0ic3RhdHVzLXJlZmVyZW5jZS1udW1iZXIiPldMMjAyNjEwMjU2OTYzOTwvcD4KICAgICAgICA8ZGl2IGNsYXNzPSJhbGVydCBhbGVydC1saWdodCBib3JkZXIiPkN1cnJlbnQgU3RhdHVzOiA8c3Ryb25nIGRhdGEtdGVzdGlkPSJzdGF0dXMtY3VycmVudC12YWx1ZSI+U1VCTUlUVEVEPC9zdHJvbmc+PC9kaXY+CiAgICAgICAgPGRpdiBjbGFzcz0idGFibGUtcmVzcG9uc2l2ZSI+PHRhYmxlIGNsYXNzPSJ0YWJsZSIgZGF0YS10ZXN0aWQ9InN0YXR1cy1oaXN0b3J5LXRhYmxlIj48dGhlYWQ+PHRyPjx0aD5TdGF0dXM8L3RoPjx0aD5Ob3RlczwvdGg+PHRoPkNoYW5nZWQgQnk8L3RoPjx0aD5EYXRlPC90aD48L3RyPjwvdGhlYWQ+PHRib2R5PgogICAgICAgICAgICAgICAgICAgIDx0ciBkYXRhLXRlc3RpZD0ic3RhdHVzLXJvdy00OCI+PHRkPlNVQk1JVFRFRDwvdGQ+PHRkPkFwcGxpY2F0aW9uIHN1Ym1pdHRlZCBzdWNjZXNzZnVsbHkuPC90ZD48dGQ+ODwvdGQ+PHRkPjI1IE9jdCAyMDI2IDE1OjEzPC90ZD48L3RyPgogICAgICAgICAgICAgICAgPC90Ym9keT48L3RhYmxlPjwvZGl2PgogICAgPC9kaXY+CjwvZGl2PgogICAgPC9tYWluPgoKICAgIDxmb290ZXIgY2xhc3M9ImJvcmRlci10b3AgYmctd2hpdGUgcHktMyIgZGF0YS10ZXN0aWQ9ImFwcC1mb290ZXIiPgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIHNtYWxsIHRleHQtbXV0ZWQgZC1mbGV4IGp1c3RpZnktY29udGVudC1iZXR3ZWVuIj4KICAgICAgICA8c3Bhbj5UYWxlbnRGYXJtIFFBIEF1dG9tYXRpb24gTGFiPC9zcGFuPgogICAgICAgIDxzcGFuPkluc3VyYW5jZSBPcmRlciBFbnRyeSBEZW1vPC9zcGFuPgogICAgPC9kaXY+CjwvZm9vdGVyPgoKICAgICAgICA8c2NyaXB0IHNyYz0iaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L25wbS9ib290c3RyYXBANS4zLjMvZGlzdC9qcy9ib290c3RyYXAuYnVuZGxlLm1pbi5qcyI+PC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPgo="
+                        },
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results\\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\assertions.ts",
+                        "column": 121,
+                        "line": 33
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "80c4ad9e4b6fc6f4fd56-9a9f3bde5a5e52dcb1ce",
+              "file": "workflow/workflow.spec.ts",
+              "line": 110,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-25T15:12:38.640Z",
+    "duration": 78360.12599999999,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 7,
+    "flaky": 0
+  }
+}

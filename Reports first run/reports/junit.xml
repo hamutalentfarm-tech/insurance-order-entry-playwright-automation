@@ -1,0 +1,597 @@
+<testsuites id="" name="" tests="11" failures="5" skipped="0" errors="2" time="78.360126">
+<testsuite name="api\api.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="2" failures="2" skipped="0" time="2.252" errors="0">
+<testcase name="API › TC-API-001 | API-V01 | products API returns 200 and the expected schema" classname="api\api.spec.ts" time="1.135">
+<properties>
+<property name="validation-id" value="API-V01">
+</property>
+<property name="risk" value="R-API-03, R-PROD-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products | Insurance Order Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f6f8fb; }
+        .page-shell { padding-top: 24px; padding-bottom: 48px; }
+        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23,
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="The response has no &quot;status&quot; field. Actual response body: &lt;!doctype html&gt;" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:20:7 › API › TC-API-001 | API-V01 | products API returns 200 and the expected schema @smoke @regression @api @P1 
+
+    Error: The response has no "status" field. Actual response body: <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Products | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { background: #f6f8fb; }
+            .page-shell { padding-top: 24px; padding-bottom: 48px; }
+            .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+            .step-link { text-decoration:none; }
+            .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }
+            .status-pill { font-size:.75rem; }
+
+            .tf-brand-logo {
+                width: 42px;
+                height: 42px;
+                bo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "success"
+    Received: undefined
+
+       at ..\utils\assertions.ts:33
+
+      31 |   showResponse(result);
+      32 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+    > 33 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('success');
+         |                                                                                                                         ^
+      34 | }
+      35 |
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+        at expectApiSuccess (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:33:121)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:22:21
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Products | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="style...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="API › TC-API-002 | API-V02 | application APIs require the API key" classname="api\api.spec.ts" time="1.117">
+<properties>
+<property name="validation-id" value="API-V02">
+</property>
+<property name="risk" value="R-API-02, R-AUTH-06">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Applications | Insurance Order Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f6f8fb; }
+        .page-shell { padding-top: 24px; padding-bottom: 48px; }
+        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15,
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="HTTP status. Actual response body: &lt;!doctype html&gt;" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:53:7 › API › TC-API-002 | API-V02 | application APIs require the API key @smoke @regression @api @P1 › no key 
+
+    Error: HTTP status. Actual response body: <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Applications | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { background: #f6f8fb; }
+            .page-shell { padding-top: 24px; padding-bottom: 48px; }
+            .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+            .step-link { text-decoration:none; }
+            .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }
+            .status-pill { font-size:.75rem; }
+
+            .tf-brand-logo {
+                width: 42px;
+                height: 42px;
+              
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 401
+    Received: 200
+
+       at ..\utils\assertions.ts:38
+
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+      37 |   showResponse(result);
+    > 38 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+         |                                                                                            ^
+      39 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('error');
+      40 |   if (pattern) {
+      41 |     const texts = errorTexts(result).join(' | ');
+        at expectApiError (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:38:92)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:60:25
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:58:9
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Applications | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="s...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-002-API-75bab-on-APIs-require-the-API-key-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="auth\login.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="3" failures="0" skipped="0" time="17.089" errors="0">
+<testcase name="Authentication: login, logout and access control › TC-AUTH-001 | AUTH-V01 | valid agent can log in" classname="auth\login.spec.ts" time="8.237">
+<properties>
+<property name="validation-id" value="AUTH-V01">
+</property>
+<property name="risk" value="R-AUTH-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-01">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-002 | AUTH-V02 | invalid password shows the invalid-credentials message" classname="auth\login.spec.ts" time="2.948">
+<properties>
+<property name="validation-id" value="AUTH-V02">
+</property>
+<property name="risk" value="R-AUTH-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-005 | AUTH-V05 | protected pages redirect to login without a session" classname="auth\login.spec.ts" time="5.904">
+<properties>
+<property name="validation-id" value="AUTH-V05">
+</property>
+<property name="risk" value="R-AUTH-06">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[setup] saved login for valid (agent.valid@insurance.test)
+[setup] saved login for draft (agent.draft@insurance.test)
+[setup] saved login for new (agent.new@insurance.test)
+[setup] saved login for submitted (agent.submitted@insurance.test)
+[setup] saved login for learner (learner001@insurance.test)
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="beneficiaries\beneficiaries.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="0.698" errors="1">
+<testcase name="Beneficiary management › TC-BEN-001 | BEN-V01 | add a valid primary beneficiary (and irrevocable confirmation)" classname="beneficiaries\beneficiaries.spec.ts" time="0.698">
+<properties>
+<property name="validation-id" value="BEN-V01">
+</property>
+<property name="risk" value="R-BEN-04, R-BEN-06">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Setup step &quot;create draft&quot; failed: HTTP 419 {" type="Error">
+<![CDATA[  [insurance-chromium] › beneficiaries\beneficiaries.spec.ts:29:7 › Beneficiary management › TC-BEN-001 | BEN-V01 | add a valid primary beneficiary (and irrevocable confirmation) @smoke @regression @beneficiary @P1 
+
+    Error: Setup step "create draft" failed: HTTP 419 {
+        "message": "CSRF token mismatch.",
+        "exception": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
+        "file": "C:\\qa-lab\\apps\\insurance-order-entry-demo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+        "line": 673,
+        "trace": [
+            {
+                "file": "C:\\qa-lab\\apps\\insurance-order-entry-demo\\vendor\\laravel\\framework\\src
+
+       at ..\utils\applicationBuilder.ts:44
+
+      42 | function must(res: ApiResult, stage: string, ok: number[] = [200, 201]): ApiResult {
+      43 |   if (!ok.includes(res.status)) {
+    > 44 |     throw new Error(`Setup step "${stage}" failed: HTTP ${res.status} ${res.text.slice(0, 400)}`);
+         |           ^
+      45 |   }
+      46 |   return res;
+      47 | }
+        at must (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\applicationBuilder.ts:44:11)
+        at buildApplication (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\applicationBuilder.ts:95:19)
+        at atBeneficiaries (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:17:11)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:30:16
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\beneficiaries-beneficiarie-80a7f-d-irrevocable-confirmation--insurance-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="client-information\client.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="1" failures="1" skipped="0" time="4.844" errors="0">
+<testcase name="Client / insured information › TC-CLI-001 | CLI-V01 | agent can enter valid insured information" classname="client-information\client.spec.ts" time="4.844">
+<properties>
+<property name="validation-id" value="CLI-V01">
+</property>
+<property name="risk" value="R-CLI-03, R-CLI-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › client-information\client.spec.ts:23:7 › Client / insured information › TC-CLI-001 | CLI-V01 | agent can enter valid insured information @smoke @regression @client @P1 › saved values equal the entered values (API read-back) 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "Qaxduiqx"
+    Received: undefined
+
+      33 |     await test.step('saved values equal the entered values (API read-back)', async () => {
+      34 |       const res = await api.getClient(id, emailOf('learner'));
+    > 35 |       expect(res.body?.data?.first_name).toBe(data.firstName);
+         |                                          ^
+      36 |       expect(res.body?.data?.last_name).toBe(data.lastName);
+      37 |       expect(String(res.body?.data?.date_of_birth).slice(0, 10)).toBe(data.dob);
+      38 |     });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:35:42
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:33:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\client-information-client--c40a9-r-valid-insured-information-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="dashboard\dashboard.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="1.347" errors="0">
+<testcase name="Dashboard (agent.valid) › TC-DASH-001 | DASH-V01 | dashboard loads after login" classname="dashboard\dashboard.spec.ts" time="1.347">
+<properties>
+<property name="validation-id" value="DASH-V01">
+</property>
+<property name="risk" value="R-DASH-04">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="documents\documents.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="0.656" errors="1">
+<testcase name="Document upload › TC-DOC-001 | DOC-V01 | valid documents (PDF, JPG, PNG) can be uploaded" classname="documents\documents.spec.ts" time="0.656">
+<properties>
+<property name="validation-id" value="DOC-V01">
+</property>
+<property name="risk" value="R-DOC-02">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="Setup step &quot;create draft&quot; failed: HTTP 419 {" type="Error">
+<![CDATA[  [insurance-chromium] › documents\documents.spec.ts:16:7 › Document upload › TC-DOC-001 | DOC-V01 | valid documents (PDF, JPG, PNG) can be uploaded @smoke @regression @api @documents @P1 
+
+    Error: Setup step "create draft" failed: HTTP 419 {
+        "message": "CSRF token mismatch.",
+        "exception": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
+        "file": "C:\\qa-lab\\apps\\insurance-order-entry-demo\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+        "line": 673,
+        "trace": [
+            {
+                "file": "C:\\qa-lab\\apps\\insurance-order-entry-demo\\vendor\\laravel\\framework\\src
+
+       at ..\utils\applicationBuilder.ts:44
+
+      42 | function must(res: ApiResult, stage: string, ok: number[] = [200, 201]): ApiResult {
+      43 |   if (!ok.includes(res.status)) {
+    > 44 |     throw new Error(`Setup step "${stage}" failed: HTTP ${res.status} ${res.text.slice(0, 400)}`);
+         |           ^
+      45 |   }
+      46 |   return res;
+      47 | }
+        at must (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\applicationBuilder.ts:44:11)
+        at buildApplication (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\applicationBuilder.ts:95:19)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\documents\documents.spec.ts:17:17
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\documents-documents-Docume-78fa6-PDF-JPG-PNG-can-be-uploaded-insurance-chromium\error-context.md
+]]>
+</error>
+</testcase>
+</testsuite>
+<testsuite name="product-selection\product-selection.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="1" failures="1" skipped="0" time="1.973" errors="0">
+<testcase name="Product selection and policy configuration › TC-PROD-001 | PROD-V01 | catalog shows the expected Whole Life products" classname="product-selection\product-selection.spec.ts" time="1.973">
+<properties>
+<property name="validation-id" value="PROD-V01">
+</property>
+<property name="risk" value="R-PROD-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Products | Insurance Order Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f6f8fb; }
+        .page-shell { padding-top: 24px; padding-bottom: 48px; }
+        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23,
+
+[[ATTACHMENT|test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="The response has no &quot;status&quot; field. Actual response body: &lt;!doctype html&gt;" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › product-selection\product-selection.spec.ts:22:7 › Product selection and policy configuration › TC-PROD-001 | PROD-V01 | catalog shows the expected Whole Life products @smoke @regression @api @product @P1 
+
+    Error: The response has no "status" field. Actual response body: <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Products | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { background: #f6f8fb; }
+            .page-shell { padding-top: 24px; padding-bottom: 48px; }
+            .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+            .step-link { text-decoration:none; }
+            .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }
+            .status-pill { font-size:.75rem; }
+
+            .tf-brand-logo {
+                width: 42px;
+                height: 42px;
+                bo
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "success"
+    Received: undefined
+
+       at ..\utils\assertions.ts:33
+
+      31 |   showResponse(result);
+      32 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+    > 33 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('success');
+         |                                                                                                                         ^
+      34 | }
+      35 |
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+        at expectApiSuccess (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:33:121)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:28:21
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Products | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="style...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="workflow\workflow.spec.ts" timestamp="2026-10-25T15:12:51.001Z" hostname="insurance-chromium" tests="1" failures="1" skipped="0" time="16.413" errors="0">
+<testcase name="Submission and status tracking › TC-WF-003 | WF-V03 | a valid application can be submitted end to end" classname="workflow\workflow.spec.ts" time="16.413">
+<properties>
+<property name="validation-id" value="WF-V03">
+</property>
+<property name="risk" value="R-WF-03">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Application Status | Insurance Order Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f6f8fb; }
+        .page-shell { padding-top: 24px; padding-bottom: 48px; }
+        .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rg
+
+[[ATTACHMENT|test-results\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="The response has no &quot;status&quot; field. Actual response body: &lt;!doctype html&gt;" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › workflow\workflow.spec.ts:110:7 › Submission and status tracking › TC-WF-003 | WF-V03 | a valid application can be submitted end to end @smoke @regression @e2e @api @workflow @P1 › E2E-01: SecureLife, ADB rider, one individual beneficiary 
+
+    Error: The response has no "status" field. Actual response body: <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Application Status | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body { background: #f6f8fb; }
+            .page-shell { padding-top: 24px; padding-bottom: 48px; }
+            .tf-card { border: 0; border-radius: 16px; box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06); }
+            .step-link { text-decoration:none; }
+            .small-label { font-size: .76rem; letter-spacing:.02em; text-transform:uppercase; color:#6c757d; }
+            .status-pill { font-size:.75rem; }
+
+            .tf-brand-logo {
+                width: 42px;
+                height: 42px;
+        
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "success"
+    Received: undefined
+
+       at ..\utils\assertions.ts:33
+
+      31 |   showResponse(result);
+      32 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+    > 33 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('success');
+         |                                                                                                                         ^
+      34 | }
+      35 |
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+        at expectApiSuccess (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:33:121)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\workflow\workflow.spec.ts:149:25
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\workflow\workflow.spec.ts:113:7
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    <!doctype html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Application Status | Insurance Order Entry</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" ...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\workflow-workflow-Submissi-8b3b1-can-be-submitted-end-to-end-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
