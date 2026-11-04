@@ -1,0 +1,2640 @@
+<testsuites id="" name="" tests="81" failures="34" skipped="2" errors="2" time="694.811211">
+<testsuite name="address-contact\address-contact.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="6" failures="0" skipped="0" time="63.539" errors="0">
+<testcase name="Address and contact information › TC-ADR-001 | CLI-V06 | same-as-residential copies the address to mailing" classname="address-contact\address-contact.spec.ts" time="5.35">
+<properties>
+<property name="validation-id" value="CLI-V06">
+</property>
+<property name="risk" value="R-ADR-01">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="After editing residential with the box ticked, mailing line 1 = &quot;99 Changed Ave&quot;">
+</property>
+</properties>
+</testcase>
+<testcase name="Address and contact information › TC-ADR-002 | CLI-V07a | invalid email formats are rejected" classname="address-contact\address-contact.spec.ts" time="15.675">
+<properties>
+<property name="validation-id" value="CLI-V07a">
+</property>
+<property name="risk" value="R-ADR-02">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="Email &quot;a@b&quot; accepted by the server: true">
+</property>
+</properties>
+</testcase>
+<testcase name="Address and contact information › TC-ADR-003 | CLI-V07b | invalid US phone formats are rejected" classname="address-contact\address-contact.spec.ts" time="16.862">
+<properties>
+<property name="validation-id" value="CLI-V07b">
+</property>
+<property name="risk" value="R-ADR-02">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="Address and contact information › TC-ADR-004 | ADR-P01 | ZIP code and state are validated" classname="address-contact\address-contact.spec.ts" time="13.159">
+<properties>
+<property name="validation-id" value="ADR-P01">
+</property>
+<property name="risk" value="R-ADR-02">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="Address and contact information › TC-ADR-005 | ADR-P02 | mailing address is required when not same as residential" classname="address-contact\address-contact.spec.ts" time="3.615">
+<properties>
+<property name="validation-id" value="ADR-P02">
+</property>
+<property name="risk" value="R-ADR-03">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="Address and contact information › TC-ADR-006 | ADR-P03 | preferred communication mode is required" classname="address-contact\address-contact.spec.ts" time="8.878">
+<properties>
+<property name="validation-id" value="ADR-P03">
+</property>
+<property name="risk" value="R-ADR-03">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="api\api.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="10" failures="7" skipped="0" time="32.523" errors="0">
+<testcase name="API › TC-API-001 | API-V01 | products API returns 200 and the expected schema" classname="api\api.spec.ts" time="0.885">
+<properties>
+<property name="validation-id" value="API-V01">
+</property>
+<property name="risk" value="R-API-03, R-PROD-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":3,"product_code":"WL_ELITE_LEGACY","product_name":"Elite Legacy Whole Life","product_type":"WHOLE_LIFE","short_description":"High-net-worth offering for estate planning and tax efficiency.","features":"High coverage, estate planning orientation, enhanced suitability, larger face-value limits.","eligibility_age_min":30,"eligibility_age_max":65,"face_value_min":"500000.00","face_value_max":"5000000.00","base_rate_per_1000
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toHaveLength(expected)" type="expect.toHaveLength">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:21:7 › API › TC-API-001 | API-V01 | products API returns 200 and the expected schema @smoke @regression @api @P1 
+
+    Error: expect(received).toHaveLength(expected)
+
+    Expected length: 5
+    Received length: 4
+    Received array:  [{"base_rate_per_1000": "6.1000", "created_at": "2026-05-17T16:06:33.000000Z", "eligibility_age_max": 65, "eligibility_age_min": 30, "face_value_max": "5000000.00", "face_value_min": "500000.00", "features": "High coverage, estate planning orientation, enhanced suitability, larger face-value limits.", "id": 3, "is_active": true, "product_code": "WL_ELITE_LEGACY", "product_name": "Elite Legacy Whole Life", "product_type": "WHOLE_LIFE", "short_description": "High-net-worth offering for estate planning and tax efficiency.", "updated_at": "2026-05-17T16:06:33.000000Z"}, {"base_rate_per_1000": "5.1500", "created_at": "2026-05-17T16:06:33.000000Z", "eligibility_age_max": 62, "eligibility_age_min": 19, "face_value_max": "1200000.00", "face_value_min": "100000.00", "features": "Multiple payment terms, flexible premium frequencies, suitable for payment option validation.", "id": 4, "is_active": true, "product_code": "WL_FLEXI_PAY", "product_name": "FlexiPay Whole Life", "product_type": "WHOLE_LIFE", "short_description": "Flexible premium payment options with adjustable premiums.", "updated_at": "2026-06-02T13:55:29.000000Z"}, {"base_rate_per_1000": "4.7500", "created_at": "2026-05-17T16:06:33.000000Z", "eligibility_age_max": 65, "eligibility_age_min": 18, "face_value_max": "1000000.00", "face_value_min": "100000.00", "features": "Fixed premium, guaranteed death benefit, simple underwriting, suitable for conservative clients.", "id": 1, "is_active": true, "product_code": "WL_SECURE_BASIC", "product_name": "SecureLife Whole Life", "product_type": "WHOLE_LIFE", "short_description": "Basic lifelong coverage with fixed premium and guaranteed death benefit.", "updated_at": "2026-05-17T16:06:33.000000Z"}, {"base_rate_per_1000": "5.3500", "created_at": "2026-05-17T16:06:33.000000Z", "eligibility_age_max": 60, "eligibility_age_min": 21, "face_value_max": "1500000.00", "face_value_min": "150000.00", "features": "Cash value growth, lifelong cover, medium-to-high suitability review, rider-friendly configuration.", "id": 2, "is_active": true, "product_code": "WL_WEALTH_BUILDER", "product_name": "WealthBuilder Whole Life", "product_type": "WHOLE_LIFE", "short_description": "Growth and protection product with cash value accumulation.", "updated_at": "2026-05-17T16:06:33.000000Z"}]
+
+      23 |     expectApiSuccess(res);
+      24 |     const items = res.body.data as Record<string, unknown>[];
+    > 25 |     expect(items).toHaveLength(PRODUCTS.length);
+         |                   ^
+      26 |
+      27 |     for (const item of items) {
+      28 |       for (const key of ['id', 'product_code', 'product_name', 'eligibility_age_min', 'eligibility_age_max', 'face_value_min', 'face_value_max', 'base_rate_per_1000', 'is_active']) {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:25:19
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Request completed successfully","data":[{"id":3,"product_code":"WL_ELITE_LEGACY","product_name":"Elite Legacy Whole Life","product_type":"WHOLE_LIFE","short_description":"High-net-worth offering for estate planning and tax efficiency.","features":"High coverag...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-001-API-d7b3d-200-and-the-expected-schema-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="API › TC-API-002 | API-V02 | application APIs require the API key" classname="api\api.spec.ts" time="2.867">
+<properties>
+<property name="validation-id" value="API-V02">
+</property>
+<property name="risk" value="R-API-02, R-AUTH-06">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="observation" value="GET health without a key: HTTP 200">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+]]>
+</system-out>
+</testcase>
+<testcase name="API › TC-API-003 | API-V03 | client API rejects invalid dates of birth" classname="api\api.spec.ts" time="1.412">
+<properties>
+<property name="validation-id" value="API-V03">
+</property>
+<property name="risk" value="R-CLI-01, R-CLI-02, R-API-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-04, SDC-05, SDC-19">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Client information saved","data":{"application_id":95,"first_name":"Qa","last_name":"Tester","date_of_birth":"2026-11-05T00:00:00.000000Z","gender":"MALE","marital_status":"SINGLE","nationality":"United States","occupation":"Engineer","employer_name":"Acme","employer_address":"1 Corporate Way","calculated_age":0,"updated_at":"2026-11-04T18:28:00.000000Z","created_at":"2026-11-04T18:28:00.000000Z","id":86}}
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-003-API-bc3a6-ects-invalid-dates-of-birth-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-003-API-bc3a6-ects-invalid-dates-of-birth-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-003-API-bc3a6-ects-invalid-dates-of-birth-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="HTTP status. Actual response body: {&quot;status&quot;:&quot;success&quot;,&quot;message&quot;:&quot;Client information saved&quot;,&quot;data&quot;:{&quot;application_id&quot;:95,&quot;first_name&quot;:&quot;Qa&quot;,&quot;last_name&quot;:&quot;Tester&quot;,&quot;date_of_birth&quot;:&quot;2026-11-05T00:00:00.000000Z&quot;,&quot;gender&quot;:&quot;MALE&quot;,&quot;marital_status&quot;:&quot;SINGLE&quot;,&quot;nationality&quot;:&quot;United States&quot;,&quot;occupation&quot;:&quot;Engineer&quot;,&quot;employer_name&quot;:&quot;Acme&quot;,&quot;employer_address&quot;:&quot;1 Corporate Way&quot;,&quot;calculated_age&quot;:0,&quot;updated_at&quot;:&quot;2026-11-04T18:28:00.000000Z&quot;,&quot;created_at&quot;:&quot;2026-11-04T18:28:00.000000Z&quot;,&quot;id&quot;:86}}" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:79:7 › API › TC-API-003 | API-V03 | client API rejects invalid dates of birth @regression @api @SDC-04 @SDC-05 @SDC-19 @P1 › future date of birth is rejected 
+
+    Error: HTTP status. Actual response body: {"status":"success","message":"Client information saved","data":{"application_id":95,"first_name":"Qa","last_name":"Tester","date_of_birth":"2026-11-05T00:00:00.000000Z","gender":"MALE","marital_status":"SINGLE","nationality":"United States","occupation":"Engineer","employer_name":"Acme","employer_address":"1 Corporate Way","calculated_age":0,"updated_at":"2026-11-04T18:28:00.000000Z","created_at":"2026-11-04T18:28:00.000000Z","id":86}}
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 422
+    Received: 200
+
+       at ..\utils\assertions.ts:38
+
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+      37 |   showResponse(result);
+    > 38 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+         |                                                                                            ^
+      39 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('error');
+      40 |   if (pattern) {
+      41 |     const texts = errorTexts(result).join(' | ');
+        at expectApiError (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:38:92)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:89:21
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:86:5
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Client information saved","data":{"application_id":95,"first_name":"Qa","last_name":"Tester","date_of_birth":"2026-11-05T00:00:00.000000Z","gender":"MALE","marital_status":"SINGLE","nationality":"United States","occupation":"Engineer","employer_name":"Acme","e...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-003-API-bc3a6-ects-invalid-dates-of-birth-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-003-API-bc3a6-ects-invalid-dates-of-birth-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-003-API-bc3a6-ects-invalid-dates-of-birth-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="API › TC-API-004 | API-V04 | validate API reports beneficiary allocation errors" classname="api\api.spec.ts" time="5.312">
+<properties>
+<property name="validation-id" value="API-V04">
+</property>
+<property name="risk" value="R-BEN-01, R-API-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-13, SDC-19">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Application validation passed","data":{"application_id":96,"application_status":"DRAFT","summary":{"valid":true,"has_warnings":false,"items":[],"errors":[]}}}
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-004-API-edce0-neficiary-allocation-errors-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-004-API-edce0-neficiary-allocation-errors-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-004-API-edce0-neficiary-allocation-errors-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="HTTP status. Actual response body: {&quot;status&quot;:&quot;success&quot;,&quot;message&quot;:&quot;Application validation passed&quot;,&quot;data&quot;:{&quot;application_id&quot;:96,&quot;application_status&quot;:&quot;DRAFT&quot;,&quot;summary&quot;:{&quot;valid&quot;:true,&quot;has_warnings&quot;:false,&quot;items&quot;:[],&quot;errors&quot;:[]}}}" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:116:7 › API › TC-API-004 | API-V04 | validate API reports beneficiary allocation errors @regression @api @SDC-13 @SDC-19 @P1 › primary total 90% 
+
+    Error: HTTP status. Actual response body: {"status":"success","message":"Application validation passed","data":{"application_id":96,"application_status":"DRAFT","summary":{"valid":true,"has_warnings":false,"items":[],"errors":[]}}}
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 422
+    Received: 200
+
+       at ..\utils\assertions.ts:38
+
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+      37 |   showResponse(result);
+    > 38 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+         |                                                                                            ^
+      39 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('error');
+      40 |   if (pattern) {
+      41 |     const texts = errorTexts(result).join(' | ');
+        at expectApiError (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:38:92)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:135:25
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:123:7
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Application validation passed","data":{"application_id":96,"application_status":"DRAFT","summary":{"valid":true,"has_warnings":false,"items":[],"errors":[]}}}
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-004-API-edce0-neficiary-allocation-errors-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-004-API-edce0-neficiary-allocation-errors-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-004-API-edce0-neficiary-allocation-errors-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="API › TC-API-005 | API-V05 | submit API rejects an incomplete application" classname="api\api.spec.ts" time="3.614">
+<properties>
+<property name="validation-id" value="API-V05">
+</property>
+<property name="risk" value="R-WF-02, R-KYC-02, R-API-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-17, SDC-06, SDC-19">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Application submitted successfully","data":{"id":97,"application_reference_number":"WL2026110467520","user_id":9,"insurance_product_id":1,"application_status":"SUBMITTED","current_step":"SUBMITTED","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":"2026-11-04T18:28:12.000000Z","created_at":"2
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-005-API-d4a6e-s-an-incomplete-application-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-005-API-d4a6e-s-an-incomplete-application-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-005-API-d4a6e-s-an-incomplete-application-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="HTTP status. Actual response body: {&quot;status&quot;:&quot;success&quot;,&quot;message&quot;:&quot;Application submitted successfully&quot;,&quot;data&quot;:{&quot;id&quot;:97,&quot;application_reference_number&quot;:&quot;WL2026110467520&quot;,&quot;user_id&quot;:9,&quot;insurance_product_id&quot;:1,&quot;application_status&quot;:&quot;SUBMITTED&quot;,&quot;current_step&quot;:&quot;SUBMITTED&quot;,&quot;face_value&quot;:&quot;250000.00&quot;,&quot;premium_frequency&quot;:&quot;MONTHLY&quot;,&quot;payment_term_years&quot;:20,&quot;policy_term&quot;:&quot;WHOLE_LIFE&quot;,&quot;base_premium&quot;:&quot;98.96&quot;,&quot;rider_premium&quot;:&quot;0.00&quot;,&quot;total_premium&quot;:&quot;98.96&quot;,&quot;suitability_override_reason&quot;:null,&quot;submitted_at&quot;:&quot;2026-11-04T18:28:12.000000Z&quot;,&quot;created_at&quot;:&quot;2026-11-04T18:28:09.000000Z&quot;,&quot;updated_at&quot;:&quot;2026-11-04T18:28:12.000000Z&quot;,&quot;status_histories&quot;:[{&quot;id&quot;:57,&quot;application_id&quot;:97,&quot;status&quot;:&quot;SUBMITTED&quot;,&quot;notes&quot;:&quot;Application submitted successfully.&quot;,&quot;changed_by&quot;:&quot;9&quot;,&quot;created_at&quot;:&quot;2026-11-04T18:28:12.000000Z&quot;,&quot;updated_at&quot;:&quot;2026-11-04T18:28:12.000000Z&quot;}],&quot;insuran" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:144:7 › API › TC-API-005 | API-V05 | submit API rejects an incomplete application @regression @api @SDC-17 @SDC-06 @SDC-19 @P1 
+
+    Error: HTTP status. Actual response body: {"status":"success","message":"Application submitted successfully","data":{"id":97,"application_reference_number":"WL2026110467520","user_id":9,"insurance_product_id":1,"application_status":"SUBMITTED","current_step":"SUBMITTED","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":"2026-11-04T18:28:12.000000Z","created_at":"2026-11-04T18:28:09.000000Z","updated_at":"2026-11-04T18:28:12.000000Z","status_histories":[{"id":57,"application_id":97,"status":"SUBMITTED","notes":"Application submitted successfully.","changed_by":"9","created_at":"2026-11-04T18:28:12.000000Z","updated_at":"2026-11-04T18:28:12.000000Z"}],"insuran
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 422
+    Received: 200
+
+       at ..\utils\assertions.ts:38
+
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+      37 |   showResponse(result);
+    > 38 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+         |                                                                                            ^
+      39 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('error');
+      40 |   if (pattern) {
+      41 |     const texts = errorTexts(result).join(' | ');
+        at expectApiError (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:38:92)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:147:19
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Application submitted successfully","data":{"id":97,"application_reference_number":"WL2026110467520","user_id":9,"insurance_product_id":1,"application_status":"SUBMITTED","current_step":"SUBMITTED","face_value":"250000.00","premium_frequency":"MONTHLY","paymen...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-005-API-d4a6e-s-an-incomplete-application-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-005-API-d4a6e-s-an-incomplete-application-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-005-API-d4a6e-s-an-incomplete-application-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="API › TC-API-006 | API-V06 | status API matches the dashboard" classname="api\api.spec.ts" time="8.083">
+<properties>
+<property name="validation-id" value="API-V06">
+</property>
+<property name="risk" value="R-DASH-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-18">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Application submitted successfully","data":{"id":98,"application_reference_number":"WL2026110485822","user_id":9,"insurance_product_id":1,"application_status":"SUBMITTED","current_step":"SUBMITTED","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":"2026-11-04T18:28:20.000000Z","created_at":"2
+]]>
+</system-out>
+</testcase>
+<testcase name="API › TC-API-007 | API-V07 | product detail API matches the product details page" classname="api\api.spec.ts" time="3.373">
+<properties>
+<property name="validation-id" value="API-V07">
+</property>
+<property name="risk" value="R-PROD-05, R-API-03">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":{"id":3,"product_code":"WL_ELITE_LEGACY","product_name":"Elite Legacy Whole Life","product_type":"WHOLE_LIFE","short_description":"High-net-worth offering for estate planning and tax efficiency.","features":"High coverage, estate planning orientation, enhanced suitability, larger face-value limits.","eligibility_age_min":30,"eligibility_age_max":65,"face_value_min":"500000.00","face_value_max":"5000000.00","base_rate_per_1000"
+]]>
+</system-out>
+</testcase>
+<testcase name="API › TC-API-008 | API-V08 | applications API returns only the requested agent records" classname="api\api.spec.ts" time="1.848">
+<properties>
+<property name="validation-id" value="API-V08">
+</property>
+<property name="risk" value="R-DASH-01">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\api-api-API-TC-API-008-API-5dbac-the-requested-agent-records-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-008-API-5dbac-the-requested-agent-records-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-008-API-5dbac-the-requested-agent-records-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="agent.valid reading agent.draft&apos;s application returned HTTP 200" type="expect.toBeGreaterThanOrEqual">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:194:7 › API › TC-API-008 | API-V08 | applications API returns only the requested agent records @regression @api @P2 › reading another agent's application is refused (read-only check) 
+
+    Error: agent.valid reading agent.draft's application returned HTTP 200
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 400
+    Received:    200
+
+      206 |     await test.step('reading another agent\'s application is refused (read-only check)', async () => {
+      207 |       const res = await api.getApplication(b[0].id, valid);
+    > 208 |       expect(res.status, `agent.valid reading agent.draft's application returned HTTP ${res.status}`).toBeGreaterThanOrEqual(400);
+          |                                                                                                       ^
+      209 |     });
+      210 |   });
+      211 |
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:208:103
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:206:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-008-API-5dbac-the-requested-agent-records-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-008-API-5dbac-the-requested-agent-records-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-008-API-5dbac-the-requested-agent-records-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="API › TC-API-009 | API-P01 | documents API validates type, size and required document" classname="api\api.spec.ts" time="1.478">
+<properties>
+<property name="validation-id" value="API-P01">
+</property>
+<property name="risk" value="R-DOC-01, R-DOC-02">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\api-api-API-TC-API-009-API-71463--size-and-required-document-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-009-API-71463--size-and-required-document-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-009-API-71463--size-and-required-document-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toMatch(expected)" type="expect.toMatch">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:212:7 › API › TC-API-009 | API-P01 | documents API validates type, size and required document @regression @api @P2 › KYC_ID is reported missing before any upload 
+
+    Error: expect(received).toMatch(expected)
+
+    Expected pattern: /KYC[_ ]ID.*(required|not been uploaded)|required document/i
+    Received string:  "Validation failed | Client information is required. | RESIDENTIAL address is required. | MAILING address is required. | Contact information is required. | KYC details are required. | Financial profile is required. | Compliance declaration is required. | Insurance product must be selected."
+
+      215 |
+      216 |     await test.step('KYC_ID is reported missing before any upload', async () => {
+    > 217 |       expect(errorTexts(await api.validate(app.id, agent())).join(' | ')).toMatch(MSG.docRequired);
+          |                                                                           ^
+      218 |     });
+      219 |     await test.step('unsupported type is rejected', async () => {
+      220 |       expectApiError(await upload(makeFile('exe')), 422, MSG.docFormat);
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:217:75
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:216:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-009-API-71463--size-and-required-document-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-009-API-71463--size-and-required-document-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-009-API-71463--size-and-required-document-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="API › TC-API-010 | API-P02 | login API status codes and response schema" classname="api\api.spec.ts" time="3.651">
+<properties>
+<property name="validation-id" value="API-P02">
+</property>
+<property name="risk" value="R-AUTH-01, R-AUTH-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-01, SDC-02">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Login validated successfully","data":{"user_id":9,"name":"Learner Agent 002","email":"learner002@insurance.test","role":"AGENT","learner_code":"LNR002","account_status":"ACTIVE"}}
+[api] HTTP 401 {"status":"error","message":"Invalid credentials","errors":[]}
+[api] HTTP 200 {"status":"success","message":"Login validated successfully","data":{"user_id":5,"name":"Locked Agent","email":"agent.locked@insurance.test","role":"AGENT","learner_code":null,"account_status":"ACTIVE"}}
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-010-API-9ba1a-s-codes-and-response-schema-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-010-API-9ba1a-s-codes-and-response-schema-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\api-api-API-TC-API-010-API-9ba1a-s-codes-and-response-schema-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="HTTP status. Actual response body: {&quot;status&quot;:&quot;success&quot;,&quot;message&quot;:&quot;Login validated successfully&quot;,&quot;data&quot;:{&quot;user_id&quot;:5,&quot;name&quot;:&quot;Locked Agent&quot;,&quot;email&quot;:&quot;agent.locked@insurance.test&quot;,&quot;role&quot;:&quot;AGENT&quot;,&quot;learner_code&quot;:null,&quot;account_status&quot;:&quot;ACTIVE&quot;}}" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › api\api.spec.ts:235:7 › API › TC-API-010 | API-P02 | login API status codes and response schema @regression @api @SDC-01 @SDC-02 @P1 › locked user -> 403 
+
+    Error: HTTP status. Actual response body: {"status":"success","message":"Login validated successfully","data":{"user_id":5,"name":"Locked Agent","email":"agent.locked@insurance.test","role":"AGENT","learner_code":null,"account_status":"ACTIVE"}}
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 403
+    Received: 200
+
+       at ..\utils\assertions.ts:38
+
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+      37 |   showResponse(result);
+    > 38 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+         |                                                                                            ^
+      39 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('error');
+      40 |   if (pattern) {
+      41 |     const texts = errorTexts(result).join(' | ');
+        at expectApiError (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:38:92)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:254:21
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\api\api.spec.ts:252:5
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Login validated successfully","data":{"user_id":9,"name":"Learner Agent 002","email":"learner002@insurance.test","role":"AGENT","learner_code":"LNR002","account_status":"ACTIVE"}}
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 401
+    {"status":"error","message":"Invalid credentials","errors":[]}
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Login validated successfully","data":{"user_id":5,"name":"Locked Agent","email":"agent.locked@insurance.test","role":"AGENT","learner_code":null,"account_status":"ACTIVE"}}
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-010-API-9ba1a-s-codes-and-response-schema-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\api-api-API-TC-API-010-API-9ba1a-s-codes-and-response-schema-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\api-api-API-TC-API-010-API-9ba1a-s-codes-and-response-schema-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="auth\lockout.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Authentication: lockout (destructive) › TC-AUTH-007 | AUTH-V07 | account locks after five failed attempts" classname="auth\lockout.spec.ts">
+<properties>
+<property name="serial" value="">
+</property>
+<property name="skip" value="Set DISPOSABLE_USER in .env to a spare learner account to run the lockout test (it will be locked).">
+</property>
+<property name="validation-id" value="AUTH-V07">
+</property>
+<property name="risk" value="R-AUTH-03">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+<testsuite name="auth\login.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="6" failures="1" skipped="0" time="42.703" errors="0">
+<testcase name="Authentication: login, logout and access control › TC-AUTH-001 | AUTH-V01 | valid agent can log in" classname="auth\login.spec.ts" time="8.364">
+<properties>
+<property name="validation-id" value="AUTH-V01">
+</property>
+<property name="risk" value="R-AUTH-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-01">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-002 | AUTH-V02 | invalid password shows the invalid-credentials message" classname="auth\login.spec.ts" time="3.07">
+<properties>
+<property name="validation-id" value="AUTH-V02">
+</property>
+<property name="risk" value="R-AUTH-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-003 | AUTH-V03 | blank username and password are rejected" classname="auth\login.spec.ts" time="5.096">
+<properties>
+<property name="validation-id" value="AUTH-V03">
+</property>
+<property name="risk" value="R-AUTH-05">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-004 | AUTH-V04 | logout clears the session" classname="auth\login.spec.ts" time="5.384">
+<properties>
+<property name="validation-id" value="AUTH-V04">
+</property>
+<property name="risk" value="R-AUTH-06">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-005 | AUTH-V05 | protected pages redirect to login without a session" classname="auth\login.spec.ts" time="7.532">
+<properties>
+<property name="validation-id" value="AUTH-V05">
+</property>
+<property name="risk" value="R-AUTH-06">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-006 | AUTH-V06 | locked user cannot access the dashboard (UI and API)" classname="auth\login.spec.ts" time="13.257">
+<properties>
+<property name="validation-id" value="AUTH-V06">
+</property>
+<property name="risk" value="R-AUTH-02">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-02">
+</property>
+</properties>
+<system-out>
+<![CDATA[[setup] saved login for valid (agent.valid@insurance.test)
+[setup] saved login for draft (agent.draft@insurance.test)
+[setup] saved login for new (agent.new@insurance.test)
+[setup] saved login for submitted (agent.submitted@insurance.test)
+[setup] saved login for learner (learner002@insurance.test)
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\error-context.md]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-2.png]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-5.png]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-4.png]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-3.png]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-6.png]]
+
+[[ATTACHMENT|test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveURL(expected) failed" type="expect.toHaveURL">
+<![CDATA[  [insurance-chromium] › auth\login.spec.ts:109:7 › Authentication: login, logout and access control › TC-AUTH-006 | AUTH-V06 | locked user cannot access the dashboard (UI and API) @regression @api @authentication @SDC-02 @P2 › UI shows the account-locked message, not the generic invalid-password message 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/login/
+    Received string:  "http://34.100.166.72:8081/change-password"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 10000ms
+        23 × locator resolved to <html lang="en">…</html>
+           - unexpected value "http://34.100.166.72:8081/change-password"
+
+
+       at ..\pages\LoginPage.ts:52
+
+      50 |
+      51 |   async expectOnLogin(): Promise<void> {
+    > 52 |     await expect(this.page).toHaveURL(/\/login/);
+         |                             ^
+      53 |     await expect(this.form).toBeVisible();
+      54 |   }
+      55 |
+        at LoginPage.expectOnLogin (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\pages\LoginPage.ts:52:29)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\auth\login.spec.ts:115:19
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\auth\login.spec.ts:114:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\error-context.md
+
+    attachment #4: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #5: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-5.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #6: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-4.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #7: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-3.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #8: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\test-failed-6.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\auth-login-Authentication--8a7bf-s-the-dashboard-UI-and-API--insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="auth\password-policy.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="1" failures="1" skipped="0" time="24.896" errors="0">
+<testcase name="Authentication: password policy › TC-AUTH-008 | AUTH-V08 | weak passwords are rejected on /change-password" classname="auth\password-policy.spec.ts" time="24.896">
+<properties>
+<property name="validation-id" value="AUTH-V08">
+</property>
+<property name="risk" value="R-AUTH-04">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-03">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\auth-password-policy-Authe-d581d-rejected-on-change-password-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\auth-password-policy-Authe-d581d-rejected-on-change-password-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\auth-password-policy-Authe-d581d-rejected-on-change-password-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="validation alert" type="expect.toBeVisible">
+<![CDATA[  [insurance-chromium] › auth\password-policy.spec.ts:11:7 › Authentication: password policy › TC-AUTH-008 | AUTH-V08 | weak passwords are rejected on /change-password @regression @authentication @SDC-03 @P2 › rejects: common word (welcome) 
+
+    Error: validation alert
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('validation-error-alert')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - validation alert getByTestId('validation-error-alert') with timeout 10000ms
+      - waiting for getByTestId('validation-error-alert')
+
+
+       at ..\pages\BasePage.ts:22
+
+      20 |
+      21 |   async expectErrorMatching(pattern: RegExp): Promise<void> {
+    > 22 |     await expect(this.validationAlert, 'validation alert').toBeVisible();
+         |                                                            ^
+      23 |     await expect(this.validationAlert).toContainText(pattern);
+      24 |   }
+      25 |
+        at ChangePasswordPage.expectErrorMatching (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\pages\BasePage.ts:22:60)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\auth\password-policy.spec.ts:32:22
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\auth\password-policy.spec.ts:29:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-password-policy-Authe-d581d-rejected-on-change-password-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\auth-password-policy-Authe-d581d-rejected-on-change-password-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\auth-password-policy-Authe-d581d-rejected-on-change-password-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="beneficiaries\beneficiaries.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="9" failures="4" skipped="0" time="68.416" errors="0">
+<testcase name="Beneficiary management › TC-BEN-001 | BEN-V01 | add a valid primary beneficiary (and irrevocable confirmation)" classname="beneficiaries\beneficiaries.spec.ts" time="8.471">
+<properties>
+<property name="validation-id" value="BEN-V01">
+</property>
+<property name="risk" value="R-BEN-04, R-BEN-06">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-002 | BEN-V02 | primary allocation below 100% is flagged and blocks submission" classname="beneficiaries\beneficiaries.spec.ts" time="7.35">
+<properties>
+<property name="validation-id" value="BEN-V02">
+</property>
+<property name="risk" value="R-BEN-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-13">
+</property>
+<property name="observation" value="Primary-total error shown on: NOWHERE">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-56255-agged-and-blocks-submission-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-56255-agged-and-blocks-submission-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-56255-agged-and-blocks-submission-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="90% must raise &quot;must total exactly 100%&quot;" type="expect.not.toBeNull">
+<![CDATA[  [insurance-chromium] › beneficiaries\beneficiaries.spec.ts:57:7 › Beneficiary management › TC-BEN-002 | BEN-V02 | primary allocation below 100% is flagged and blocks submission @regression @beneficiary @SDC-13 @P1 
+
+    Error: 90% must raise "must total exactly 100%"
+
+    expect(received).not.toBeNull()
+
+    Received: null
+
+      65 |     const where = await totalErrorSurface(page, ben, id, MSG.primaryTotal);
+      66 |     testInfo.annotations.push({ type: 'observation', description: `Primary-total error shown on: ${where ?? 'NOWHERE'}` });
+    > 67 |     expect(where, '90% must raise "must total exactly 100%"').not.toBeNull();
+         |                                                                   ^
+      68 |
+      69 |     await test.step('review page keeps Submit disabled', async () => {
+      70 |       const review = new ReviewPage(page);
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:67:67
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-56255-agged-and-blocks-submission-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-56255-agged-and-blocks-submission-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\beneficiaries-beneficiarie-56255-agged-and-blocks-submission-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-003 | BEN-V03 | primary allocation above 100% is blocked" classname="beneficiaries\beneficiaries.spec.ts" time="6.675">
+<properties>
+<property name="validation-id" value="BEN-V03">
+</property>
+<property name="risk" value="R-BEN-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-13">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-004 | BEN-V04 | secondary allocation is validated separately" classname="beneficiaries\beneficiaries.spec.ts" time="10.483">
+<properties>
+<property name="validation-id" value="BEN-V04">
+</property>
+<property name="risk" value="R-BEN-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-13">
+</property>
+<property name="observation" value="Review errors with secondary at 80%: none about beneficiaries">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-005 | BEN-V05 | minor beneficiary requires guardian details" classname="beneficiaries\beneficiaries.spec.ts" time="5.566">
+<properties>
+<property name="validation-id" value="BEN-V05">
+</property>
+<property name="risk" value="R-BEN-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-14">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-f2989-y-requires-guardian-details-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-f2989-y-requires-guardian-details-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-f2989-y-requires-guardian-details-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toMatch(expected)" type="expect.toMatch">
+<![CDATA[  [insurance-chromium] › beneficiaries\beneficiaries.spec.ts:125:7 › Beneficiary management › TC-BEN-005 | BEN-V05 | minor beneficiary requires guardian details @regression @beneficiary @SDC-14 @P1 › minor without guardian is rejected 
+
+    Error: expect(received).toMatch(expected)
+
+    Expected pattern: /guardian details are required/i
+    Received string:  "Guardian name is required for a minor beneficiary. | Guardian relationship is required for a minor beneficiary. | Guardian contact is required for a minor beneficiary. | Guardian address is required for a minor beneficiary. | Legal acknowledgement is required for a minor beneficiary. Please correct the following: Guardian name is required for a minor beneficiary. Guardian relationship is required for a minor beneficiary. Guardian contact is required for a minor beneficiary. Guardian address is required for a minor beneficiary. Legal acknowledgement is required for a minor beneficiary."
+
+      132 |       await expect(ben.guardianSection).toBeVisible();
+      133 |       await ben.add(minor);
+    > 134 |       expect(await ben.errorsText()).toMatch(MSG.guardian);
+          |                                      ^
+      135 |       await expect(ben.rows()).toHaveCount(0);
+      136 |     });
+      137 |     await test.step('minor with guardian details and legal acknowledgement is saved', async () => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:134:38
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:131:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-f2989-y-requires-guardian-details-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-f2989-y-requires-guardian-details-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\beneficiaries-beneficiarie-f2989-y-requires-guardian-details-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-006 | BEN-V06 | trust beneficiary shows trust-specific fields" classname="beneficiaries\beneficiaries.spec.ts" time="7.816">
+<properties>
+<property name="validation-id" value="BEN-V06">
+</property>
+<property name="risk" value="R-BEN-05">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-007 | BEN-V07 | organization beneficiary shows organization-specific fields" classname="beneficiaries\beneficiaries.spec.ts" time="7.205">
+<properties>
+<property name="validation-id" value="BEN-V07">
+</property>
+<property name="risk" value="R-BEN-05">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-008 | BEN-V08 | duplicate beneficiary is blocked" classname="beneficiaries\beneficiaries.spec.ts" time="6.899">
+<properties>
+<property name="validation-id" value="BEN-V08">
+</property>
+<property name="risk" value="R-BEN-03">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-15">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-a96ea-cate-beneficiary-is-blocked-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-a96ea-cate-beneficiary-is-blocked-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-a96ea-cate-beneficiary-is-blocked-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="duplicate error" type="expect.toMatch">
+<![CDATA[  [insurance-chromium] › beneficiaries\beneficiaries.spec.ts:196:7 › Beneficiary management › TC-BEN-008 | BEN-V08 | duplicate beneficiary is blocked @regression @api @beneficiary @SDC-15 @P2 › same name + date of birth + relationship is blocked 
+
+    Error: duplicate error
+
+    expect(received).toMatch(expected)
+
+    Expected pattern: /duplicate|already exists|already added/i
+    Received string:  ""
+
+      203 |     await test.step('same name + date of birth + relationship is blocked', async () => {
+      204 |       await ben.add({ ...original });
+    > 205 |       expect(await ben.errorsText(), 'duplicate error').toMatch(MSG.duplicate);
+          |                                                         ^
+      206 |       await ben.goto(id);
+      207 |       await expect(ben.rows()).toHaveCount(1);
+      208 |       const list = await api.listBeneficiaries(id, agent());
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:205:57
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:203:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-a96ea-cate-beneficiary-is-blocked-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-a96ea-cate-beneficiary-is-blocked-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\beneficiaries-beneficiarie-a96ea-cate-beneficiary-is-blocked-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Beneficiary management › TC-BEN-009 | BEN-V09 | removing or editing a beneficiary updates the allocation total" classname="beneficiaries\beneficiaries.spec.ts" time="7.951">
+<properties>
+<property name="validation-id" value="BEN-V09">
+</property>
+<property name="risk" value="R-BEN-04">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="70% total flagged on: NOWHERE">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-63106-pdates-the-allocation-total-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-63106-pdates-the-allocation-total-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\beneficiaries-beneficiarie-63106-pdates-the-allocation-total-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).not.toBeNull()" type="expect.not.toBeNull">
+<![CDATA[  [insurance-chromium] › beneficiaries\beneficiaries.spec.ts:216:7 › Beneficiary management › TC-BEN-009 | BEN-V09 | removing or editing a beneficiary updates the allocation total @regression @beneficiary @P3 › remove the 30% beneficiary: total becomes 70% and is flagged 
+
+    Error: expect(received).not.toBeNull()
+
+    Received: null
+
+      238 |       const where = await totalErrorSurface(page, ben, app.id, MSG.primaryTotal);
+      239 |       testInfo.annotations.push({ type: 'observation', description: `70% total flagged on: ${where ?? 'NOWHERE'}` });
+    > 240 |       expect(where).not.toBeNull();
+          |                         ^
+      241 |     });
+      242 |     await test.step('edit the 20% beneficiary to 50%: total returns to 100%', async () => {
+      243 |       await ben.goto(app.id);
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:240:25
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\beneficiaries\beneficiaries.spec.ts:234:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-63106-pdates-the-allocation-total-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\beneficiaries-beneficiarie-63106-pdates-the-allocation-total-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\beneficiaries-beneficiarie-63106-pdates-the-allocation-total-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="client-information\client.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="8" failures="5" skipped="0" time="55.945" errors="0">
+<testcase name="Client / insured information › TC-CLI-001 | CLI-V01 | agent can enter valid insured information" classname="client-information\client.spec.ts" time="4.763">
+<properties>
+<property name="validation-id" value="CLI-V01">
+</property>
+<property name="risk" value="R-CLI-03, R-CLI-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / insured information › TC-CLI-002 | CLI-V02 | mandatory personal fields are validated" classname="client-information\client.spec.ts" time="16.335">
+<properties>
+<property name="validation-id" value="CLI-V02">
+</property>
+<property name="risk" value="R-CLI-03">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="Selects with no blank option: gender, maritalStatus">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / insured information › TC-CLI-003 | CLI-V03 | DOB below 18 is rejected" classname="client-information\client.spec.ts" time="3.885">
+<properties>
+<property name="validation-id" value="CLI-V03">
+</property>
+<property name="risk" value="R-CLI-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-04">
+</property>
+<property name="observation" value="Age error shown on: NOWHERE">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\client-information-client--304c5-03-DOB-below-18-is-rejected-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\client-information-client--304c5-03-DOB-below-18-is-rejected-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\client-information-client--304c5-03-DOB-below-18-is-rejected-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="age 17y364d must produce the age-range error (form or review page)" type="expect.not.toBeNull">
+<![CDATA[  [insurance-chromium] › client-information\client.spec.ts:71:7 › Client / insured information › TC-CLI-003 | CLI-V03 | DOB below 18 is rejected @regression @client @SDC-04 @P1 
+
+    Error: age 17y364d must produce the age-range error (form or review page)
+
+    expect(received).not.toBeNull()
+
+    Received: null
+
+      77 |     const where = await ageErrorSurface(page, id);
+      78 |     testInfo.annotations.push({ type: 'observation', description: `Age error shown on: ${where ?? 'NOWHERE'}` });
+    > 79 |     expect(where, 'age 17y364d must produce the age-range error (form or review page)').not.toBeNull();
+         |                                                                                             ^
+      80 |   });
+      81 |
+      82 |   test(name('TC-CLI-004', 'DOB above 65 is rejected'), meta('TC-CLI-004'), async ({ page, api }, testInfo) => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:79:93
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--304c5-03-DOB-below-18-is-rejected-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--304c5-03-DOB-below-18-is-rejected-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\client-information-client--304c5-03-DOB-below-18-is-rejected-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Client / insured information › TC-CLI-004 | CLI-V04 | DOB above 65 is rejected" classname="client-information\client.spec.ts" time="4.576">
+<properties>
+<property name="validation-id" value="CLI-V04">
+</property>
+<property name="risk" value="R-CLI-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-04">
+</property>
+<property name="observation" value="Age error shown on: NOWHERE">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\client-information-client--96eb2-04-DOB-above-65-is-rejected-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\client-information-client--96eb2-04-DOB-above-65-is-rejected-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\client-information-client--96eb2-04-DOB-above-65-is-rejected-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="age 66 must produce the age-range error (form or review page)" type="expect.not.toBeNull">
+<![CDATA[  [insurance-chromium] › client-information\client.spec.ts:82:7 › Client / insured information › TC-CLI-004 | CLI-V04 | DOB above 65 is rejected @regression @client @SDC-04 @P1 
+
+    Error: age 66 must produce the age-range error (form or review page)
+
+    expect(received).not.toBeNull()
+
+    Received: null
+
+      88 |     const where = await ageErrorSurface(page, id);
+      89 |     testInfo.annotations.push({ type: 'observation', description: `Age error shown on: ${where ?? 'NOWHERE'}` });
+    > 90 |     expect(where, 'age 66 must produce the age-range error (form or review page)').not.toBeNull();
+         |                                                                                        ^
+      91 |   });
+      92 |
+      93 |   test(name('TC-CLI-005', 'future DOB is rejected'), meta('TC-CLI-005'), async ({ page, api }) => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:90:88
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--96eb2-04-DOB-above-65-is-rejected-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--96eb2-04-DOB-above-65-is-rejected-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\client-information-client--96eb2-04-DOB-above-65-is-rejected-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Client / insured information › TC-CLI-005 | CLI-V05 | future DOB is rejected" classname="client-information\client.spec.ts" time="5.323">
+<properties>
+<property name="validation-id" value="CLI-V05">
+</property>
+<property name="risk" value="R-CLI-02">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-05">
+</property>
+</properties>
+</testcase>
+<testcase name="Client / insured information › TC-CLI-006 | CLI-P01 | age boundaries 18 and 65 are accepted" classname="client-information\client.spec.ts" time="3.358">
+<properties>
+<property name="validation-id" value="CLI-P01">
+</property>
+<property name="risk" value="R-CLI-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-04">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\client-information-client--1bb35-ries-18-and-65-are-accepted-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\client-information-client--1bb35-ries-18-and-65-are-accepted-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\client-information-client--1bb35-ries-18-and-65-are-accepted-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="calculated age on review page" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › client-information\client.spec.ts:112:7 › Client / insured information › TC-CLI-006 | CLI-P01 | age boundaries 18 and 65 are accepted @regression @client @SDC-04 @P1 › age exactly 18 
+
+    Error: calculated age on review page
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 18
+    Received: 19
+
+      121 |         await expect(page, `age ${age} is accepted and the flow moves on`).toHaveURL(/address-contact/);
+      122 |         await review.goto(id);
+    > 123 |         expect(await review.calculatedAge(), 'calculated age on review page').toBe(age);
+          |                                                                               ^
+      124 |         expect(anyMatches(await review.errors(), MSG.ageRange), `no age error at ${age}`).toBe(false);
+      125 |       });
+      126 |     }
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:123:79
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:117:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--1bb35-ries-18-and-65-are-accepted-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--1bb35-ries-18-and-65-are-accepted-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\client-information-client--1bb35-ries-18-and-65-are-accepted-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Client / insured information › TC-CLI-007 | CLI-P02 | age is calculated correctly from the date of birth" classname="client-information\client.spec.ts" time="3.755">
+<properties>
+<property name="validation-id" value="CLI-P02">
+</property>
+<property name="risk" value="R-CLI-04">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\client-information-client--796a4-ctly-from-the-date-of-birth-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\client-information-client--796a4-ctly-from-the-date-of-birth-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\client-information-client--796a4-ctly-from-the-date-of-birth-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBe(expected) // Object.is equality" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › client-information\client.spec.ts:129:7 › Client / insured information › TC-CLI-007 | CLI-P02 | age is calculated correctly from the date of birth @regression @client @P3 › birthday today 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 40
+    Received: 41
+
+      142 |         await client.save();
+      143 |         await review.goto(id);
+    > 144 |         expect(await review.calculatedAge()).toBe(ageOn(c.dob));
+          |                                              ^
+      145 |       });
+      146 |     }
+      147 |   });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:144:46
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:139:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--796a4-ctly-from-the-date-of-birth-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--796a4-ctly-from-the-date-of-birth-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\client-information-client--796a4-ctly-from-the-date-of-birth-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Client / insured information › TC-CLI-008 | CLI-P03 | name format validation" classname="client-information\client.spec.ts" time="13.95">
+<properties>
+<property name="validation-id" value="CLI-P03">
+</property>
+<property name="risk" value="R-CLI-03">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\client-information-client--ebeb1--P03-name-format-validation-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\client-information-client--ebeb1--P03-name-format-validation-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\client-information-client--ebeb1--P03-name-format-validation-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveURL(expected) failed" type="expect.toHaveURL">
+<![CDATA[  [insurance-chromium] › client-information\client.spec.ts:149:7 › Client / insured information › TC-CLI-008 | CLI-P03 | name format validation @regression @client @P3 › rejects first name "12345" 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/client/
+    Received string:  "http://34.100.166.72:8081/applications/116/address-contact"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 10000ms
+        23 × locator resolved to <html lang="en">…</html>
+           - unexpected value "http://34.100.166.72:8081/applications/116/address-contact"
+
+
+      157 |         await client.fill(clientData({ firstName: value }));
+      158 |         await client.save({ ignoreBrowserValidation: true });
+    > 159 |         await expect(page).toHaveURL(/\/client/);
+          |                            ^
+      160 |         expect((await client.errorMessages()).length, 'validation message').toBeGreaterThan(0);
+      161 |       });
+      162 |     }
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:159:28
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\client-information\client.spec.ts:155:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--ebeb1--P03-name-format-validation-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\client-information-client--ebeb1--P03-name-format-validation-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\client-information-client--ebeb1--P03-name-format-validation-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="dashboard\dashboard.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="6" failures="1" skipped="0" time="31.631" errors="0">
+<testcase name="Dashboard (agent.valid) › TC-DASH-001 | DASH-V01 | dashboard loads after login" classname="dashboard\dashboard.spec.ts" time="2.694">
+<properties>
+<property name="validation-id" value="DASH-V01">
+</property>
+<property name="risk" value="R-DASH-04">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Dashboard (agent.valid) › TC-DASH-002 | DASH-V02 | agent sees only their own applications" classname="dashboard\dashboard.spec.ts" time="3.616">
+<properties>
+<property name="validation-id" value="DASH-V02">
+</property>
+<property name="risk" value="R-DASH-01">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+</testcase>
+<testcase name="Dashboard (agent.valid) › TC-DASH-005 | DASH-V05 | summary counts equal the API counts per status" classname="dashboard\dashboard.spec.ts" time="5.236">
+<properties>
+<property name="validation-id" value="DASH-V05">
+</property>
+<property name="risk" value="R-DASH-04">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":49,"application_reference_number":null,"user_id":1,"insurance_product_id":null,"application_status":"DRAFT","current_step":"KYC_FINANCIAL","face_value":null,"premium_frequency":"MONTHLY","payment_term_years":null,"policy_term":"WHOLE_LIFE","base_premium":"0.00","rider_premium":"0.00","total_premium":"0.00","suitability_override_reason":null,"submitted_at":null,"created_at":"2026-06-04T03:53:19.000000Z","updated_at":"202
+[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":43,"application_reference_number":"WL2026060255444","user_id":1,"insurance_product_id":3,"application_status":"SUBMITTED","current_step":"SUBMITTED","face_value":"500001.00","premium_frequency":"MONTHLY","payment_term_years":10,"policy_term":"WHOLE_LIFE","base_premium":"254.17","rider_premium":"1.76","total_premium":"255.93","suitability_override_reason":null,"submitted_at":"2026-06-02T10:05:58.000000Z","created_at":"20
+[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[]}
+[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":5,"application_reference_number":"WL202605170005","user_id":1,"insurance_product_id":1,"application_status":"APPROVED","current_step":"SUBMITTED","face_value":"200000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"79.17","rider_premium":"0.00","total_premium":"79.17","suitability_override_reason":null,"submitted_at":"2026-04-27T16:06:33.000000Z","created_at":"2026-05
+[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[]}
+]]>
+</system-out>
+</testcase>
+<testcase name="Dashboard (agent.new) › TC-DASH-003 | DASH-V03 | new agent sees the empty state" classname="dashboard\dashboard.spec.ts" time="11.868">
+<properties>
+<property name="validation-id" value="DASH-V03">
+</property>
+<property name="risk" value="R-DASH-04">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\dashboard-dashboard-Dashbo-0f679--agent-sees-the-empty-state-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\dashboard-dashboard-Dashbo-0f679--agent-sees-the-empty-state-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\dashboard-dashboard-Dashbo-0f679--agent-sees-the-empty-state-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [insurance-chromium] › dashboard\dashboard.spec.ts:82:7 › Dashboard (agent.new) › TC-DASH-003 | DASH-V03 | new agent sees the empty state @regression @api @dashboard @P3 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('dashboard-empty-state')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByTestId('dashboard-empty-state') with timeout 10000ms
+      - waiting for getByTestId('dashboard-empty-state')
+
+
+      83 |     const dashboard = new DashboardPage(page);
+      84 |     await dashboard.goto();
+    > 85 |     await expect(dashboard.emptyState).toBeVisible();
+         |                                        ^
+      86 |     await expect(dashboard.newApplicationButton).toBeVisible();
+      87 |     for (const key of Object.keys(STATUS_BY_KEY) as SummaryKey[]) {
+      88 |       expect(await dashboard.summaryCount(key), `count ${key}`).toBe(0);
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\dashboard\dashboard.spec.ts:85:40
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\dashboard-dashboard-Dashbo-0f679--agent-sees-the-empty-state-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\dashboard-dashboard-Dashbo-0f679--agent-sees-the-empty-state-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\dashboard-dashboard-Dashbo-0f679--agent-sees-the-empty-state-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Dashboard (learner: write flows) › TC-DASH-004 | DASH-V04 | draft can be resumed from the dashboard" classname="dashboard\dashboard.spec.ts" time="3.474">
+<properties>
+<property name="validation-id" value="DASH-V04">
+</property>
+<property name="risk" value="R-DASH-03">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-16">
+</property>
+</properties>
+</testcase>
+<testcase name="Dashboard (learner: write flows) › TC-DASH-006 | DASH-V06 | dashboard status matches the status API" classname="dashboard\dashboard.spec.ts" time="4.743">
+<properties>
+<property name="validation-id" value="DASH-V06">
+</property>
+<property name="risk" value="R-DASH-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-18">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":{"application_id":118,"application_reference_number":null,"application_status":"DRAFT","current_step":"ADDRESS_CONTACT","status_history":[]}}
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="documents\documents.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="7" failures="3" skipped="1" time="35.529" errors="0">
+<testcase name="Document upload › TC-DOC-001 | DOC-V01 | valid documents (PDF, JPG, PNG) can be uploaded" classname="documents\documents.spec.ts" time="6.049">
+<properties>
+<property name="validation-id" value="DOC-V01">
+</property>
+<property name="risk" value="R-DOC-02">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Document upload › TC-DOC-002 | DOC-V02 | unsupported file types are rejected" classname="documents\documents.spec.ts" time="6.589">
+<properties>
+<property name="validation-id" value="DOC-V02">
+</property>
+<property name="risk" value="R-DOC-01">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="Text file renamed .pdf rejected: true">
+</property>
+</properties>
+</testcase>
+<testcase name="Document upload › TC-DOC-003 | DOC-V03 | file above 5 MB is rejected, 5 MB is accepted" classname="documents\documents.spec.ts" time="4.88">
+<properties>
+<property name="validation-id" value="DOC-V03">
+</property>
+<property name="risk" value="R-DOC-01">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="Oversize message: Document size exceeds the allowed limit.">
+</property>
+</properties>
+</testcase>
+<testcase name="Document upload › TC-DOC-004 | DOC-V04 | missing KYC_ID document blocks submission" classname="documents\documents.spec.ts" time="5.029">
+<properties>
+<property name="validation-id" value="DOC-V04">
+</property>
+<property name="risk" value="R-KYC-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-06">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\documents-documents-Docume-9045d--document-blocks-submission-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\documents-documents-Docume-9045d--document-blocks-submission-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\documents-documents-Docume-9045d--document-blocks-submission-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="missing KYC_ID listed" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › documents\documents.spec.ts:88:7 › Document upload › TC-DOC-004 | DOC-V04 | missing KYC_ID document blocks submission @regression @api @documents @SDC-06 @P1 
+
+    Error: missing KYC_ID listed
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      91 |     await review.goto(app.id);
+      92 |
+    > 93 |     expect(anyMatches(await review.errors(), MSG.docRequired), 'missing KYC_ID listed').toBe(true);
+         |                                                                                         ^
+      94 |     await expect(review.submitButton).toBeDisabled();
+      95 |
+      96 |     await test.step('API submit is rejected and the application stays a draft', async () => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\documents\documents.spec.ts:93:89
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Docume-9045d--document-blocks-submission-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Docume-9045d--document-blocks-submission-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\documents-documents-Docume-9045d--document-blocks-submission-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Validation summary and submit control › TC-DOC-005 | VAL-V01 | validation summary lists the unresolved errors" classname="documents\documents.spec.ts" time="3.987">
+<properties>
+<property name="validation-id" value="VAL-V01">
+</property>
+<property name="risk" value="R-DOC-03, R-BEN-06">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="observation" value="7 errors, rendered as a flat list (no grouping markup)">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\documents-documents-Valida-f7ab6-lists-the-unresolved-errors-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\documents-documents-Valida-f7ab6-lists-the-unresolved-errors-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\documents-documents-Valida-f7ab6-lists-the-unresolved-errors-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="summary mentions beneficiary" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › documents\documents.spec.ts:107:7 › Validation summary and submit control › TC-DOC-005 | VAL-V01 | validation summary lists the unresolved errors @regression @documents @P2 
+
+    Error: summary mentions beneficiary
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+      118 |     ];
+      119 |     for (const [label, pattern] of expectations) {
+    > 120 |       expect(anyMatches(errors, pattern), `summary mentions ${label}`).toBe(true);
+          |                                                                        ^
+      121 |     }
+      122 |     await expect(review.submitButton).toBeDisabled();
+      123 |   });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\documents\documents.spec.ts:120:72
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Valida-f7ab6-lists-the-unresolved-errors-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Valida-f7ab6-lists-the-unresolved-errors-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\documents-documents-Valida-f7ab6-lists-the-unresolved-errors-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Validation summary and submit control › TC-DOC-006 | VAL-V02 | clicking a validation error navigates to the field" classname="documents\documents.spec.ts">
+<properties>
+<property name="validation-id" value="VAL-V02">
+</property>
+<property name="risk" value="R-DOC-03">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="skip" value="OBSERVATION: the review page renders errors as plain list items without links, so click-to-navigate is not implemented. Raise with the mentor: requirement gap or design choice.">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Validation summary and submit control › TC-DOC-007 | VAL-V03 | submit stays disabled until critical errors are resolved" classname="documents\documents.spec.ts" time="6.16">
+<properties>
+<property name="validation-id" value="VAL-V03">
+</property>
+<property name="risk" value="R-WF-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-17">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\documents-documents-Valida-faac4-ritical-errors-are-resolved-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\documents-documents-Valida-faac4-ritical-errors-are-resolved-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\documents-documents-Valida-faac4-ritical-errors-are-resolved-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(received).toBeGreaterThan(expected)" type="expect.toBeGreaterThan">
+<![CDATA[  [insurance-chromium] › documents\documents.spec.ts:137:7 › Validation summary and submit control › TC-DOC-007 | VAL-V03 | submit stays disabled until critical errors are resolved @regression @api @documents @SDC-17 @P1 › one blocking error: Submit is disabled 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+      142 |     await test.step('one blocking error: Submit is disabled', async () => {
+      143 |       await review.goto(app.id);
+    > 144 |       expect((await review.errors()).length).toBeGreaterThan(0);
+          |                                              ^
+      145 |       await expect(review.submitButton).toBeDisabled();
+      146 |     });
+      147 |     await test.step('resolving it enables Submit', async () => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\documents\documents.spec.ts:144:46
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\documents\documents.spec.ts:142:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Valida-faac4-ritical-errors-are-resolved-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\documents-documents-Valida-faac4-ritical-errors-are-resolved-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\documents-documents-Valida-faac4-ritical-errors-are-resolved-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="kyc-financial\kyc-financial.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="6" failures="2" skipped="0" time="50.2" errors="0">
+<testcase name="KYC, financial and compliance › TC-KYC-001 | CLI-V08 | SSN is masked on every screen and response" classname="kyc-financial\kyc-financial.spec.ts" time="6.952">
+<properties>
+<property name="validation-id" value="CLI-V08">
+</property>
+<property name="risk" value="R-KYC-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-07">
+</property>
+</properties>
+</testcase>
+<testcase name="KYC, financial and compliance › TC-KYC-002 | CLI-V09 | KYC upload rejects unsupported file types" classname="kyc-financial\kyc-financial.spec.ts" time="4.041">
+<properties>
+<property name="validation-id" value="CLI-V09">
+</property>
+<property name="risk" value="R-DOC-01">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="KYC, financial and compliance › TC-KYC-003 | CLI-V10 | PEP = Yes requires details" classname="kyc-financial\kyc-financial.spec.ts" time="10.514">
+<properties>
+<property name="validation-id" value="CLI-V10">
+</property>
+<property name="risk" value="R-KYC-05">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="observation" value="PEP-details error shown on: review">
+</property>
+</properties>
+</testcase>
+<testcase name="KYC, financial and compliance › TC-KYC-004 | KYC-P01 | premium must be affordable against income (20%)" classname="kyc-financial\kyc-financial.spec.ts" time="5.27">
+<properties>
+<property name="validation-id" value="KYC-P01">
+</property>
+<property name="risk" value="R-KYC-03">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-08">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\kyc-financial-kyc-financia-2f5ac-fordable-against-income-20--insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\kyc-financial-kyc-financia-2f5ac-fordable-against-income-20--insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\kyc-financial-kyc-financia-2f5ac-fordable-against-income-20--insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="affordability error on review page" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › kyc-financial\kyc-financial.spec.ts:88:7 › KYC, financial and compliance › TC-KYC-004 | KYC-P01 | premium must be affordable against income (20%) @regression @api @kyc @SDC-08 @P1 › income 5,000 is flagged on the review page and by the validate API 
+
+    Error: affordability error on review page
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+       96 |     await test.step('income 5,000 is flagged on the review page and by the validate API', async () => {
+       97 |       await review.goto(app.id);
+    >  98 |       expect(anyMatches(await review.errors(), MSG.affordability), 'affordability error on review page').toBe(true);
+          |                                                                                                          ^
+       99 |       const res = await api.validate(app.id, agent());
+      100 |       expect(errorTexts(res).join(' | ')).toMatch(MSG.affordability);
+      101 |     });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:98:106
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:96:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\kyc-financial-kyc-financia-2f5ac-fordable-against-income-20--insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\kyc-financial-kyc-financia-2f5ac-fordable-against-income-20--insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\kyc-financial-kyc-financia-2f5ac-fordable-against-income-20--insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="KYC, financial and compliance › TC-KYC-005 | KYC-P02 | ID number rules by ID type" classname="kyc-financial\kyc-financial.spec.ts" time="14.738">
+<properties>
+<property name="validation-id" value="KYC-P02">
+</property>
+<property name="risk" value="R-KYC-04">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="SSN: &quot;@@@&quot; accepted = true">
+</property>
+<property name="observation" value="STATE_ID: &quot;@@@&quot; accepted = true">
+</property>
+<property name="observation" value="PASSPORT: &quot;@@@&quot; accepted = true">
+</property>
+<property name="observation" value="DRIVERS_LICENSE: &quot;@@@&quot; accepted = true">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\kyc-financial-kyc-financia-26ec5--ID-number-rules-by-ID-type-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\kyc-financial-kyc-financia-26ec5--ID-number-rules-by-ID-type-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\kyc-financial-kyc-financia-26ec5--ID-number-rules-by-ID-type-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="SSN: &quot;@@@&quot; should be rejected as an ID number" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › kyc-financial\kyc-financial.spec.ts:110:7 › KYC, financial and compliance › TC-KYC-005 | KYC-P02 | ID number rules by ID type @regression @kyc @P3 
+
+    Error: SSN: "@@@" should be rejected as an ID number
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      134 |         const accepted = /\/product/.test(page.url());
+      135 |         testInfo.annotations.push({ type: 'observation', description: `${type}: "@@@" accepted = ${accepted}` });
+    > 136 |         expect.soft(accepted, `${type}: "@@@" should be rejected as an ID number`).toBe(false);
+          |                                                                                    ^
+      137 |       });
+      138 |     }
+      139 |   });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:136:84
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:130:7
+
+    Error: STATE_ID: "@@@" should be rejected as an ID number
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      134 |         const accepted = /\/product/.test(page.url());
+      135 |         testInfo.annotations.push({ type: 'observation', description: `${type}: "@@@" accepted = ${accepted}` });
+    > 136 |         expect.soft(accepted, `${type}: "@@@" should be rejected as an ID number`).toBe(false);
+          |                                                                                    ^
+      137 |       });
+      138 |     }
+      139 |   });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:136:84
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:130:7
+
+    Error: PASSPORT: "@@@" should be rejected as an ID number
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      134 |         const accepted = /\/product/.test(page.url());
+      135 |         testInfo.annotations.push({ type: 'observation', description: `${type}: "@@@" accepted = ${accepted}` });
+    > 136 |         expect.soft(accepted, `${type}: "@@@" should be rejected as an ID number`).toBe(false);
+          |                                                                                    ^
+      137 |       });
+      138 |     }
+      139 |   });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:136:84
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:130:7
+
+    Error: DRIVERS_LICENSE: "@@@" should be rejected as an ID number
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      134 |         const accepted = /\/product/.test(page.url());
+      135 |         testInfo.annotations.push({ type: 'observation', description: `${type}: "@@@" accepted = ${accepted}` });
+    > 136 |         expect.soft(accepted, `${type}: "@@@" should be rejected as an ID number`).toBe(false);
+          |                                                                                    ^
+      137 |       });
+      138 |     }
+      139 |   });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:136:84
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\kyc-financial\kyc-financial.spec.ts:130:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\kyc-financial-kyc-financia-26ec5--ID-number-rules-by-ID-type-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\kyc-financial-kyc-financia-26ec5--ID-number-rules-by-ID-type-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\kyc-financial-kyc-financia-26ec5--ID-number-rules-by-ID-type-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="KYC, financial and compliance › TC-KYC-006 | KYC-P03 | incomplete compliance declaration blocks progress" classname="kyc-financial\kyc-financial.spec.ts" time="8.685">
+<properties>
+<property name="validation-id" value="KYC-P03">
+</property>
+<property name="risk" value="R-KYC-05">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="observation" value="Declaration error shown on: review">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="product-selection\product-selection.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="7" failures="3" skipped="0" time="65.529" errors="2">
+<testcase name="Product selection and policy configuration › TC-PROD-001 | PROD-V01 | catalog shows the expected Whole Life products" classname="product-selection\product-selection.spec.ts" time="2.726">
+<properties>
+<property name="validation-id" value="PROD-V01">
+</property>
+<property name="risk" value="R-PROD-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":3,"product_code":"WL_ELITE_LEGACY","product_name":"Elite Legacy Whole Life","product_type":"WHOLE_LIFE","short_description":"High-net-worth offering for estate planning and tax efficiency.","features":"High coverage, estate planning orientation, enhanced suitability, larger face-value limits.","eligibility_age_min":30,"eligibility_age_max":65,"face_value_min":"500000.00","face_value_max":"5000000.00","base_rate_per_1000
+
+[[ATTACHMENT|test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="seeded products are all listed" type="expect.toEqual">
+<![CDATA[  [insurance-chromium] › product-selection\product-selection.spec.ts:22:7 › Product selection and policy configuration › TC-PROD-001 | PROD-V01 | catalog shows the expected Whole Life products @smoke @regression @api @product @P1 
+
+    Error: seeded products are all listed
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 1
+    + Received  + 0
+
+      Array [
+        "WL_ELITE_LEGACY",
+        "WL_FLEXI_PAY",
+    -   "WL_GUARANTEED_RETURN",
+        "WL_SECURE_BASIC",
+        "WL_WEALTH_BUILDER",
+      ]
+
+      30 |
+      31 |     expect(sorted(uiCodes), 'UI cards equal active products in the API').toEqual(sorted(activeApi));
+    > 32 |     expect(sorted(uiCodes), 'seeded products are all listed').toEqual(sorted(PRODUCTS.map((p) => p.code)));
+         |                                                               ^
+      33 |     for (const code of uiCodes) await expect(catalog.card(code)).toBeVisible();
+      34 |   });
+      35 |
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:32:63
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Request completed successfully","data":[{"id":3,"product_code":"WL_ELITE_LEGACY","product_name":"Elite Legacy Whole Life","product_type":"WHOLE_LIFE","short_description":"High-net-worth offering for estate planning and tax efficiency.","features":"High coverag...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\product-selection-product--5a45d-xpected-Whole-Life-products-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Product selection and policy configuration › TC-PROD-002 | PROD-V02 | product details page opens with features and terms" classname="product-selection\product-selection.spec.ts" time="5.655">
+<properties>
+<property name="validation-id" value="PROD-V02">
+</property>
+<property name="risk" value="R-PROD-05, R-PROD-06">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+</testcase>
+<testcase name="Product selection and policy configuration › TC-PROD-003 | PROD-V03 | face value below the minimum is rejected" classname="product-selection\product-selection.spec.ts" time="19.305">
+<properties>
+<property name="validation-id" value="PROD-V03">
+</property>
+<property name="risk" value="R-PROD-02">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\product-selection-product--98654-low-the-minimum-is-rejected-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\product-selection-product--98654-low-the-minimum-is-rejected-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\product-selection-product--98654-low-the-minimum-is-rejected-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="No option matching Guaranteed Return Whole Life. Options: Select product | Elite Legacy Whole Life | FlexiPay Whole Life | SecureLife Whole Life | WealthBuilder Whole Life" type="Error">
+<![CDATA[  [insurance-chromium] › product-selection\product-selection.spec.ts:55:7 › Product selection and policy configuration › TC-PROD-003 | PROD-V03 | face value below the minimum is rejected @regression @api @product @P2 › Guaranteed Return Whole Life: 199999 rejected, 200000 accepted 
+
+    Error: No option matching Guaranteed Return Whole Life. Options: Select product | Elite Legacy Whole Life | FlexiPay Whole Life | SecureLife Whole Life | WealthBuilder Whole Life
+
+       at ..\utils\testHelpers.ts:45
+
+      43 |   );
+      44 |   const match = options.find((o) => (typeof pattern === 'string' ? o.text.includes(pattern) : pattern.test(o.text)));
+    > 45 |   if (!match) throw new Error(`No option matching ${pattern}. Options: ${options.map((o) => o.text).join(' | ')}`);
+         |                     ^
+      46 |   await select.selectOption(match.value);
+      47 |   return match.text;
+      48 | }
+        at selectByText (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\testHelpers.ts:45:21)
+        at ProductConfigurationPage.selectProduct (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\pages\ProductConfigurationPage.ts:40:5)
+        at ProductConfigurationPage.fill (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\pages\ProductConfigurationPage.ts:56:5)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:62:9
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:60:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--98654-low-the-minimum-is-rejected-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--98654-low-the-minimum-is-rejected-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\product-selection-product--98654-low-the-minimum-is-rejected-insurance-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Product selection and policy configuration › TC-PROD-004 | PROD-V04 | face value above the maximum is rejected" classname="product-selection\product-selection.spec.ts" time="19.056">
+<properties>
+<property name="validation-id" value="PROD-V04">
+</property>
+<property name="risk" value="R-PROD-02">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\product-selection-product--6e943-ove-the-maximum-is-rejected-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\product-selection-product--6e943-ove-the-maximum-is-rejected-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\product-selection-product--6e943-ove-the-maximum-is-rejected-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<error message="No option matching Guaranteed Return Whole Life. Options: Select product | Elite Legacy Whole Life | FlexiPay Whole Life | SecureLife Whole Life | WealthBuilder Whole Life" type="Error">
+<![CDATA[  [insurance-chromium] › product-selection\product-selection.spec.ts:83:7 › Product selection and policy configuration › TC-PROD-004 | PROD-V04 | face value above the maximum is rejected @regression @api @product @P2 › Guaranteed Return Whole Life: 2000001 rejected, 2000000 accepted 
+
+    Error: No option matching Guaranteed Return Whole Life. Options: Select product | Elite Legacy Whole Life | FlexiPay Whole Life | SecureLife Whole Life | WealthBuilder Whole Life
+
+       at ..\utils\testHelpers.ts:45
+
+      43 |   );
+      44 |   const match = options.find((o) => (typeof pattern === 'string' ? o.text.includes(pattern) : pattern.test(o.text)));
+    > 45 |   if (!match) throw new Error(`No option matching ${pattern}. Options: ${options.map((o) => o.text).join(' | ')}`);
+         |                     ^
+      46 |   await select.selectOption(match.value);
+      47 |   return match.text;
+      48 | }
+        at selectByText (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\testHelpers.ts:45:21)
+        at ProductConfigurationPage.selectProduct (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\pages\ProductConfigurationPage.ts:40:5)
+        at ProductConfigurationPage.fill (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\pages\ProductConfigurationPage.ts:56:5)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:90:9
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:88:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--6e943-ove-the-maximum-is-rejected-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--6e943-ove-the-maximum-is-rejected-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\product-selection-product--6e943-ove-the-maximum-is-rejected-insurance-chromium\error-context.md
+]]>
+</error>
+</testcase>
+<testcase name="Product selection and policy configuration › TC-PROD-005 | PROD-V05 | premium recalculates when frequency or face value changes" classname="product-selection\product-selection.spec.ts" time="6.313">
+<properties>
+<property name="validation-id" value="PROD-V05">
+</property>
+<property name="risk" value="R-PROD-03">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-12">
+</property>
+</properties>
+</testcase>
+<testcase name="Product selection and policy configuration › TC-PROD-006 | PROD-V06 | premium matches on configuration, summary, review and API" classname="product-selection\product-selection.spec.ts" time="6.655">
+<properties>
+<property name="validation-id" value="PROD-V06">
+</property>
+<property name="risk" value="R-PROD-04">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-12">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\product-selection-product--48c15-tion-summary-review-and-API-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\product-selection-product--48c15-tion-summary-review-and-API-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\product-selection-product--48c15-tion-summary-review-and-API-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="all four places show the same premium" type="expect.toEqual">
+<![CDATA[  [insurance-chromium] › product-selection\product-selection.spec.ts:150:7 › Product selection and policy configuration › TC-PROD-006 | PROD-V06 | premium matches on configuration, summary, review and API @regression @api @product @SDC-12 @P2 › as configured (250,000 + ADB, monthly) 
+
+    Error: all four places show the same premium
+
+    expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 4
+    + Received  + 4
+
+      Object {
+    -   "apiPremium": 116.67,
+    -   "configPremium": 116.67,
+    -   "reviewPremium": 116.67,
+    -   "summary": 116.67,
+    +   "apiPremium": 98.96,
+    +   "configPremium": 98.96,
+    +   "reviewPremium": 98.96,
+    +   "summary": 98.96,
+      }
+
+      171 |       const expected = totalPremium({ face, rate: p.ratePer1000 }, [{ coverage: face, rate: RIDERS.ADB.ratePer1000 }], 'MONTHLY');
+      172 |       const v = await readAll();
+    > 173 |       expect(v, 'all four places show the same premium').toEqual({ configPremium: expected, summary: expected, reviewPremium: expected, apiPremium: expected });
+          |                                                          ^
+      174 |     });
+      175 |     await test.step('after changing the face value to 300,000', async () => {
+      176 |       await config.goto(app.id);
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:173:58
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:170:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--48c15-tion-summary-review-and-API-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--48c15-tion-summary-review-and-API-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\product-selection-product--48c15-tion-summary-review-and-API-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Product selection and policy configuration › TC-PROD-007 | PROD-V07 | suitability / eligibility warning for age and product mismatch" classname="product-selection\product-selection.spec.ts" time="5.819">
+<properties>
+<property name="validation-id" value="PROD-V07">
+</property>
+<property name="risk" value="R-PROD-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-09">
+</property>
+<property name="observation" value="age 19 with WealthBuilder (min 21): eligibility message shown on NOWHERE">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\product-selection-product--bed9d-or-age-and-product-mismatch-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\product-selection-product--bed9d-or-age-and-product-mismatch-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\product-selection-product--bed9d-or-age-and-product-mismatch-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="age 19 with WealthBuilder (min 21): UI must flag the mismatch" type="expect.not.toBeNull">
+<![CDATA[  [insurance-chromium] › product-selection\product-selection.spec.ts:185:7 › Product selection and policy configuration › TC-PROD-007 | PROD-V07 | suitability / eligibility warning for age and product mismatch @regression @api @product @SDC-09 @P1 › age 19 with WealthBuilder (min 21) 
+
+    Error: age 19 with WealthBuilder (min 21): UI must flag the mismatch
+
+    expect(received).not.toBeNull()
+
+    Received: null
+
+      201 |         const where = await errorSurface(page, app.id, MSG.eligibility);
+      202 |         testInfo.annotations.push({ type: 'observation', description: `${c.label}: eligibility message shown on ${where ?? 'NOWHERE'}` });
+    > 203 |         expect(where, `${c.label}: UI must flag the mismatch`).not.toBeNull();
+          |                                                                    ^
+      204 |
+      205 |         // API: validate must report it as well
+      206 |         const res = await api.validate(app.id, agent());
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:203:68
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\product-selection\product-selection.spec.ts:192:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--bed9d-or-age-and-product-mismatch-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\product-selection-product--bed9d-or-age-and-product-mismatch-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\product-selection-product--bed9d-or-age-and-product-mismatch-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="riders\riders.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="7" failures="6" skipped="0" time="66.461" errors="0">
+<testcase name="Rider selection › TC-RID-001 | RIDER-V01 | agent can add an eligible protection rider (ADB)" classname="riders\riders.spec.ts" time="6.961">
+<properties>
+<property name="validation-id" value="RIDER-V01">
+</property>
+<property name="risk" value="R-RID-05">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+</testcase>
+<testcase name="Rider selection › TC-RID-002 | RIDER-V02 | rider coverage cannot exceed the base face value" classname="riders\riders.spec.ts" time="15.163">
+<properties>
+<property name="validation-id" value="RIDER-V02">
+</property>
+<property name="risk" value="R-RID-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-10">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\riders-riders-Rider-select-3be9c--exceed-the-base-face-value-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-3be9c--exceed-the-base-face-value-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-3be9c--exceed-the-base-face-value-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="validation alert" type="expect.toBeVisible">
+<![CDATA[  [insurance-chromium] › riders\riders.spec.ts:52:7 › Rider selection › TC-RID-002 | RIDER-V02 | rider coverage cannot exceed the base face value @regression @api @rider @SDC-10 @P1 › ADB at face value + 1 is rejected, at face value accepted 
+
+    Error: validation alert
+
+    expect(locator).toBeVisible() failed
+
+    Locator: getByTestId('validation-error-alert')
+    Expected: visible
+    Timeout: 10000ms
+    Error: element(s) not found
+
+    Call log:
+      - validation alert getByTestId('validation-error-alert') with timeout 10000ms
+      - waiting for getByTestId('validation-error-alert')
+
+
+       at ..\pages\BasePage.ts:22
+
+      20 |
+      21 |   async expectErrorMatching(pattern: RegExp): Promise<void> {
+    > 22 |     await expect(this.validationAlert, 'validation alert').toBeVisible();
+         |                                                            ^
+      23 |     await expect(this.validationAlert).toContainText(pattern);
+      24 |   }
+      25 |
+        at RiderSelectionPage.expectErrorMatching (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\pages\BasePage.ts:22:60)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:61:20
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:55:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-3be9c--exceed-the-base-face-value-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-3be9c--exceed-the-base-face-value-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\riders-riders-Rider-select-3be9c--exceed-the-base-face-value-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Rider selection › TC-RID-003 | RIDER-V03 | age-ineligible rider cannot be added" classname="riders\riders.spec.ts" time="16.387">
+<properties>
+<property name="validation-id" value="RIDER-V03">
+</property>
+<property name="risk" value="R-RID-03">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\riders-riders-Rider-select-0143f-gible-rider-cannot-be-added-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-0143f-gible-rider-cannot-be-added-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-0143f-gible-rider-cannot-be-added-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="expect(page).toHaveURL(expected) failed" type="expect.toHaveURL">
+<![CDATA[  [insurance-chromium] › riders\riders.spec.ts:82:7 › Rider selection › TC-RID-003 | RIDER-V03 | age-ineligible rider cannot be added @regression @api @rider @P2 
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/riders/
+    Received string:  "http://34.100.166.72:8081/applications/141/beneficiaries"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 10000ms
+        23 × locator resolved to <html lang="en">…</html>
+           - unexpected value "http://34.100.166.72:8081/applications/141/beneficiaries"
+
+
+      87 |     await riders.select('WAIVER_DISABILITY', FACE);
+      88 |     await riders.save();
+    > 89 |     await expect(page).toHaveURL(/\/riders/);
+         |                        ^
+      90 |     await riders.expectErrorMatching(MSG.riderAge);
+      91 |
+      92 |     await test.step('API rejects it as well', async () => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:89:24
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-0143f-gible-rider-cannot-be-added-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-0143f-gible-rider-cannot-be-added-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\riders-riders-Rider-select-0143f-gible-rider-cannot-be-added-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Rider selection › TC-RID-004 | RIDER-V04 | maximum of four riders is enforced" classname="riders\riders.spec.ts" time="7.827">
+<properties>
+<property name="validation-id" value="RIDER-V04">
+</property>
+<property name="risk" value="R-RID-04">
+</property>
+<property name="priority" value="P3">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Rider selection saved","data":{"id":142,"application_reference_number":null,"user_id":9,"insurance_product_id":1,"application_status":"DRAFT","current_step":"BENEFICIARIES","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":null,"created_at":"2026-11-04T18:36:19.000000Z","updated_at":"2026-11-
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-b1a18--of-four-riders-is-enforced-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-b1a18--of-four-riders-is-enforced-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-b1a18--of-four-riders-is-enforced-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="HTTP status. Actual response body: {&quot;status&quot;:&quot;success&quot;,&quot;message&quot;:&quot;Rider selection saved&quot;,&quot;data&quot;:{&quot;id&quot;:142,&quot;application_reference_number&quot;:null,&quot;user_id&quot;:9,&quot;insurance_product_id&quot;:1,&quot;application_status&quot;:&quot;DRAFT&quot;,&quot;current_step&quot;:&quot;BENEFICIARIES&quot;,&quot;face_value&quot;:&quot;250000.00&quot;,&quot;premium_frequency&quot;:&quot;MONTHLY&quot;,&quot;payment_term_years&quot;:20,&quot;policy_term&quot;:&quot;WHOLE_LIFE&quot;,&quot;base_premium&quot;:&quot;98.96&quot;,&quot;rider_premium&quot;:&quot;0.00&quot;,&quot;total_premium&quot;:&quot;98.96&quot;,&quot;suitability_override_reason&quot;:null,&quot;submitted_at&quot;:null,&quot;created_at&quot;:&quot;2026-11-04T18:36:19.000000Z&quot;,&quot;updated_at&quot;:&quot;2026-11-04T18:36:25.000000Z&quot;,&quot;application_riders&quot;:[]}}" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › riders\riders.spec.ts:104:7 › Rider selection › TC-RID-004 | RIDER-V04 | maximum of four riders is enforced @regression @rider @P3 › API rejects five riders too 
+
+    Error: HTTP status. Actual response body: {"status":"success","message":"Rider selection saved","data":{"id":142,"application_reference_number":null,"user_id":9,"insurance_product_id":1,"application_status":"DRAFT","current_step":"BENEFICIARIES","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":null,"created_at":"2026-11-04T18:36:19.000000Z","updated_at":"2026-11-04T18:36:25.000000Z","application_riders":[]}}
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 422
+    Received: 200
+
+       at ..\utils\assertions.ts:38
+
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+      37 |   showResponse(result);
+    > 38 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+         |                                                                                            ^
+      39 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('error');
+      40 |   if (pattern) {
+      41 |     const texts = errorTexts(result).join(' | ');
+        at expectApiError (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:38:92)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:123:21
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:121:5
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Rider selection saved","data":{"id":142,"application_reference_number":null,"user_id":9,"insurance_product_id":1,"application_status":"DRAFT","current_step":"BENEFICIARIES","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-b1a18--of-four-riders-is-enforced-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-b1a18--of-four-riders-is-enforced-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\riders-riders-Rider-select-b1a18--of-four-riders-is-enforced-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Rider selection › TC-RID-005 | RIDER-V05 | mutually exclusive waiver riders cannot both be selected" classname="riders\riders.spec.ts" time="6.816">
+<properties>
+<property name="validation-id" value="RIDER-V05">
+</property>
+<property name="risk" value="R-RID-02">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-11">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Rider selection saved","data":{"id":143,"application_reference_number":null,"user_id":9,"insurance_product_id":1,"application_status":"DRAFT","current_step":"BENEFICIARIES","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":null,"created_at":"2026-11-04T18:36:28.000000Z","updated_at":"2026-11-
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-44bab-ers-cannot-both-be-selected-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-44bab-ers-cannot-both-be-selected-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-44bab-ers-cannot-both-be-selected-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="HTTP status. Actual response body: {&quot;status&quot;:&quot;success&quot;,&quot;message&quot;:&quot;Rider selection saved&quot;,&quot;data&quot;:{&quot;id&quot;:143,&quot;application_reference_number&quot;:null,&quot;user_id&quot;:9,&quot;insurance_product_id&quot;:1,&quot;application_status&quot;:&quot;DRAFT&quot;,&quot;current_step&quot;:&quot;BENEFICIARIES&quot;,&quot;face_value&quot;:&quot;250000.00&quot;,&quot;premium_frequency&quot;:&quot;MONTHLY&quot;,&quot;payment_term_years&quot;:20,&quot;policy_term&quot;:&quot;WHOLE_LIFE&quot;,&quot;base_premium&quot;:&quot;98.96&quot;,&quot;rider_premium&quot;:&quot;0.00&quot;,&quot;total_premium&quot;:&quot;98.96&quot;,&quot;suitability_override_reason&quot;:null,&quot;submitted_at&quot;:null,&quot;created_at&quot;:&quot;2026-11-04T18:36:28.000000Z&quot;,&quot;updated_at&quot;:&quot;2026-11-04T18:36:33.000000Z&quot;,&quot;application_riders&quot;:[]}}" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › riders\riders.spec.ts:133:7 › Rider selection › TC-RID-005 | RIDER-V05 | mutually exclusive waiver riders cannot both be selected @regression @api @rider @SDC-11 @P2 › API rejects both together 
+
+    Error: HTTP status. Actual response body: {"status":"success","message":"Rider selection saved","data":{"id":143,"application_reference_number":null,"user_id":9,"insurance_product_id":1,"application_status":"DRAFT","current_step":"BENEFICIARIES","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":null,"created_at":"2026-11-04T18:36:28.000000Z","updated_at":"2026-11-04T18:36:33.000000Z","application_riders":[]}}
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 422
+    Received: 200
+
+       at ..\utils\assertions.ts:38
+
+      36 | export function expectApiError(result: ApiResult, status: number, pattern?: RegExp): void {
+      37 |   showResponse(result);
+    > 38 |   expect(result.status, `HTTP status. Actual response body: ${result.text.slice(0, 800)}`).toBe(status);
+         |                                                                                            ^
+      39 |   expect(result.body?.status, `The response has no "status" field. Actual response body: ${result.text.slice(0, 800)}`).toBe('error');
+      40 |   if (pattern) {
+      41 |     const texts = errorTexts(result).join(' | ');
+        at expectApiError (C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\utils\assertions.ts:38:92)
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:149:21
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:145:5
+
+    attachment #1: api-response (text/plain) ───────────────────────────────────────────────────────
+    HTTP 200
+    {"status":"success","message":"Rider selection saved","data":{"id":143,"application_reference_number":null,"user_id":9,"insurance_product_id":1,"application_status":"DRAFT","current_step":"BENEFICIARIES","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_...
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-44bab-ers-cannot-both-be-selected-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #3: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-44bab-ers-cannot-both-be-selected-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\riders-riders-Rider-select-44bab-ers-cannot-both-be-selected-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Rider selection › TC-RID-006 | RIDER-V06 | critical illness rider triggers a health questionnaire" classname="riders\riders.spec.ts" time="6.53">
+<properties>
+<property name="validation-id" value="RIDER-V06">
+</property>
+<property name="risk" value="R-RID-06">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="Questionnaire message shown on: NOWHERE">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\riders-riders-Rider-select-04be9-gers-a-health-questionnaire-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-04be9-gers-a-health-questionnaire-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-04be9-gers-a-health-questionnaire-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="selecting Critical Illness must lead to a health questionnaire (page text or message)" type="expect.not.toBeNull">
+<![CDATA[  [insurance-chromium] › riders\riders.spec.ts:159:7 › Rider selection › TC-RID-006 | RIDER-V06 | critical illness rider triggers a health questionnaire @regression @rider @P3 
+
+    Error: selecting Critical Illness must lead to a health questionnaire (page text or message)
+
+    expect(received).not.toBeNull()
+
+    Received: null
+
+      173 |     const where = await errorSurface(page, app.id, /questionnaire|health/i);
+      174 |     testInfo.annotations.push({ type: 'observation', description: `Questionnaire message shown on: ${where ?? 'NOWHERE'}` });
+    > 175 |     expect(where, 'selecting Critical Illness must lead to a health questionnaire (page text or message)').not.toBeNull();
+          |                                                                                                                ^
+      176 |   });
+      177 |
+      178 |   test(name('TC-RID-007', 'rider premiums are itemised in the total premium'), meta('TC-RID-007'), async ({ page, api }) => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:175:112
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-04be9-gers-a-health-questionnaire-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-04be9-gers-a-health-questionnaire-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\riders-riders-Rider-select-04be9-gers-a-health-questionnaire-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Rider selection › TC-RID-007 | RIDER-V07 | rider premiums are itemised in the total premium" classname="riders\riders.spec.ts" time="6.777">
+<properties>
+<property name="validation-id" value="RIDER-V07">
+</property>
+<property name="risk" value="R-RID-05">
+</property>
+<property name="priority" value="P2">
+</property>
+<property name="seeded-defect-candidate" value="SDC-12">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\riders-riders-Rider-select-2babb-emised-in-the-total-premium-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-2babb-emised-in-the-total-premium-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\riders-riders-Rider-select-2babb-emised-in-the-total-premium-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="ADB premium itemised" type="expect.toContain">
+<![CDATA[  [insurance-chromium] › riders\riders.spec.ts:178:7 › Rider selection › TC-RID-007 | RIDER-V07 | rider premiums are itemised in the total premium @regression @api @rider @SDC-12 @P2 › itemised premiums and total with both riders 
+
+    Error: ADB premium itemised
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected substring: "17.71"
+    Received string:    "Current rider premium: $23.13"
+
+      189 |       await riders.goto(app.id);
+      190 |       const text = await riders.summaryText();
+    > 191 |       for (const p of picks) expect(text, `${p.key} premium itemised`).toContain(periodPremium(p.coverage, rate(p.key), 'MONTHLY').toFixed(2));
+          |                                                                        ^
+      192 |       const total = totalPremium({ face: FACE, rate: BASE.ratePer1000 }, picks.map((p) => ({ coverage: p.coverage, rate: rate(p.key) })), 'MONTHLY');
+      193 |       expect(Number((await api.getApplication(app.id, agent())).body?.data?.total_premium), 'API total').toBe(total);
+      194 |     });
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:191:72
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\riders\riders.spec.ts:188:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-2babb-emised-in-the-total-premium-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\riders-riders-Rider-select-2babb-emised-in-the-total-premium-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\riders-riders-Rider-select-2babb-emised-in-the-total-premium-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="workflow\workflow.spec.ts" timestamp="2026-11-04T18:26:49.363Z" hostname="insurance-chromium" tests="7" failures="1" skipped="0" time="77.132" errors="0">
+<testcase name="Submission and status tracking › TC-WF-001 | WF-V01 | incomplete application is saved as a draft" classname="workflow\workflow.spec.ts" time="7.403">
+<properties>
+<property name="validation-id" value="WF-V01">
+</property>
+<property name="risk" value="R-WF-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-16">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission and status tracking › TC-WF-002 | WF-V02 | draft can be resumed with the saved data" classname="workflow\workflow.spec.ts" time="5.833">
+<properties>
+<property name="validation-id" value="WF-V02">
+</property>
+<property name="risk" value="R-WF-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-16">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission and status tracking › TC-WF-003 | WF-V03 | a valid application can be submitted end to end" classname="workflow\workflow.spec.ts" time="39.292">
+<properties>
+<property name="validation-id" value="WF-V03">
+</property>
+<property name="risk" value="R-WF-03">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":{"application_id":148,"application_reference_number":"WL2026110453301","application_status":"SUBMITTED","current_step":"SUBMITTED","status_history":[{"id":59,"application_id":148,"status":"SUBMITTED","notes":"Application submitted successfully.","changed_by":"9","created_at":"2026-11-04T18:37:23.000000Z","updated_at":"2026-11-04T18:37:23.000000Z"}]}}
+[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":{"application_id":149,"application_reference_number":"WL2026110415228","application_status":"SUBMITTED","current_step":"SUBMITTED","status_history":[{"id":60,"application_id":149,"status":"SUBMITTED","notes":"Application submitted successfully.","changed_by":"9","created_at":"2026-11-04T18:37:42.000000Z","updated_at":"2026-11-04T18:37:42.000000Z"}]}}
+]]>
+</system-out>
+</testcase>
+<testcase name="Submission and status tracking › TC-WF-004 | WF-V04 | submitted application is read-only" classname="workflow\workflow.spec.ts" time="2.516">
+<properties>
+<property name="validation-id" value="WF-V04">
+</property>
+<property name="risk" value="R-WF-04">
+</property>
+<property name="priority" value="P2">
+</property>
+</properties>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\test-failed-2.png]]
+
+[[ATTACHMENT|test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\video.webm]]
+
+[[ATTACHMENT|test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="client page offers no way to edit a submitted application" type="expect.toBe">
+<![CDATA[  [insurance-chromium] › workflow\workflow.spec.ts:156:7 › Submission and status tracking › TC-WF-004 | WF-V04 | submitted application is read-only @regression @api @workflow @P2 › /client cannot be edited 
+
+    Error: client page offers no way to edit a submitted application
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 11
+
+      170 |         const editableInputs = await page.locator('form input:not([type=hidden]):not([disabled]):not([readonly]), form select:not([disabled]), form textarea:not([disabled]):not([readonly])').count();
+      171 |         const saveVisible = await page.locator('form button[data-testid$="save-continue-button"]:not([disabled])').count();
+    > 172 |         expect(editableInputs + saveVisible, `${step} page offers no way to edit a submitted application`).toBe(0);
+          |                                                                                                            ^
+      173 |       });
+      174 |     }
+      175 |     await test.step('API refuses to change a submitted application (re-sends the identical, current data)', async () => {
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\workflow\workflow.spec.ts:172:108
+        at C:\Users\talentfarm_learner\insurance-order-entry-playwright-automation\tests\workflow\workflow.spec.ts:164:7
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\reports\test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #4: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\reports\test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\reports\test-results\workflow-workflow-Submissi-234a1-ed-application-is-read-only-insurance-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Submission and status tracking › TC-WF-005 | WF-V05 | confirmation page appears after submission" classname="workflow\workflow.spec.ts" time="7.375">
+<properties>
+<property name="validation-id" value="WF-V05">
+</property>
+<property name="risk" value="R-WF-05">
+</property>
+<property name="priority" value="P3">
+</property>
+<property name="observation" value="No confirmation-email simulation text on the page.">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission and status tracking › TC-WF-006 | WF-V06 | dashboard status updates after submission" classname="workflow\workflow.spec.ts" time="8.221">
+<properties>
+<property name="validation-id" value="WF-V06">
+</property>
+<property name="risk" value="R-WF-03, R-DASH-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-18">
+</property>
+</properties>
+</testcase>
+<testcase name="Submission and status tracking › TC-WF-007 | WF-V07 | status page matches the status API" classname="workflow\workflow.spec.ts" time="6.492">
+<properties>
+<property name="validation-id" value="WF-V07">
+</property>
+<property name="risk" value="R-DASH-02">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-18">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Application submitted successfully","data":{"id":152,"application_reference_number":"WL2026110427996","user_id":9,"insurance_product_id":1,"application_status":"SUBMITTED","current_step":"SUBMITTED","face_value":"250000.00","premium_frequency":"MONTHLY","payment_term_years":20,"policy_term":"WHOLE_LIFE","base_premium":"98.96","rider_premium":"0.00","total_premium":"98.96","suitability_override_reason":null,"submitted_at":"2026-11-04T18:38:10.000000Z","created_at":"
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
