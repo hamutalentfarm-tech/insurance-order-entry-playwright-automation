@@ -1,0 +1,165 @@
+<testsuites id="" name="" tests="11" failures="0" skipped="0" errors="0" time="104.26975">
+<testsuite name="api\api.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="2" failures="0" skipped="0" time="4.498" errors="0">
+<testcase name="API › TC-API-001 | API-V01 | products API returns 200 and the expected schema" classname="api\api.spec.ts" time="1.692">
+<properties>
+<property name="validation-id" value="API-V01">
+</property>
+<property name="risk" value="R-API-03, R-PROD-05">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="observation" value="WL_FLEXI_PAY differs from the reference data: ages 19-62, face value 100000.00-1200000.00">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":3,"product_code":"WL_ELITE_LEGACY","product_name":"Elite Legacy Whole Life","product_type":"WHOLE_LIFE","short_description":"High-net-worth offering for estate planning and tax efficiency.","features":"High coverage, estate planning orientation, enhanced suitability, larger face-value limits.","eligibility_age_min":30,"eligibility_age_max":65,"face_value_min":"500000.00","face_value_max":"5000000.00","base_rate_per_1000
+[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":1,"rider_code":"RIDER_ADB","rider_name":"Accidental Death Benefit Rider","rider_category":"PROTECTION","description":"Pays additional benefit if death is due to accident.","eligibility_age_min":18,"eligibility_age_max":65,"coverage_limit_type":"SAME_AS_BASE","max_coverage_amount":null,"cannot_exceed_base_face_value":true,"requires_health_questionnaire":false,"requires_base_coverage_min":false,"base_coverage_min_amount":
+]]>
+</system-out>
+</testcase>
+<testcase name="API › TC-API-002 | API-V02 | application APIs require the API key" classname="api\api.spec.ts" time="2.806">
+<properties>
+<property name="validation-id" value="API-V02">
+</property>
+<property name="risk" value="R-API-02, R-AUTH-06">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="observation" value="GET health without a key: HTTP 200">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+[api] HTTP 401 {"status":"error","message":"Unauthorized"}
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="auth\login.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="3" failures="0" skipped="0" time="19.386" errors="0">
+<testcase name="Authentication: login, logout and access control › TC-AUTH-001 | AUTH-V01 | valid agent can log in" classname="auth\login.spec.ts" time="8.444">
+<properties>
+<property name="validation-id" value="AUTH-V01">
+</property>
+<property name="risk" value="R-AUTH-01">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="seeded-defect-candidate" value="SDC-01">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-002 | AUTH-V02 | invalid password shows the invalid-credentials message" classname="auth\login.spec.ts" time="3.192">
+<properties>
+<property name="validation-id" value="AUTH-V02">
+</property>
+<property name="risk" value="R-AUTH-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+<testcase name="Authentication: login, logout and access control › TC-AUTH-005 | AUTH-V05 | protected pages redirect to login without a session" classname="auth\login.spec.ts" time="7.75">
+<properties>
+<property name="validation-id" value="AUTH-V05">
+</property>
+<property name="risk" value="R-AUTH-06">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[setup] saved login for valid (agent.valid@insurance.test)
+[setup] saved login for draft (agent.draft@insurance.test)
+[setup] saved login for new (agent.new@insurance.test)
+[setup] saved login for submitted (agent.submitted@insurance.test)
+[setup] saved login for learner (learner003@insurance.test)
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="beneficiaries\beneficiaries.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="7.948" errors="0">
+<testcase name="Beneficiary management › TC-BEN-001 | BEN-V01 | add a valid primary beneficiary (and irrevocable confirmation)" classname="beneficiaries\beneficiaries.spec.ts" time="7.948">
+<properties>
+<property name="validation-id" value="BEN-V01">
+</property>
+<property name="risk" value="R-BEN-04, R-BEN-06">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="client-information\client.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="4.606" errors="0">
+<testcase name="Client / insured information › TC-CLI-001 | CLI-V01 | agent can enter valid insured information" classname="client-information\client.spec.ts" time="4.606">
+<properties>
+<property name="validation-id" value="CLI-V01">
+</property>
+<property name="risk" value="R-CLI-03, R-CLI-05">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="dashboard\dashboard.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="1.104" errors="0">
+<testcase name="Dashboard (agent.valid) › TC-DASH-001 | DASH-V01 | dashboard loads after login" classname="dashboard\dashboard.spec.ts" time="1.104">
+<properties>
+<property name="validation-id" value="DASH-V01">
+</property>
+<property name="risk" value="R-DASH-04">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="documents\documents.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="6.025" errors="0">
+<testcase name="Document upload › TC-DOC-001 | DOC-V01 | valid documents (PDF, JPG, PNG) can be uploaded" classname="documents\documents.spec.ts" time="6.025">
+<properties>
+<property name="validation-id" value="DOC-V01">
+</property>
+<property name="risk" value="R-DOC-02">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="product-selection\product-selection.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="1.401" errors="0">
+<testcase name="Product selection and policy configuration › TC-PROD-001 | PROD-V01 | catalog shows the expected Whole Life products" classname="product-selection\product-selection.spec.ts" time="1.401">
+<properties>
+<property name="validation-id" value="PROD-V01">
+</property>
+<property name="risk" value="R-PROD-05">
+</property>
+<property name="priority" value="P1">
+</property>
+<property name="observation" value="Not offered on this VM: Guaranteed Return Whole Life">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":[{"id":3,"product_code":"WL_ELITE_LEGACY","product_name":"Elite Legacy Whole Life","product_type":"WHOLE_LIFE","short_description":"High-net-worth offering for estate planning and tax efficiency.","features":"High coverage, estate planning orientation, enhanced suitability, larger face-value limits.","eligibility_age_min":30,"eligibility_age_max":65,"face_value_min":"500000.00","face_value_max":"5000000.00","base_rate_per_1000
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="workflow\workflow.spec.ts" timestamp="2026-11-04T20:19:36.593Z" hostname="insurance-chromium" tests="1" failures="0" skipped="0" time="32.071" errors="0">
+<testcase name="Submission and status tracking › TC-WF-003 | WF-V03 | a valid application can be submitted end to end" classname="workflow\workflow.spec.ts" time="32.071">
+<properties>
+<property name="validation-id" value="WF-V03">
+</property>
+<property name="risk" value="R-WF-03">
+</property>
+<property name="priority" value="P1">
+</property>
+</properties>
+<system-out>
+<![CDATA[[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":{"application_id":156,"application_reference_number":"WL2026110420705","application_status":"SUBMITTED","current_step":"SUBMITTED","status_history":[{"id":64,"application_id":156,"status":"SUBMITTED","notes":"Application submitted successfully.","changed_by":"10","created_at":"2026-11-04T20:20:48.000000Z","updated_at":"2026-11-04T20:20:48.000000Z"}]}}
+[api] HTTP 200 {"status":"success","message":"Request completed successfully","data":{"application_id":157,"application_reference_number":"WL2026110414762","application_status":"SUBMITTED","current_step":"SUBMITTED","status_history":[{"id":65,"application_id":157,"status":"SUBMITTED","notes":"Application submitted successfully.","changed_by":"10","created_at":"2026-11-04T20:21:04.000000Z","updated_at":"2026-11-04T20:21:04.000000Z"}]}}
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

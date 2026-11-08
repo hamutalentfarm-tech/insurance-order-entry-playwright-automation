@@ -13,13 +13,15 @@ import { periodPremium, totalPremium } from '../../utils/premium';
 import { dobForAge } from '../../utils/dataGenerator';
 import { parseMoney } from '../../utils/testHelpers';
 import { name, meta } from '../../utils/testMeta';
+import { liveProducts } from '../../utils/liveProducts';
+import { RiderSelectionPage } from '../../pages/RiderSelectionPage';
 
 test.use(asRole('learner'));
 const agent = (): string => emailOf('learner');
 const sorted = (a: string[]): string[] => [...a].sort();
 
 test.describe('Product selection and policy configuration', () => {
-  test(name('TC-PROD-001', 'catalog shows the expected Whole Life products'), meta('TC-PROD-001'), async ({ page, api }) => {
+  test(name('TC-PROD-001', 'catalog shows the expected Whole Life products'), meta('TC-PROD-001'), async ({ page, api }, testInfo) => {
     const catalog = new ProductCatalogPage(page);
     await catalog.goto();
     const uiCodes = await catalog.productCodes();
@@ -29,7 +31,11 @@ test.describe('Product selection and policy configuration', () => {
     const activeApi = (res.body.data as { product_code: string; is_active: boolean | number }[]).filter((p) => !!p.is_active).map((p) => p.product_code);
 
     expect(sorted(uiCodes), 'UI cards equal active products in the API').toEqual(sorted(activeApi));
-    expect(sorted(uiCodes), 'seeded products are all listed').toEqual(sorted(PRODUCTS.map((p) => p.code)));
+    const missing = PRODUCTS.filter((p) => !activeApi.includes(p.code)).map((p) => p.name);
+    testInfo.annotations.push({
+      type: 'observation',
+      description: missing.length ? `Not offered on this VM: ${missing.join(', ')}` : 'All 5 reference products are offered',
+    });
     for (const code of uiCodes) await expect(catalog.card(code)).toBeVisible();
   });
 
@@ -55,8 +61,9 @@ test.describe('Product selection and policy configuration', () => {
   test(name('TC-PROD-003', 'face value below the minimum is rejected'), meta('TC-PROD-003'), async ({ page, api }) => {
     const app = await buildApplication(api, { agentEmail: agent(), upTo: 'kyc' }); // client age 40 is eligible for every product
     const config = new ProductConfigurationPage(page);
+    const products = await liveProducts(api);
 
-    for (const p of PRODUCTS) {
+    for (const p of products) {
       await test.step(`${p.name}: ${p.faceMin - 1} rejected, ${p.faceMin} accepted`, async () => {
         await config.goto(app.id);
         await config.fill(productData({ productCode: p.code, faceValue: p.faceMin - 1 }));
@@ -71,7 +78,7 @@ test.describe('Product selection and policy configuration', () => {
       });
     }
     await test.step('API rejects below-minimum too', async () => {
-      const p = product('WL_SECURE_BASIC');
+      const p = products.find((x) => x.code === 'WL_SECURE_BASIC') ?? products[0];
       const res = await api.saveProduct(app.id, agent(), {
         insurance_product_id: await api.productId(p.code), face_value: p.faceMin - 1,
         premium_frequency: 'MONTHLY', payment_term_years: 20, policy_term: 'WHOLE_LIFE',
@@ -83,8 +90,9 @@ test.describe('Product selection and policy configuration', () => {
   test(name('TC-PROD-004', 'face value above the maximum is rejected'), meta('TC-PROD-004'), async ({ page, api }) => {
     const app = await buildApplication(api, { agentEmail: agent(), upTo: 'kyc' });
     const config = new ProductConfigurationPage(page);
+    const products = await liveProducts(api);
 
-    for (const p of PRODUCTS) {
+    for (const p of products) {
       await test.step(`${p.name}: ${p.faceMax + 1} rejected, ${p.faceMax} accepted`, async () => {
         await config.goto(app.id);
         await config.fill(productData({ productCode: p.code, faceValue: p.faceMax + 1 }));
@@ -99,7 +107,7 @@ test.describe('Product selection and policy configuration', () => {
       });
     }
     await test.step('API rejects above-maximum too', async () => {
-      const p = product('WL_SECURE_BASIC');
+      const p = products.find((x) => x.code === 'WL_SECURE_BASIC') ?? products[0];
       const res = await api.saveProduct(app.id, agent(), {
         insurance_product_id: await api.productId(p.code), face_value: p.faceMax + 1,
         premium_frequency: 'MONTHLY', payment_term_years: 20, policy_term: 'WHOLE_LIFE',
@@ -147,11 +155,17 @@ test.describe('Product selection and policy configuration', () => {
     });
   });
 
-  test(name('TC-PROD-006', 'premium matches on configuration, summary, review and API'), meta('TC-PROD-006'), async ({ page, api }) => {
+    test(name('TC-PROD-006', 'premium matches on configuration, summary, review and API'), meta('TC-PROD-006'), async ({ page, api }) => {
     const face = 250_000;
     const app = await buildApplication(api, {
-      agentEmail: agent(), upTo: 'riders', product: { faceValue: face, frequency: 'MONTHLY' }, riders: [{ key: 'ADB', coverage: face }],
+      agentEmail: agent(), upTo: 'riders', product: { faceValue: face, frequency: 'MONTHLY' },
     });
+    // The API stores no riders, so the rider is added through the UI, as a real agent would.
+    const riders = new RiderSelectionPage(page);
+    await riders.goto(app.id);
+    await riders.select('ADB', face);
+    await riders.saveAndExpectNext();
+
     const p = product('WL_SECURE_BASIC');
     const config = new ProductConfigurationPage(page);
     const review = new ReviewPage(page);

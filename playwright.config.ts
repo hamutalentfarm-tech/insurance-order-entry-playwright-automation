@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const BASE_URL = (process.env.INSURANCE_BASE_URL ?? 'http://127.0.0.1:8081').replace(/\/$/, '');
+const BASE_URL = (process.env.INSURANCE_BASE_URL ?? 'http://34.100.166.72:8081').replace(/\/$/, '');
 const IS_CI = !!process.env.CI;
 
 // Chromium by default (Q-12). Add firefox/webkit with BROWSERS=chromium,firefox,webkit

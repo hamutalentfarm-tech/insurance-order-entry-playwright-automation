@@ -39,4 +39,7 @@ export const env = {
   get disposableEmail(): string {
     return process.env.DISPOSABLE_USER || '';
   },
+  get passwordTestEmail(): string {
+    return process.env.PASSWORD_TEST_USER || '';
+  },
 };

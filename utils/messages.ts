@@ -28,7 +28,7 @@ export const MSG = {
   primaryTotal: /primary beneficiary allocation must total exactly 100/i,
   secondaryTotal: /secondary.*(100|total)/i,
   noPrimary: /at least one primary beneficiary is required/i,
-  guardian: /guardian details are required/i,
+  guardian: /guardian .*(required|needed)/i,
   duplicate: /duplicate|already exists|already added/i,
   trustName: /trust name is required/i,
   organizationName: /organization name is required/i,

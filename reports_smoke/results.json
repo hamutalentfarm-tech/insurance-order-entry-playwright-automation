@@ -1,0 +1,1571 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--grep",
+      "@smoke"
+    ],
+    "configFile": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\playwright.config.ts",
+    "rootDir": "C:/Users/talentfarm_learner/insurance-order-entry-playwright-automation/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\utils\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/talentfarm_learner/insurance-order-entry-playwright-automation/reports/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "insurance-chromium",
+        "name": "insurance-chromium",
+        "testDir": "C:/Users/talentfarm_learner/insurance-order-entry-playwright-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\reports\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "insurance-chromium",
+        "testDir": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests",
+        "snapshotDir": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://34.100.166.72:8081",
+          "testIdAttribute": "data-testid",
+          "actionTimeout": 15000,
+          "navigationTimeout": 30000,
+          "trace": "on-first-retry",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "insurance-chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/html",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/junit.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "api\\api.spec.ts",
+      "file": "api/api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API",
+          "file": "api/api.spec.ts",
+          "line": 20,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-API-001 | API-V01 | products API returns 200 and the expected schema",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "API-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 21,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-API-03, R-PROD-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 21,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 21,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "observation",
+                      "description": "WL_FLEXI_PAY differs from the reference data: ages 19-62, face value 100000.00-1200000.00"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1692,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 200 {\"status\":\"success\",\"message\":\"Request completed successfully\",\"data\":[{\"id\":3,\"product_code\":\"WL_ELITE_LEGACY\",\"product_name\":\"Elite Legacy Whole Life\",\"product_type\":\"WHOLE_LIFE\",\"short_description\":\"High-net-worth offering for estate planning and tax efficiency.\",\"features\":\"High coverage, estate planning orientation, enhanced suitability, larger face-value limits.\",\"eligibility_age_min\":30,\"eligibility_age_max\":65,\"face_value_min\":\"500000.00\",\"face_value_max\":\"5000000.00\",\"base_rate_per_1000\n"
+                        },
+                        {
+                          "text": "[api] HTTP 200 {\"status\":\"success\",\"message\":\"Request completed successfully\",\"data\":[{\"id\":1,\"rider_code\":\"RIDER_ADB\",\"rider_name\":\"Accidental Death Benefit Rider\",\"rider_category\":\"PROTECTION\",\"description\":\"Pays additional benefit if death is due to accident.\",\"eligibility_age_min\":18,\"eligibility_age_max\":65,\"coverage_limit_type\":\"SAME_AS_BASE\",\"max_coverage_amount\":null,\"cannot_exceed_base_face_value\":true,\"requires_health_questionnaire\":false,\"requires_base_coverage_min\":false,\"base_coverage_min_amount\":\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "riders API (extension)",
+                          "duration": 459
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:19:37.708Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "API-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 21,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-API-03, R-PROD-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 21,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 21,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "observation",
+                          "description": "WL_FLEXI_PAY differs from the reference data: ages 19-62, face value 100000.00-1200000.00"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKeyJzdGF0dXMiOiJzdWNjZXNzIiwibWVzc2FnZSI6IlJlcXVlc3QgY29tcGxldGVkIHN1Y2Nlc3NmdWxseSIsImRhdGEiOlt7ImlkIjozLCJwcm9kdWN0X2NvZGUiOiJXTF9FTElURV9MRUdBQ1kiLCJwcm9kdWN0X25hbWUiOiJFbGl0ZSBMZWdhY3kgV2hvbGUgTGlmZSIsInByb2R1Y3RfdHlwZSI6IldIT0xFX0xJRkUiLCJzaG9ydF9kZXNjcmlwdGlvbiI6IkhpZ2gtbmV0LXdvcnRoIG9mZmVyaW5nIGZvciBlc3RhdGUgcGxhbm5pbmcgYW5kIHRheCBlZmZpY2llbmN5LiIsImZlYXR1cmVzIjoiSGlnaCBjb3ZlcmFnZSwgZXN0YXRlIHBsYW5uaW5nIG9yaWVudGF0aW9uLCBlbmhhbmNlZCBzdWl0YWJpbGl0eSwgbGFyZ2VyIGZhY2UtdmFsdWUgbGltaXRzLiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjMwLCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2NSwiZmFjZV92YWx1ZV9taW4iOiI1MDAwMDAuMDAiLCJmYWNlX3ZhbHVlX21heCI6IjUwMDAwMDAuMDAiLCJiYXNlX3JhdGVfcGVyXzEwMDAiOiI2LjEwMDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIn0seyJpZCI6NCwicHJvZHVjdF9jb2RlIjoiV0xfRkxFWElfUEFZIiwicHJvZHVjdF9uYW1lIjoiRmxleGlQYXkgV2hvbGUgTGlmZSIsInByb2R1Y3RfdHlwZSI6IldIT0xFX0xJRkUiLCJzaG9ydF9kZXNjcmlwdGlvbiI6IkZsZXhpYmxlIHByZW1pdW0gcGF5bWVudCBvcHRpb25zIHdpdGggYWRqdXN0YWJsZSBwcmVtaXVtcy4iLCJmZWF0dXJlcyI6Ik11bHRpcGxlIHBheW1lbnQgdGVybXMsIGZsZXhpYmxlIHByZW1pdW0gZnJlcXVlbmNpZXMsIHN1aXRhYmxlIGZvciBwYXltZW50IG9wdGlvbiB2YWxpZGF0aW9uLiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjE5LCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2MiwiZmFjZV92YWx1ZV9taW4iOiIxMDAwMDAuMDAiLCJmYWNlX3ZhbHVlX21heCI6IjEyMDAwMDAuMDAiLCJiYXNlX3JhdGVfcGVyXzEwMDAiOiI1LjE1MDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNi0wMlQxMzo1NToyOS4wMDAwMDBaIn0seyJpZCI6MSwicHJvZHVjdF9jb2RlIjoiV0xfU0VDVVJFX0JBU0lDIiwicHJvZHVjdF9uYW1lIjoiU2VjdXJlTGlmZSBXaG9sZSBMaWZlIiwicHJvZHVjdF90eXBlIjoiV0hPTEVfTElGRSIsInNob3J0X2Rlc2NyaXB0aW9uIjoiQmFzaWMgbGlmZWxvbmcgY292ZXJhZ2Ugd2l0aCBmaXhlZCBwcmVtaXVtIGFuZCBndWFyYW50ZWVkIGRlYXRoIGJlbmVmaXQuIiwiZmVhdHVyZXMiOiJGaXhlZCBwcmVtaXVtLCBndWFyYW50ZWVkIGRlYXRoIGJlbmVmaXQsIHNpbXBsZSB1bmRlcndyaXRpbmcsIHN1aXRhYmxlIGZvciBjb25zZXJ2YXRpdmUgY2xpZW50cy4iLCJlbGlnaWJpbGl0eV9hZ2VfbWluIjoxOCwiZWxpZ2liaWxpdHlfYWdlX21heCI6NjUsImZhY2VfdmFsdWVfbWluIjoiMTAwMDAwLjAwIiwiZmFjZV92YWx1ZV9tYXgiOiIxMDAwMDAwLjAwIiwiYmFzZV9yYXRlX3Blcl8xMDAwIjoiNC43NTAwIiwiaXNfYWN0aXZlIjp0cnVlLCJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiJ9LHsiaWQiOjIsInByb2R1Y3RfY29kZSI6IldMX1dFQUxUSF9CVUlMREVSIiwicHJvZHVjdF9uYW1lIjoiV2VhbHRoQnVpbGRlciBXaG9sZSBMaWZlIiwicHJvZHVjdF90eXBlIjoiV0hPTEVfTElGRSIsInNob3J0X2Rlc2NyaXB0aW9uIjoiR3Jvd3RoIGFuZCBwcm90ZWN0aW9uIHByb2R1Y3Qgd2l0aCBjYXNoIHZhbHVlIGFjY3VtdWxhdGlvbi4iLCJmZWF0dXJlcyI6IkNhc2ggdmFsdWUgZ3Jvd3RoLCBsaWZlbG9uZyBjb3ZlciwgbWVkaXVtLXRvLWhpZ2ggc3VpdGFiaWxpdHkgcmV2aWV3LCByaWRlci1mcmllbmRseSBjb25maWd1cmF0aW9uLiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjIxLCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2MCwiZmFjZV92YWx1ZV9taW4iOiIxNTAwMDAuMDAiLCJmYWNlX3ZhbHVlX21heCI6IjE1MDAwMDAuMDAiLCJiYXNlX3JhdGVfcGVyXzEwMDAiOiI1LjM1MDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIn1dfQ=="
+                        },
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKeyJzdGF0dXMiOiJzdWNjZXNzIiwibWVzc2FnZSI6IlJlcXVlc3QgY29tcGxldGVkIHN1Y2Nlc3NmdWxseSIsImRhdGEiOlt7ImlkIjoxLCJyaWRlcl9jb2RlIjoiUklERVJfQURCIiwicmlkZXJfbmFtZSI6IkFjY2lkZW50YWwgRGVhdGggQmVuZWZpdCBSaWRlciIsInJpZGVyX2NhdGVnb3J5IjoiUFJPVEVDVElPTiIsImRlc2NyaXB0aW9uIjoiUGF5cyBhZGRpdGlvbmFsIGJlbmVmaXQgaWYgZGVhdGggaXMgZHVlIHRvIGFjY2lkZW50LiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjE4LCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2NSwiY292ZXJhZ2VfbGltaXRfdHlwZSI6IlNBTUVfQVNfQkFTRSIsIm1heF9jb3ZlcmFnZV9hbW91bnQiOm51bGwsImNhbm5vdF9leGNlZWRfYmFzZV9mYWNlX3ZhbHVlIjp0cnVlLCJyZXF1aXJlc19oZWFsdGhfcXVlc3Rpb25uYWlyZSI6ZmFsc2UsInJlcXVpcmVzX2Jhc2VfY292ZXJhZ2VfbWluIjpmYWxzZSwiYmFzZV9jb3ZlcmFnZV9taW5fYW1vdW50IjpudWxsLCJtdXR1YWxfZXhjbHVzaW9uX2dyb3VwIjpudWxsLCJyYXRlX3Blcl8xMDAwIjoiMC44NTAwIiwiaXNfYWN0aXZlIjp0cnVlLCJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiJ9LHsiaWQiOjIsInJpZGVyX2NvZGUiOiJSSURFUl9ESVNBQklMSVRZIiwicmlkZXJfbmFtZSI6IlBlcm1hbmVudCBEaXNhYmlsaXR5IFJpZGVyIiwicmlkZXJfY2F0ZWdvcnkiOiJQUk9URUNUSU9OIiwiZGVzY3JpcHRpb24iOiJQcm92aWRlcyBsdW1wIHN1bSBvciBpbmNvbWUgb24gdG90YWwgcGVybWFuZW50IGRpc2FiaWxpdHkuIiwiZWxpZ2liaWxpdHlfYWdlX21pbiI6MTgsImVsaWdpYmlsaXR5X2FnZV9tYXgiOjYwLCJjb3ZlcmFnZV9saW1pdF90eXBlIjoiU0FNRV9BU19CQVNFIiwibWF4X2NvdmVyYWdlX2Ftb3VudCI6bnVsbCwiY2Fubm90X2V4Y2VlZF9iYXNlX2ZhY2VfdmFsdWUiOnRydWUsInJlcXVpcmVzX2hlYWx0aF9xdWVzdGlvbm5haXJlIjpmYWxzZSwicmVxdWlyZXNfYmFzZV9jb3ZlcmFnZV9taW4iOmZhbHNlLCJiYXNlX2NvdmVyYWdlX21pbl9hbW91bnQiOm51bGwsIm11dHVhbF9leGNsdXNpb25fZ3JvdXAiOm51bGwsInJhdGVfcGVyXzEwMDAiOiIxLjEwMDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIn0seyJpZCI6MywicmlkZXJfY29kZSI6IlJJREVSX1RFUk1fQURET04iLCJyaWRlcl9uYW1lIjoiVGVybSBSaWRlciBBZGQtb24iLCJyaWRlcl9jYXRlZ29yeSI6IlBST1RFQ1RJT04iLCJkZXNjcmlwdGlvbiI6IkFkZGl0aW9uYWwgdGVybSBjb3ZlcmFnZSBsYXllcmVkIG9uIHRvcCBvZiB0aGUgV2hvbGUgTGlmZSBiYXNlIHByb2R1Y3QuIiwiZWxpZ2liaWxpdHlfYWdlX21pbiI6MjEsImVsaWdpYmlsaXR5X2FnZV9tYXgiOjU1LCJjb3ZlcmFnZV9saW1pdF90eXBlIjoiU0FNRV9BU19CQVNFIiwibWF4X2NvdmVyYWdlX2Ftb3VudCI6bnVsbCwiY2Fubm90X2V4Y2VlZF9iYXNlX2ZhY2VfdmFsdWUiOnRydWUsInJlcXVpcmVzX2hlYWx0aF9xdWVzdGlvbm5haXJlIjpmYWxzZSwicmVxdWlyZXNfYmFzZV9jb3ZlcmFnZV9taW4iOmZhbHNlLCJiYXNlX2NvdmVyYWdlX21pbl9hbW91bnQiOm51bGwsIm11dHVhbF9leGNsdXNpb25fZ3JvdXAiOm51bGwsInJhdGVfcGVyXzEwMDAiOiIxLjI1MDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIn0seyJpZCI6NCwicmlkZXJfY29kZSI6IlJJREVSX0NSSVRJQ0FMX0lMTE5FU1MiLCJyaWRlcl9uYW1lIjoiQ3JpdGljYWwgSWxsbmVzcyBSaWRlciIsInJpZGVyX2NhdGVnb3J5IjoiSEVBTFRIIiwiZGVzY3JpcHRpb24iOiJQYXlzIGx1bXAgc3VtIG9uIGRpYWdub3NpcyBvZiBjb3ZlcmVkIGNyaXRpY2FsIGlsbG5lc3MuIiwiZWxpZ2liaWxpdHlfYWdlX21pbiI6MTgsImVsaWdpYmlsaXR5X2FnZV9tYXgiOjU4LCJjb3ZlcmFnZV9saW1pdF90eXBlIjoiUEVSQ0VOVF9PRl9CQVNFIiwibWF4X2NvdmVyYWdlX2Ftb3VudCI6IjUwMDAwMC4wMCIsImNhbm5vdF9leGNlZWRfYmFzZV9mYWNlX3ZhbHVlIjp0cnVlLCJyZXF1aXJlc19oZWFsdGhfcXVlc3Rpb25uYWlyZSI6dHJ1ZSwicmVxdWlyZXNfYmFzZV9jb3ZlcmFnZV9taW4iOmZhbHNlLCJiYXNlX2NvdmVyYWdlX21pbl9hbW91bnQiOm51bGwsIm11dHVhbF9leGNsdXNpb25fZ3JvdXAiOm51bGwsInJhdGVfcGVyXzEwMDAiOiIxLjYwMDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIn0seyJpZCI6NSwicmlkZXJfY29kZSI6IlJJREVSX0hPU1BJVEFMX0NBU0giLCJyaWRlcl9uYW1lIjoiSG9zcGl0YWwgQ2FzaCBSaWRlciIsInJpZGVyX2NhdGVnb3J5IjoiSEVBTFRIIiwiZGVzY3JpcHRpb24iOiJQYXlzIGRhaWx5IGNhc2ggYmVuZWZpdCBkdXJpbmcgaG9zcGl0YWxpemF0aW9uLiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjE4LCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2MCwiY292ZXJhZ2VfbGltaXRfdHlwZSI6IkZJWEVEX0FNT1VOVCIsIm1heF9jb3ZlcmFnZV9hbW91bnQiOiIxMDAwMDAuMDAiLCJjYW5ub3RfZXhjZWVkX2Jhc2VfZmFjZV92YWx1ZSI6dHJ1ZSwicmVxdWlyZXNfaGVhbHRoX3F1ZXN0aW9ubmFpcmUiOmZhbHNlLCJyZXF1aXJlc19iYXNlX2NvdmVyYWdlX21pbiI6ZmFsc2UsImJhc2VfY292ZXJhZ2VfbWluX2Ftb3VudCI6bnVsbCwibXV0dWFsX2V4Y2x1c2lvbl9ncm91cCI6bnVsbCwicmF0ZV9wZXJfMTAwMCI6IjAuNjUwMCIsImlzX2FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoifSx7ImlkIjo3LCJyaWRlcl9jb2RlIjoiUklERVJfV0FJVkVSX0NJIiwicmlkZXJfbmFtZSI6IldhaXZlciBvZiBQcmVtaXVtIC0gQ3JpdGljYWwgSWxsbmVzcyIsInJpZGVyX2NhdGVnb3J5IjoiV0FJVkVSIiwiZGVzY3JpcHRpb24iOiJXYWl2ZXMgZnV0dXJlIHByZW1pdW1zIHVwb24gZGlhZ25vc2lzIG9mIGNvdmVyZWQgY3JpdGljYWwgaWxsbmVzcy4iLCJlbGlnaWJpbGl0eV9hZ2VfbWluIjoxOCwiZWxpZ2liaWxpdHlfYWdlX21heCI6NTUsImNvdmVyYWdlX2xpbWl0X3R5cGUiOiJTQU1FX0FTX0JBU0UiLCJtYXhfY292ZXJhZ2VfYW1vdW50IjpudWxsLCJjYW5ub3RfZXhjZWVkX2Jhc2VfZmFjZV92YWx1ZSI6dHJ1ZSwicmVxdWlyZXNfaGVhbHRoX3F1ZXN0aW9ubmFpcmUiOnRydWUsInJlcXVpcmVzX2Jhc2VfY292ZXJhZ2VfbWluIjp0cnVlLCJiYXNlX2NvdmVyYWdlX21pbl9hbW91bnQiOiIyMDAwMDAuMDAiLCJtdXR1YWxfZXhjbHVzaW9uX2dyb3VwIjoiV0FJVkVSX1BSRU1JVU0iLCJyYXRlX3Blcl8xMDAwIjoiMC45MDAwIiwiaXNfYWN0aXZlIjp0cnVlLCJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiJ9LHsiaWQiOjYsInJpZGVyX2NvZGUiOiJSSURFUl9XQUlWRVJfRElTQUJJTElUWSIsInJpZGVyX25hbWUiOiJXYWl2ZXIgb2YgUHJlbWl1bSAtIERpc2FiaWxpdHkiLCJyaWRlcl9jYXRlZ29yeSI6IldBSVZFUiIsImRlc2NyaXB0aW9uIjoiV2FpdmVzIGZ1dHVyZSBwcmVtaXVtcyBpZiBpbnN1cmVkIGJlY29tZXMgdG90YWxseSBkaXNhYmxlZC4iLCJlbGlnaWJpbGl0eV9hZ2VfbWluIjoxOCwiZWxpZ2liaWxpdHlfYWdlX21heCI6NTUsImNvdmVyYWdlX2xpbWl0X3R5cGUiOiJTQU1FX0FTX0JBU0UiLCJtYXhfY292ZXJhZ2VfYW1vdW50IjpudWxsLCJjYW5ub3RfZXhjZWVkX2Jhc2VfZmFjZV92YWx1ZSI6dHJ1ZSwicmVxdWlyZXNfaGVhbHRoX3F1ZXN0aW9ubmFpcmUiOmZhbHNlLCJyZXF1aXJlc19iYXNlX2NvdmVyYWdlX21pbiI6dHJ1ZSwiYmFzZV9jb3ZlcmFnZV9taW5fYW1vdW50IjoiMjAwMDAwLjAwIiwibXV0dWFsX2V4Y2x1c2lvbl9ncm91cCI6IldBSVZFUl9QUkVNSVVNIiwicmF0ZV9wZXJfMTAwMCI6IjAuNzAwMCIsImlzX2FjdGl2ZSI6dHJ1ZSwiY3JlYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiIsInVwZGF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoifSx7ImlkIjo4LCJyaWRlcl9jb2RlIjoiUklERVJfRkFNSUxZX0lOQ09NRSIsInJpZGVyX25hbWUiOiJGYW1pbHkgSW5jb21lIEJlbmVmaXQgUmlkZXIiLCJyaWRlcl9jYXRlZ29yeSI6IklOQ09NRSIsImRlc2NyaXB0aW9uIjoiUHJvdmlkZXMgbW9udGhseSBpbmNvbWUgdG8gZmFtaWx5IGZvciBhIGRlZmluZWQgcGVyaW9kIGFmdGVyIGluc3VyZWQgZGVhdGguIiwiZWxpZ2liaWxpdHlfYWdlX21pbiI6MjUsImVsaWdpYmlsaXR5X2FnZV9tYXgiOjU1LCJjb3ZlcmFnZV9saW1pdF90eXBlIjoiUEVSQ0VOVF9PRl9CQVNFIiwibWF4X2NvdmVyYWdlX2Ftb3VudCI6Ijc1MDAwMC4wMCIsImNhbm5vdF9leGNlZWRfYmFzZV9mYWNlX3ZhbHVlIjp0cnVlLCJyZXF1aXJlc19oZWFsdGhfcXVlc3Rpb25uYWlyZSI6ZmFsc2UsInJlcXVpcmVzX2Jhc2VfY292ZXJhZ2VfbWluIjp0cnVlLCJiYXNlX2NvdmVyYWdlX21pbl9hbW91bnQiOiIyNTAwMDAuMDAiLCJtdXR1YWxfZXhjbHVzaW9uX2dyb3VwIjpudWxsLCJyYXRlX3Blcl8xMDAwIjoiMS4zNTAwIiwiaXNfYWN0aXZlIjp0cnVlLCJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiJ9LHsiaWQiOjksInJpZGVyX2NvZGUiOiJSSURFUl9HVUFSQU5URUVEX0lOQ09NRSIsInJpZGVyX25hbWUiOiJHdWFyYW50ZWVkIEluY29tZSBSaWRlciIsInJpZGVyX2NhdGVnb3J5IjoiSU5DT01FIiwiZGVzY3JpcHRpb24iOiJQcm92aWRlcyBndWFyYW50ZWVkIHBlcmlvZGljIGluY29tZSBmb3IgYSBzZXQgZHVyYXRpb24uIiwiZWxpZ2liaWxpdHlfYWdlX21pbiI6MzAsImVsaWdpYmlsaXR5X2FnZV9tYXgiOjYwLCJjb3ZlcmFnZV9saW1pdF90eXBlIjoiUEVSQ0VOVF9PRl9CQVNFIiwibWF4X2NvdmVyYWdlX2Ftb3VudCI6IjUwMDAwMC4wMCIsImNhbm5vdF9leGNlZWRfYmFzZV9mYWNlX3ZhbHVlIjp0cnVlLCJyZXF1aXJlc19oZWFsdGhfcXVlc3Rpb25uYWlyZSI6ZmFsc2UsInJlcXVpcmVzX2Jhc2VfY292ZXJhZ2VfbWluIjp0cnVlLCJiYXNlX2NvdmVyYWdlX21pbl9hbW91bnQiOiIzMDAwMDAuMDAiLCJtdXR1YWxfZXhjbHVzaW9uX2dyb3VwIjpudWxsLCJyYXRlX3Blcl8xMDAwIjoiMS41MDAwIiwiaXNfYWN0aXZlIjp0cnVlLCJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiJ9XX0="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "495da78dfc57d624a56a-453b01d3c350134d6548",
+              "file": "api/api.spec.ts",
+              "line": 21,
+              "column": 7
+            },
+            {
+              "title": "TC-API-002 | API-V02 | application APIs require the API key",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "API-V02",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 57,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-API-02, R-AUTH-06",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 57,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                        "line": 57,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "observation",
+                      "description": "GET health without a key: HTTP 200"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2806,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 401 {\"status\":\"error\",\"message\":\"Unauthorized\"}\n"
+                        },
+                        {
+                          "text": "[api] HTTP 401 {\"status\":\"error\",\"message\":\"Unauthorized\"}\n"
+                        },
+                        {
+                          "text": "[api] HTTP 401 {\"status\":\"error\",\"message\":\"Unauthorized\"}\n"
+                        },
+                        {
+                          "text": "[api] HTTP 401 {\"status\":\"error\",\"message\":\"Unauthorized\"}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "no key",
+                          "duration": 765
+                        },
+                        {
+                          "title": "wrong key",
+                          "duration": 948
+                        },
+                        {
+                          "title": "health check is public",
+                          "duration": 355
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:19:39.654Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "API-V02",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 57,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-API-02, R-AUTH-06",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 57,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\api\\api.spec.ts",
+                            "line": 57,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "observation",
+                          "description": "GET health without a key: HTTP 200"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCA0MDEKeyJzdGF0dXMiOiJlcnJvciIsIm1lc3NhZ2UiOiJVbmF1dGhvcml6ZWQifQ=="
+                        },
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCA0MDEKeyJzdGF0dXMiOiJlcnJvciIsIm1lc3NhZ2UiOiJVbmF1dGhvcml6ZWQifQ=="
+                        },
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCA0MDEKeyJzdGF0dXMiOiJlcnJvciIsIm1lc3NhZ2UiOiJVbmF1dGhvcml6ZWQifQ=="
+                        },
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCA0MDEKeyJzdGF0dXMiOiJlcnJvciIsIm1lc3NhZ2UiOiJVbmF1dGhvcml6ZWQifQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "495da78dfc57d624a56a-552e870627ceb94b5121",
+              "file": "api/api.spec.ts",
+              "line": 57,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "auth\\login.spec.ts",
+      "file": "auth/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication: login, logout and access control",
+          "file": "auth/login.spec.ts",
+          "line": 16,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-AUTH-001 | AUTH-V01 | valid agent can log in",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "authentication",
+                "SDC-01",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "AUTH-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-AUTH-01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "seeded-defect-candidate",
+                      "description": "SDC-01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 17,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8444,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "log in as valid",
+                          "duration": 2132
+                        },
+                        {
+                          "title": "log in as draft",
+                          "duration": 1979
+                        },
+                        {
+                          "title": "log in as new",
+                          "duration": 1842
+                        },
+                        {
+                          "title": "log in as submitted",
+                          "duration": 2109
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:19:42.517Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "AUTH-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-AUTH-01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "seeded-defect-candidate",
+                          "description": "SDC-01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 17,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-06796c47c5359db549fd",
+              "file": "auth/login.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "TC-AUTH-002 | AUTH-V02 | invalid password shows the invalid-credentials message",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "authentication",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "AUTH-V02",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 28,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-AUTH-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 28,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 28,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3192,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-04T20:19:50.985Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "AUTH-V02",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 28,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-AUTH-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 28,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 28,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-e2e8a58ab7ea36885eb4",
+              "file": "auth/login.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "TC-AUTH-005 | AUTH-V05 | protected pages redirect to login without a session",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "authentication",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "AUTH-V05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 93,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-AUTH-06",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 93,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                        "line": 93,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7750,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[setup] saved login for valid (agent.valid@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for draft (agent.draft@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for new (agent.new@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for submitted (agent.submitted@insurance.test)\n"
+                        },
+                        {
+                          "text": "[setup] saved login for learner (learner003@insurance.test)\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "GET /dashboard without a session",
+                          "duration": 910
+                        },
+                        {
+                          "title": "GET /applications without a session",
+                          "duration": 859
+                        },
+                        {
+                          "title": "GET /applications/new without a session",
+                          "duration": 838
+                        },
+                        {
+                          "title": "GET /profile without a session",
+                          "duration": 972
+                        },
+                        {
+                          "title": "GET /support without a session",
+                          "duration": 840
+                        },
+                        {
+                          "title": "GET /change-password without a session",
+                          "duration": 825
+                        },
+                        {
+                          "title": "GET /applications/49/client without a session",
+                          "duration": 906
+                        },
+                        {
+                          "title": "GET /applications/49/review without a session",
+                          "duration": 823
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:19:54.203Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "AUTH-V05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 93,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-AUTH-06",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 93,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\auth\\login.spec.ts",
+                            "line": 93,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "231ca1f0f4db3e4958c3-41d6c8f06905efe21fa7",
+              "file": "auth/login.spec.ts",
+              "line": 93,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "beneficiaries\\beneficiaries.spec.ts",
+      "file": "beneficiaries/beneficiaries.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Beneficiary management",
+          "file": "beneficiaries/beneficiaries.spec.ts",
+          "line": 28,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-BEN-001 | BEN-V01 | add a valid primary beneficiary (and irrevocable confirmation)",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "beneficiary",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "BEN-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                        "line": 29,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-BEN-04, R-BEN-06",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                        "line": 29,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                        "line": 29,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7948,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "extension: irrevocable designation asks for confirmation (browser confirm dialog)",
+                          "duration": 2334
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:20:13.507Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "BEN-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                            "line": 29,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-BEN-04, R-BEN-06",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                            "line": 29,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\beneficiaries\\beneficiaries.spec.ts",
+                            "line": 29,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "92262c7b403700513bf7-53b4ab660bf4d289e125",
+              "file": "beneficiaries/beneficiaries.spec.ts",
+              "line": 29,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "client-information\\client.spec.ts",
+      "file": "client-information/client.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Client / insured information",
+          "file": "client-information/client.spec.ts",
+          "line": 22,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-CLI-001 | CLI-V01 | agent can enter valid insured information",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "client",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "CLI-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                        "line": 23,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-CLI-03, R-CLI-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                        "line": 23,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                        "line": 23,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4606,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "saved values equal the entered values (API read-back)",
+                          "duration": 427
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:20:21.547Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "CLI-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                            "line": 23,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-CLI-03, R-CLI-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                            "line": 23,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\client-information\\client.spec.ts",
+                            "line": 23,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2281cdd43ac321b7efb1-021e4fff497721eb6b9e",
+              "file": "client-information/client.spec.ts",
+              "line": 23,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard\\dashboard.spec.ts",
+      "file": "dashboard/dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard (agent.valid)",
+          "file": "dashboard/dashboard.spec.ts",
+          "line": 17,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-DASH-001 | DASH-V01 | dashboard loads after login",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "dashboard",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "DASH-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-DASH-04",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1104,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-04T20:20:26.198Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "DASH-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-DASH-04",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\dashboard\\dashboard.spec.ts",
+                            "line": 20,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "747340cde928aa6c3216-90185b5bbf4124fc4168",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 20,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "documents\\documents.spec.ts",
+      "file": "documents/documents.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Document upload",
+          "file": "documents/documents.spec.ts",
+          "line": 15,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-DOC-001 | DOC-V01 | valid documents (PDF, JPG, PNG) can be uploaded",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "documents",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "DOC-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                        "line": 16,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-DOC-02",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                        "line": 16,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                        "line": 16,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 6025,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "upload KYC_ID (kyc-155.pdf)",
+                          "duration": 1238
+                        },
+                        {
+                          "title": "upload ADDRESS_PROOF (address-155.jpg)",
+                          "duration": 1321
+                        },
+                        {
+                          "title": "upload INCOME_PROOF (income-155.png)",
+                          "duration": 1085
+                        },
+                        {
+                          "title": "documents persist after reload and are stored by the API",
+                          "duration": 913
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:20:27.353Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "DOC-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                            "line": 16,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-DOC-02",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                            "line": 16,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\documents\\documents.spec.ts",
+                            "line": 16,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "435ed4a0a7277bdfe9d0-d47a76653a5bb43585a7",
+              "file": "documents/documents.spec.ts",
+              "line": 16,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "product-selection\\product-selection.spec.ts",
+      "file": "product-selection/product-selection.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Product selection and policy configuration",
+          "file": "product-selection/product-selection.spec.ts",
+          "line": 23,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-PROD-001 | PROD-V01 | catalog shows the expected Whole Life products",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "api",
+                "product",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "PROD-V01",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                        "line": 24,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-PROD-05",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                        "line": 24,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                        "line": 24,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "observation",
+                      "description": "Not offered on this VM: Guaranteed Return Whole Life"
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1401,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 200 {\"status\":\"success\",\"message\":\"Request completed successfully\",\"data\":[{\"id\":3,\"product_code\":\"WL_ELITE_LEGACY\",\"product_name\":\"Elite Legacy Whole Life\",\"product_type\":\"WHOLE_LIFE\",\"short_description\":\"High-net-worth offering for estate planning and tax efficiency.\",\"features\":\"High coverage, estate planning orientation, enhanced suitability, larger face-value limits.\",\"eligibility_age_min\":30,\"eligibility_age_max\":65,\"face_value_min\":\"500000.00\",\"face_value_max\":\"5000000.00\",\"base_rate_per_1000\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-04T20:20:33.446Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "PROD-V01",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                            "line": 24,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-PROD-05",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                            "line": 24,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\product-selection\\product-selection.spec.ts",
+                            "line": 24,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "observation",
+                          "description": "Not offered on this VM: Guaranteed Return Whole Life"
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKeyJzdGF0dXMiOiJzdWNjZXNzIiwibWVzc2FnZSI6IlJlcXVlc3QgY29tcGxldGVkIHN1Y2Nlc3NmdWxseSIsImRhdGEiOlt7ImlkIjozLCJwcm9kdWN0X2NvZGUiOiJXTF9FTElURV9MRUdBQ1kiLCJwcm9kdWN0X25hbWUiOiJFbGl0ZSBMZWdhY3kgV2hvbGUgTGlmZSIsInByb2R1Y3RfdHlwZSI6IldIT0xFX0xJRkUiLCJzaG9ydF9kZXNjcmlwdGlvbiI6IkhpZ2gtbmV0LXdvcnRoIG9mZmVyaW5nIGZvciBlc3RhdGUgcGxhbm5pbmcgYW5kIHRheCBlZmZpY2llbmN5LiIsImZlYXR1cmVzIjoiSGlnaCBjb3ZlcmFnZSwgZXN0YXRlIHBsYW5uaW5nIG9yaWVudGF0aW9uLCBlbmhhbmNlZCBzdWl0YWJpbGl0eSwgbGFyZ2VyIGZhY2UtdmFsdWUgbGltaXRzLiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjMwLCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2NSwiZmFjZV92YWx1ZV9taW4iOiI1MDAwMDAuMDAiLCJmYWNlX3ZhbHVlX21heCI6IjUwMDAwMDAuMDAiLCJiYXNlX3JhdGVfcGVyXzEwMDAiOiI2LjEwMDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIn0seyJpZCI6NCwicHJvZHVjdF9jb2RlIjoiV0xfRkxFWElfUEFZIiwicHJvZHVjdF9uYW1lIjoiRmxleGlQYXkgV2hvbGUgTGlmZSIsInByb2R1Y3RfdHlwZSI6IldIT0xFX0xJRkUiLCJzaG9ydF9kZXNjcmlwdGlvbiI6IkZsZXhpYmxlIHByZW1pdW0gcGF5bWVudCBvcHRpb25zIHdpdGggYWRqdXN0YWJsZSBwcmVtaXVtcy4iLCJmZWF0dXJlcyI6Ik11bHRpcGxlIHBheW1lbnQgdGVybXMsIGZsZXhpYmxlIHByZW1pdW0gZnJlcXVlbmNpZXMsIHN1aXRhYmxlIGZvciBwYXltZW50IG9wdGlvbiB2YWxpZGF0aW9uLiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjE5LCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2MiwiZmFjZV92YWx1ZV9taW4iOiIxMDAwMDAuMDAiLCJmYWNlX3ZhbHVlX21heCI6IjEyMDAwMDAuMDAiLCJiYXNlX3JhdGVfcGVyXzEwMDAiOiI1LjE1MDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNi0wMlQxMzo1NToyOS4wMDAwMDBaIn0seyJpZCI6MSwicHJvZHVjdF9jb2RlIjoiV0xfU0VDVVJFX0JBU0lDIiwicHJvZHVjdF9uYW1lIjoiU2VjdXJlTGlmZSBXaG9sZSBMaWZlIiwicHJvZHVjdF90eXBlIjoiV0hPTEVfTElGRSIsInNob3J0X2Rlc2NyaXB0aW9uIjoiQmFzaWMgbGlmZWxvbmcgY292ZXJhZ2Ugd2l0aCBmaXhlZCBwcmVtaXVtIGFuZCBndWFyYW50ZWVkIGRlYXRoIGJlbmVmaXQuIiwiZmVhdHVyZXMiOiJGaXhlZCBwcmVtaXVtLCBndWFyYW50ZWVkIGRlYXRoIGJlbmVmaXQsIHNpbXBsZSB1bmRlcndyaXRpbmcsIHN1aXRhYmxlIGZvciBjb25zZXJ2YXRpdmUgY2xpZW50cy4iLCJlbGlnaWJpbGl0eV9hZ2VfbWluIjoxOCwiZWxpZ2liaWxpdHlfYWdlX21heCI6NjUsImZhY2VfdmFsdWVfbWluIjoiMTAwMDAwLjAwIiwiZmFjZV92YWx1ZV9tYXgiOiIxMDAwMDAwLjAwIiwiYmFzZV9yYXRlX3Blcl8xMDAwIjoiNC43NTAwIiwiaXNfYWN0aXZlIjp0cnVlLCJjcmVhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMDUtMTdUMTY6MDY6MzMuMDAwMDAwWiJ9LHsiaWQiOjIsInByb2R1Y3RfY29kZSI6IldMX1dFQUxUSF9CVUlMREVSIiwicHJvZHVjdF9uYW1lIjoiV2VhbHRoQnVpbGRlciBXaG9sZSBMaWZlIiwicHJvZHVjdF90eXBlIjoiV0hPTEVfTElGRSIsInNob3J0X2Rlc2NyaXB0aW9uIjoiR3Jvd3RoIGFuZCBwcm90ZWN0aW9uIHByb2R1Y3Qgd2l0aCBjYXNoIHZhbHVlIGFjY3VtdWxhdGlvbi4iLCJmZWF0dXJlcyI6IkNhc2ggdmFsdWUgZ3Jvd3RoLCBsaWZlbG9uZyBjb3ZlciwgbWVkaXVtLXRvLWhpZ2ggc3VpdGFiaWxpdHkgcmV2aWV3LCByaWRlci1mcmllbmRseSBjb25maWd1cmF0aW9uLiIsImVsaWdpYmlsaXR5X2FnZV9taW4iOjIxLCJlbGlnaWJpbGl0eV9hZ2VfbWF4Ijo2MCwiZmFjZV92YWx1ZV9taW4iOiIxNTAwMDAuMDAiLCJmYWNlX3ZhbHVlX21heCI6IjE1MDAwMDAuMDAiLCJiYXNlX3JhdGVfcGVyXzEwMDAiOiI1LjM1MDAiLCJpc19hY3RpdmUiOnRydWUsImNyZWF0ZWRfYXQiOiIyMDI2LTA1LTE3VDE2OjA2OjMzLjAwMDAwMFoiLCJ1cGRhdGVkX2F0IjoiMjAyNi0wNS0xN1QxNjowNjozMy4wMDAwMDBaIn1dfQ=="
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "63db1f7a7681e76a1ba8-c013654b94d9ebb699d4",
+              "file": "product-selection/product-selection.spec.ts",
+              "line": 24,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "workflow\\workflow.spec.ts",
+      "file": "workflow/workflow.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Submission and status tracking",
+          "file": "workflow/workflow.spec.ts",
+          "line": 67,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-WF-003 | WF-V03 | a valid application can be submitted end to end",
+              "ok": true,
+              "tags": [
+                "smoke",
+                "regression",
+                "e2e",
+                "api",
+                "workflow",
+                "P1"
+              ],
+              "tests": [
+                {
+                  "timeout": 240000,
+                  "annotations": [
+                    {
+                      "type": "validation-id",
+                      "description": "WF-V03",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                        "line": 110,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "risk",
+                      "description": "R-WF-03",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                        "line": 110,
+                        "column": 7
+                      }
+                    },
+                    {
+                      "type": "priority",
+                      "description": "P1",
+                      "location": {
+                        "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                        "line": 110,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "expectedStatus": "passed",
+                  "projectId": "insurance-chromium",
+                  "projectName": "insurance-chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 32071,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[api] HTTP 200 {\"status\":\"success\",\"message\":\"Request completed successfully\",\"data\":{\"application_id\":156,\"application_reference_number\":\"WL2026110420705\",\"application_status\":\"SUBMITTED\",\"current_step\":\"SUBMITTED\",\"status_history\":[{\"id\":64,\"application_id\":156,\"status\":\"SUBMITTED\",\"notes\":\"Application submitted successfully.\",\"changed_by\":\"10\",\"created_at\":\"2026-11-04T20:20:48.000000Z\",\"updated_at\":\"2026-11-04T20:20:48.000000Z\"}]}}\n"
+                        },
+                        {
+                          "text": "[api] HTTP 200 {\"status\":\"success\",\"message\":\"Request completed successfully\",\"data\":{\"application_id\":157,\"application_reference_number\":\"WL2026110414762\",\"application_status\":\"SUBMITTED\",\"current_step\":\"SUBMITTED\",\"status_history\":[{\"id\":65,\"application_id\":157,\"status\":\"SUBMITTED\",\"notes\":\"Application submitted successfully.\",\"changed_by\":\"10\",\"created_at\":\"2026-11-04T20:21:04.000000Z\",\"updated_at\":\"2026-11-04T20:21:04.000000Z\"}]}}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "E2E-01: SecureLife, ADB rider, one individual beneficiary",
+                          "duration": 15261
+                        },
+                        {
+                          "title": "E2E-02: FlexiPay quarterly, Hospital Cash rider, trust primary and minor secondary with guardian",
+                          "duration": 16372
+                        }
+                      ],
+                      "startTime": "2026-11-04T20:20:34.915Z",
+                      "annotations": [
+                        {
+                          "type": "validation-id",
+                          "description": "WF-V03",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                            "line": 110,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "risk",
+                          "description": "R-WF-03",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                            "line": 110,
+                            "column": 7
+                          }
+                        },
+                        {
+                          "type": "priority",
+                          "description": "P1",
+                          "location": {
+                            "file": "C:\\Users\\talentfarm_learner\\insurance-order-entry-playwright-automation\\tests\\workflow\\workflow.spec.ts",
+                            "line": 110,
+                            "column": 7
+                          }
+                        }
+                      ],
+                      "attachments": [
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKeyJzdGF0dXMiOiJzdWNjZXNzIiwibWVzc2FnZSI6IlJlcXVlc3QgY29tcGxldGVkIHN1Y2Nlc3NmdWxseSIsImRhdGEiOnsiYXBwbGljYXRpb25faWQiOjE1NiwiYXBwbGljYXRpb25fcmVmZXJlbmNlX251bWJlciI6IldMMjAyNjExMDQyMDcwNSIsImFwcGxpY2F0aW9uX3N0YXR1cyI6IlNVQk1JVFRFRCIsImN1cnJlbnRfc3RlcCI6IlNVQk1JVFRFRCIsInN0YXR1c19oaXN0b3J5IjpbeyJpZCI6NjQsImFwcGxpY2F0aW9uX2lkIjoxNTYsInN0YXR1cyI6IlNVQk1JVFRFRCIsIm5vdGVzIjoiQXBwbGljYXRpb24gc3VibWl0dGVkIHN1Y2Nlc3NmdWxseS4iLCJjaGFuZ2VkX2J5IjoiMTAiLCJjcmVhdGVkX2F0IjoiMjAyNi0xMS0wNFQyMDoyMDo0OC4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMTEtMDRUMjA6MjA6NDguMDAwMDAwWiJ9XX19"
+                        },
+                        {
+                          "name": "api-response",
+                          "contentType": "text/plain",
+                          "body": "SFRUUCAyMDAKeyJzdGF0dXMiOiJzdWNjZXNzIiwibWVzc2FnZSI6IlJlcXVlc3QgY29tcGxldGVkIHN1Y2Nlc3NmdWxseSIsImRhdGEiOnsiYXBwbGljYXRpb25faWQiOjE1NywiYXBwbGljYXRpb25fcmVmZXJlbmNlX251bWJlciI6IldMMjAyNjExMDQxNDc2MiIsImFwcGxpY2F0aW9uX3N0YXR1cyI6IlNVQk1JVFRFRCIsImN1cnJlbnRfc3RlcCI6IlNVQk1JVFRFRCIsInN0YXR1c19oaXN0b3J5IjpbeyJpZCI6NjUsImFwcGxpY2F0aW9uX2lkIjoxNTcsInN0YXR1cyI6IlNVQk1JVFRFRCIsIm5vdGVzIjoiQXBwbGljYXRpb24gc3VibWl0dGVkIHN1Y2Nlc3NmdWxseS4iLCJjaGFuZ2VkX2J5IjoiMTAiLCJjcmVhdGVkX2F0IjoiMjAyNi0xMS0wNFQyMDoyMTowNC4wMDAwMDBaIiwidXBkYXRlZF9hdCI6IjIwMjYtMTEtMDRUMjA6MjE6MDQuMDAwMDAwWiJ9XX19"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "80c4ad9e4b6fc6f4fd56-9a9f3bde5a5e52dcb1ce",
+              "file": "workflow/workflow.spec.ts",
+              "line": 110,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-04T20:19:22.884Z",
+    "duration": 104269.75,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
